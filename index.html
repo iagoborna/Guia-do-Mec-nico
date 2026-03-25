@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Guia do Mecânico</title>
+
+<style>
+</style><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Mecânica Aplicada</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Guia do Mecânico</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a192f">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+    
+</head>
+
+
+
+<body>
+
+<header>
+    <h1>⚙️ O Guia do Mecânico</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#componentes">Componentes</a>
+        <a href="#manutencao">Manutenção</a>
+        <a href="#aprender">Aprender</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <section class="hero">
+    <div class="hero-content">
+        <h2>O Guia do Mecânico</h2>
+        <p>Soluções e conhecimentos práticos em Engenharia Mecânica</p>
+    </div>
+</section>
+
+</section>
+
+<section id="componentes">
+    <h2>Componentes Mecânicos</h2>
+
+    <div class="cards">
+<a href="rolamentos.html" class="card">
+    <img src="rolamento.jpg">
+    <div class="card-content">
+        <h3>Rolamentos</h3>
+        <p>Reduzem atrito e suportam cargas rotativas.</p>
+    </div>
+</a>
+        
+
+        <div class="card">
+            <img src="engrenagens.jpg">
+            <div class="card-content">
+                <h3>Engrenagens</h3>
+                <p>Transmitem força e movimento entre eixos.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="correntes.jpg">
+            <div class="card-content">
+                <h3>Correntes</h3>
+                <p>Utilizadas para transmissão robusta de potência.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="parafusos.jpg">
+            <div class="card-content">
+                <h3>Parafusos</h3>
+                <p>Fixação mecânica com resistência e precisão.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="manutencao">
+    <h2>Manutenções e seus tipos</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="preventiva.jpg">
+            <div class="card-content">
+                <h3>Preventiva</h3>
+                <p>Evita falhas antes que aconteçam.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="corretiva.jpg">
+            <div class="card-content">
+                <h3>Corretiva</h3>
+                <p>Corrige falhas após ocorrerem.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
+            <div class="card-content">
+                <h3>Preditiva</h3>
+                <p>Monitora e prevê falhas futuras.</p>
+            </div>
+        </div>
+
+    </div>
+
+<section id="aprender">
+    <h2>Aprender</h2>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-content">
+                <h3>Torque</h3>
+                <p>Força aplicada a uma distância.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Potência</h3>
+                <p>Energia por unidade de tempo.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Transmissão</h3>
+                <p>Transferência de movimento mecânico.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="diagnostico">
+    <h2>Diagnóstico de Problemas</h2>
+
+    <select id="problema">
+        <option value="vibracao">Vibração</option>
+        <option value="ruido">Ruído</option>
+        <option value="desgaste">Desgaste</option>
+    </select>
+
+    <button class="calc" onclick="diagnosticar()">Diagnosticar</button>
+    <p id="resultadoDiag"></p>
+</section>
+
+<footer>
+    <p>Iago de Oliveira Leite - Projeto Acadêmico</p>
+</footer>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({behavior: "smooth"});
+}
+
+function calcularTorque() {
+    let f = document.getElementById("forca").value;
+    let d = document.getElementById("distancia").value;
+    document.getElementById("resultadoTorque").innerText = "Torque: " + (f*d) + " Nm";
+}
+
+function calcularReducao() {
+    let z1 = document.getElementById("z1").value;
+    let z2 = document.getElementById("z2").value;
+    document.getElementById("resultadoReducao").innerText = "Redução: " + (z2/z1);
+}
+
+function diagnosticar() {
+    let p = document.getElementById("problema").value;
+
+    let resposta = {
+        vibracao: "Desalinhamento ou desbalanceamento.",
+        ruido: "Falta de lubrificação ou desgaste.",
+        desgaste: "Excesso de carga ou material inadequado."
+    };
+
+    document.getElementById("resultadoDiag").innerText = resposta[p];
+}
+</script>
+
+</body>
+</html>

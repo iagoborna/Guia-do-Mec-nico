@@ -1,0 +1,139 @@
+/* RESET */body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    background: #020617;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1e293b;
+}
+
+header h1 {
+    color: #facc15;
+    font-size: 20px;
+}
+
+/* MENU */
+nav a {
+    color: #e2e8f0;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* SEÇÕES */section {
+    padding: 80px 30px;
+}
+
+
+/* GRID DE CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    display: block;
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #e2e8f0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* IMAGEM DO CARD */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* CONTEÚDO */
+.card-content {
+    padding: 15px;
+}
+
+/* TÍTULOS */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* BOTÕES (CASO USE) */
+button {
+    background: #22c55e;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+/* INPUTS */
+input {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    border-top: 1px solid #1e293b;
+}
+.card h3 {
+    margin: 10px 0;
+    color: #facc15;
+}
+.hero {
+    min-height: 5vh; /* diminui o espaço */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 20px;
+
+    background: linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
+                url('imagens/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.hero-content h2 {
+    font-size: 42px;
+    color: #facc15;
+    margin-bottom: 10px;
+}
+.hero-content p {
+    font-size: 20px;
+    color: #cbd5f5;
+    max-width: 500px;
+    margin: auto;
+}
