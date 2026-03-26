@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- PWA -->
-  <link rel="manifest" href="manifest.json?v=5">
+  <link rel="manifest" href="manifest.json?v=10">
   <meta name="theme-color" content="#0a192f">
   <meta name="mobile-web-app-capable" content="yes">
 
@@ -184,6 +184,15 @@ function diagnosticar() {
     };
 
     document.getElementById("resultadoDiag").innerText = resposta[p];
+}
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(function() {
+      console.log('Service Worker registrado');
+    });
 }
 </script>
 
