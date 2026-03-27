@@ -13,7 +13,7 @@ body::before {
     position: fixed;
     width: 600px;
     height: 600px;
-    background: url("imagens/engrenagem.png") no-repeat center;
+    background: url("fundo.jpg") no-repeat center;
     background-size: contain;
     opacity: 0.05;
     top: 10%;
@@ -163,7 +163,7 @@ footer {
     text-align: center;
 
     background: linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
-                url('imagens/fundo.jpg');
+                url('fundo.jpg');
     background-size: cover;
     background-position: center;
 
