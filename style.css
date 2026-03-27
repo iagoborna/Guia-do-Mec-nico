@@ -71,7 +71,7 @@ nav a:hover {
 }
 
 /* SEÇÕES */section {
-    padding: 80px 30px;
+    padding: 40px 20px;
 }
 
 
@@ -154,12 +154,12 @@ footer {
     backdrop-filter: blur(10px);
     border-radius: 15px;
 
-    min-height: 40vh;
+    min-height: 18vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 13px;
 
     background: linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
                 url('fundo.jpg');
