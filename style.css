@@ -1,10 +1,45 @@
-/* RESET */body {
+/* RESET */
+body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #0f172a;
+    background: linear-gradient(135deg, #0a192f, #112d4e);
     color: #e2e8f0;
+    overflow-x: hidden;
 }
 
+/* ENGRENAGEM FUNDO */
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: url("imagens/engrenagem.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.05;
+    top: 10%;
+    left: -100px;
+    animation: girar 30s linear infinite;
+    z-index: -1;
+}
+
+/* GRID TÉCNICO */
+body::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+}
+
+/* ANIMAÇÃO */
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
 /* HEADER */
 header {
@@ -114,26 +149,60 @@ footer {
     color: #facc15;
 }
 .hero {
-    min-height: 5vh; /* diminui o espaço */
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.04);
+    border-radius: 15px;
+
+    padding: 13px;
+    min-height: 16vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px 20px;
 
     background: linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
                 url('imagens/fundo.jpg');
     background-size: cover;
     background-position: center;
+
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
 }
 .hero-content h2 {
-    font-size: 42px;
+    font-size: 28px;
     color: #facc15;
     margin-bottom: 10px;
 }
 .hero-content p {
-    font-size: 20px;
+    font-size: 16px;
     color: #cbd5f5;
     max-width: 500px;
     margin: auto;
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* APLICA NO TÍTULO */
+.hero-content h2 {
+    font-size: 28px;
+    animation: fadeUp 1s ease forwards;
+}
+
+/* TEXTO MENOR COM DELAY */
+.hero-content p {
+    font-size: 16px;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
 }
