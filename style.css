@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* RESET */
 body {
     margin: 0;
@@ -20,18 +24,20 @@ body::after {
     pointer-events: none;
 }
 
-/* HEADER */
+/* HEADER PREMIUM */
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(2, 6, 23, 0.92);
-    backdrop-filter: blur(8px);
+    background: rgba(2, 6, 23, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 header h1 {
@@ -55,7 +61,7 @@ nav a:hover {
 
 /* SEÇÕES */
 section {
-    padding: 36px 20px;
+    padding: 24px 20px;
 }
 
 /* HERO */
@@ -64,7 +70,7 @@ section {
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 18px;
-    min-height: 22vh;
+    min-height: 18vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,6 +136,31 @@ section {
     opacity: 0;
 }
 
+/* BOTÃO PREMIUM */
+.btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #facc15, #eab308);
+    color: #0a192f;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(250, 204, 21, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    animation: pulseGlow 2.2s infinite;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(250, 204, 21, 0.35);
+    filter: brightness(1.05);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
 /* GRID DE CARDS */
 .cards {
     display: grid;
@@ -137,21 +168,23 @@ section {
     gap: 20px;
 }
 
-/* CARD */
+/* CARDS PREMIUM */
 .card {
     display: block;
-    background: #1e293b;
-    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(30,41,59,0.96), rgba(15,23,42,0.96));
+    border-radius: 14px;
     overflow: hidden;
     text-decoration: none;
     color: #e2e8f0;
-    transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.28);
+    border-color: rgba(250,204,21,0.25);
 }
 
 .card img {
@@ -161,7 +194,7 @@ section {
 }
 
 .card-content {
-    padding: 15px;
+    padding: 16px;
 }
 
 .card h3 {
@@ -169,11 +202,16 @@ section {
     color: #facc15;
 }
 
+.card p {
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
 h2 {
     margin-bottom: 20px;
 }
 
-/* BOTÕES */
+/* BOTÕES GERAIS */
 button {
     background: #22c55e;
     border: none;
@@ -205,6 +243,18 @@ footer {
     margin-top: 30px;
 }
 
+/* ANIMAÇÃO DOS CARDS AO ROLAR */
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ANIMAÇÕES */
 @keyframes girar {
     from { transform: translateY(-50%) rotate(0deg); }
@@ -219,5 +269,17 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 rgba(250, 204, 21, 0.00), 0 8px 18px rgba(250, 204, 21, 0.20);
+    }
+    50% {
+        box-shadow: 0 0 18px rgba(250, 204, 21, 0.22), 0 8px 18px rgba(250, 204, 21, 0.28);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(250, 204, 21, 0.00), 0 8px 18px rgba(250, 204, 21, 0.20);
     }
 }

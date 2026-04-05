@@ -27,15 +27,16 @@
 <section id="home" class="hero">
     <div class="hero-content">
         <h2>Domine a Mecânica Industrial</h2>
-        <p>Guias práticos, aplicações reais e conteúdo técnico direto ao ponto.</p>
+        <p>Aprenda na prática sobre componentes, manutenção e engenharia aplicada.</p>
+        <a href="#componentes" class="btn">Explorar Conteúdo</a>
     </div>
 </section>
 
 <section id="componentes">
-    <h2>Componentes Mecânicos</h2>
+    <h2 class="reveal">Componentes Mecânicos</h2>
 
     <div class="cards">
-        <a href="rolamentos.html" class="card">
+        <a href="rolamentos.html" class="card reveal">
             <img src="rolamento.jpg" alt="Rolamentos">
             <div class="card-content">
                 <h3>Rolamentos</h3>
@@ -43,7 +44,7 @@
             </div>
         </a>
 
-        <div class="card">
+        <div class="card reveal">
             <img src="engrenagens.jpg" alt="Engrenagens">
             <div class="card-content">
                 <h3>Engrenagens</h3>
@@ -51,7 +52,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <img src="correntes.jpg" alt="Correntes">
             <div class="card-content">
                 <h3>Correntes</h3>
@@ -59,7 +60,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <img src="parafusos.jpg" alt="Parafusos">
             <div class="card-content">
                 <h3>Parafusos</h3>
@@ -70,10 +71,10 @@
 </section>
 
 <section id="manutencao">
-    <h2>Manutenções e seus tipos</h2>
+    <h2 class="reveal">Manutenções e seus tipos</h2>
 
     <div class="cards">
-        <div class="card">
+        <div class="card reveal">
             <img src="preventiva.jpg" alt="Manutenção preventiva">
             <div class="card-content">
                 <h3>Preventiva</h3>
@@ -81,7 +82,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <img src="corretiva.jpg" alt="Manutenção corretiva">
             <div class="card-content">
                 <h3>Corretiva</h3>
@@ -89,7 +90,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <img src="corretiva.jpg" alt="Manutenção preditiva">
             <div class="card-content">
                 <h3>Preditiva</h3>
@@ -100,24 +101,24 @@
 </section>
 
 <section id="aprender">
-    <h2>Aprender</h2>
+    <h2 class="reveal">Aprender</h2>
 
     <div class="cards">
-        <div class="card">
+        <div class="card reveal">
             <div class="card-content">
                 <h3>Torque</h3>
                 <p>Força aplicada a uma distância.</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <div class="card-content">
                 <h3>Potência</h3>
                 <p>Energia por unidade de tempo.</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card reveal">
             <div class="card-content">
                 <h3>Transmissão</h3>
                 <p>Transferência de movimento.</p>
@@ -126,36 +127,9 @@
     </div>
 </section>
 
-<section id="diagnostico">
-    <h2>Diagnóstico de Problemas</h2>
-
-    <select id="problema">
-        <option value="vibracao">Vibração</option>
-        <option value="ruido">Ruído</option>
-        <option value="desgaste">Desgaste</option>
-    </select>
-
-    <button onclick="diagnosticar()">Diagnosticar</button>
-    <p id="resultadoDiag"></p>
-</section>
-
 <footer>
     <p>Iago de Oliveira Leite - Projeto Acadêmico</p>
 </footer>
-
-<script>
-function diagnosticar() {
-    let p = document.getElementById("problema").value;
-
-    let resposta = {
-        vibracao: "Desalinhamento ou desbalanceamento.",
-        ruido: "Falta de lubrificação ou desgaste.",
-        desgaste: "Excesso de carga ou material inadequado."
-    };
-
-    document.getElementById("resultadoDiag").innerText = resposta[p];
-}
-</script>
 
 <script>
 if ('serviceWorker' in navigator) {
@@ -164,6 +138,23 @@ if ('serviceWorker' in navigator) {
       console.log('Service Worker registrado');
     });
 }
+
+const reveals = document.querySelectorAll('.reveal');
+
+function mostrarAoRolar() {
+    const triggerBottom = window.innerHeight * 0.88;
+
+    reveals.forEach((element) => {
+        const top = element.getBoundingClientRect().top;
+
+        if (top < triggerBottom) {
+            element.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', mostrarAoRolar);
+window.addEventListener('load', mostrarAoRolar);
 </script>
 
 </body>
