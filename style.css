@@ -82,7 +82,7 @@ section {
     padding: 24px 20px;
 }
 
-/* HERO */
+/* HERO COM IMAGEM DE FUNDO */
 .hero {
     position: relative;
     overflow: hidden;
@@ -95,29 +95,14 @@ section {
     text-align: center;
     padding: 18px;
     background:
-        linear-gradient(rgba(2,6,23,0.82), rgba(2,6,23,0.92)),
-        url('fundo.jpg');
+        linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.92)),
+        url("./imagens/rolamento-bg.jpg");
     background-size: cover;
     background-position: center;
     box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-/* DECORAÇÃO MECÂNICA APENAS NO HERO */
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    right: -90px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: url("engrenagens.jpg") no-repeat center;
-    background-size: contain;
-    opacity: 0.06;
-    animation: girar 35s linear infinite;
-    pointer-events: none;
-}
-
+/* SOBREPOSIÇÃO EXTRA PARA LEGIBILIDADE */
 .hero::after {
     content: "";
     position: absolute;
@@ -283,11 +268,6 @@ footer {
 }
 
 /* ANIMAÇÕES */
-@keyframes girar {
-    from { transform: translateY(-50%) rotate(0deg); }
-    to { transform: translateY(-50%) rotate(360deg); }
-}
-
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -301,13 +281,13 @@ footer {
 
 @keyframes pulseGlow {
     0% {
-        box-shadow: 0 0 0 rgba(250, 204, 21, 0.00), 0 8px 18px rgba(250, 204, 21, 0.20);
+        box-shadow: 0 0 0 rgba(250, 204, 21, 0), 0 8px 18px rgba(250, 204, 21, 0.20);
     }
     50% {
         box-shadow: 0 0 18px rgba(250, 204, 21, 0.22), 0 8px 18px rgba(250, 204, 21, 0.28);
     }
     100% {
-        box-shadow: 0 0 0 rgba(250, 204, 21, 0.00), 0 8px 18px rgba(250, 204, 21, 0.20);
+        box-shadow: 0 0 0 rgba(250, 204, 21, 0), 0 8px 18px rgba(250, 204, 21, 0.20);
     }
 }
 
@@ -366,4 +346,145 @@ footer {
         max-width: 260px;
         text-align: center;
     }
+}
+
+/* BUSCADOR */
+.buscador-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.resultado-card {
+    margin-top: 18px;
+}
+
+.resultado-buscador {
+    margin: 0;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    color: #facc15;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.pagina-intro {
+    padding-top: 10px;
+}
+
+.destaque-card {
+    background: linear-gradient(180deg, rgba(26,35,55,0.98), rgba(15,23,42,0.98));
+    border: 1px solid rgba(250,204,21,0.10);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+}
+
+.mini-tag {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 10px;
+    background: rgba(250,204,21,0.10);
+    border: 1px solid rgba(250,204,21,0.16);
+    color: #facc15;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.texto-suporte {
+    color: #cbd5e1;
+    margin-bottom: 14px;
+}
+
+/* TIPOS DE CARGA */
+.carga-card .card-content h3 {
+    color: #facc15;
+    margin-bottom: 14px;
+}
+
+.seta-demo {
+    margin-top: 18px;
+    height: 70px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seta-vertical,
+.seta-horizontal {
+    font-size: 42px;
+    color: #facc15;
+    font-weight: bold;
+    text-shadow: 0 0 12px rgba(250, 204, 21, 0.18);
+}
+
+.seta-vertical {
+    animation: radialPulse 1.2s ease-in-out infinite;
+}
+
+.seta-horizontal {
+    animation: axialPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes radialPulse {
+    0% {
+        transform: translateY(-6px);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(6px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-6px);
+        opacity: 0.7;
+    }
+}
+
+@keyframes axialPulse {
+    0% {
+        transform: translateX(-8px);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateX(8px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-8px);
+        opacity: 0.7;
+    }
+}
+
+/* SEÇÃO DE CÓDIGOS */
+.divisor {
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 20px 0;
+}
+
+.grid-codigo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.grid-codigo div {
+    background: rgba(255,255,255,0.04);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.lista-codigo {
+    padding-left: 18px;
+    line-height: 1.6;
 }
