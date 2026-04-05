@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head>
+<html lang="pt-BR">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>O Guia do Mecânico</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- PWA -->
   <link rel="manifest" href="manifest.json?v=10">
   <meta name="theme-color" content="#0a192f">
   <meta name="mobile-web-app-capable" content="yes">
-
-  <!-- Ícone -->
   <link rel="icon" href="icon.png">
 </head>
-
-
-
 
 <body>
 
@@ -33,30 +25,26 @@
 </header>
 
 <section id="home" class="hero">
-    <section class="hero">
     <div class="hero-content">
         <h2>Domine a Mecânica Industrial</h2>
-<p>Guias práticos, aplicações reais e conteúdo técnico direto ao ponto.</p>
+        <p>Guias práticos, aplicações reais e conteúdo técnico direto ao ponto.</p>
     </div>
-</section>
-
 </section>
 
 <section id="componentes">
     <h2>Componentes Mecânicos</h2>
 
     <div class="cards">
-<a href="rolamentos.html" class="card">
-    <img src="rolamento.jpg">
-    <div class="card-content">
-        <h3>Rolamentos</h3>
-        <p>Reduzem atrito e suportam cargas rotativas.</p>
-    </div>
-</a>
-        
+        <a href="rolamentos.html" class="card">
+            <img src="rolamento.jpg" alt="Rolamentos">
+            <div class="card-content">
+                <h3>Rolamentos</h3>
+                <p>Reduzem atrito e suportam cargas rotativas.</p>
+            </div>
+        </a>
 
         <div class="card">
-            <img src="engrenagens.jpg">
+            <img src="engrenagens.jpg" alt="Engrenagens">
             <div class="card-content">
                 <h3>Engrenagens</h3>
                 <p>Transmitem força e movimento entre eixos.</p>
@@ -64,7 +52,7 @@
         </div>
 
         <div class="card">
-            <img src="correntes.jpg">
+            <img src="correntes.jpg" alt="Correntes">
             <div class="card-content">
                 <h3>Correntes</h3>
                 <p>Utilizadas para transmissão robusta de potência.</p>
@@ -72,13 +60,12 @@
         </div>
 
         <div class="card">
-            <img src="parafusos.jpg">
+            <img src="parafusos.jpg" alt="Parafusos">
             <div class="card-content">
                 <h3>Parafusos</h3>
                 <p>Fixação mecânica com resistência e precisão.</p>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -86,9 +73,8 @@
     <h2>Manutenções e seus tipos</h2>
 
     <div class="cards">
-
         <div class="card">
-            <img src="preventiva.jpg">
+            <img src="preventiva.jpg" alt="Manutenção preventiva">
             <div class="card-content">
                 <h3>Preventiva</h3>
                 <p>Evita falhas antes que aconteçam.</p>
@@ -96,7 +82,7 @@
         </div>
 
         <div class="card">
-            <img src="corretiva.jpg">
+            <img src="corretiva.jpg" alt="Manutenção corretiva">
             <div class="card-content">
                 <h3>Corretiva</h3>
                 <p>Corrige falhas após ocorrerem.</p>
@@ -104,14 +90,14 @@
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
+            <img src="corretiva.jpg" alt="Manutenção preditiva">
             <div class="card-content">
                 <h3>Preditiva</h3>
                 <p>Monitora e prevê falhas futuras.</p>
             </div>
         </div>
-
     </div>
+</section>
 
 <section id="aprender">
     <h2>Aprender</h2>
@@ -134,7 +120,7 @@
         <div class="card">
             <div class="card-content">
                 <h3>Transmissão</h3>
-                <p>Transferência de movimento mecânico.</p>
+                <p>Transferência de movimento.</p>
             </div>
         </div>
     </div>
@@ -149,7 +135,7 @@
         <option value="desgaste">Desgaste</option>
     </select>
 
-    <button class="calc" onclick="diagnosticar()">Diagnosticar</button>
+    <button onclick="diagnosticar()">Diagnosticar</button>
     <p id="resultadoDiag"></p>
 </section>
 
@@ -158,22 +144,6 @@
 </footer>
 
 <script>
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({behavior: "smooth"});
-}
-
-function calcularTorque() {
-    let f = document.getElementById("forca").value;
-    let d = document.getElementById("distancia").value;
-    document.getElementById("resultadoTorque").innerText = "Torque: " + (f*d) + " Nm";
-}
-
-function calcularReducao() {
-    let z1 = document.getElementById("z1").value;
-    let z2 = document.getElementById("z2").value;
-    document.getElementById("resultadoReducao").innerText = "Redução: " + (z2/z1);
-}
-
 function diagnosticar() {
     let p = document.getElementById("problema").value;
 
