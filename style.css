@@ -348,29 +348,6 @@ footer {
     }
 }
 
-/* BUSCADOR */
-.buscador-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin-top: 18px;
-}
-
-.resultado-card {
-    margin-top: 18px;
-}
-
-.resultado-buscador {
-    margin: 0;
-    padding: 12px 14px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 10px;
-    color: #facc15;
-    font-weight: 600;
-    line-height: 1.5;
-}
-
 .pagina-intro {
     padding-top: 10px;
 }
@@ -487,4 +464,181 @@ footer {
 .lista-codigo {
     padding-left: 18px;
     line-height: 1.6;
+}
+
+.sobre-projeto {
+    padding-top: 10px;
+}
+
+.sobre-projeto h3 {
+    color: #facc15;
+    margin-bottom: 12px;
+}
+
+/* FOOTER PROFISSIONAL */
+.footer-profissional {
+    background: #020617;
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+.footer-col h3 {
+    color: #facc15;
+    margin-bottom: 10px;
+}
+
+.footer-col h4 {
+    color: #e2e8f0;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* RESULTADO TÉCNICO DO BUSCADOR */
+.resultado-card {
+    margin-top: 18px;
+}
+
+.resultado-buscador {
+    margin: 0;
+    padding: 16px 18px;
+    background: linear-gradient(180deg, rgba(20,28,45,0.98), rgba(12,18,30,0.98));
+    border: 1px solid rgba(250,204,21,0.12);
+    border-radius: 12px;
+    color: #e2e8f0;
+    font-weight: 500;
+    line-height: 1.7;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+.resultado-buscador strong {
+    color: #facc15;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+}
+
+.resultado-buscador .codigo-encontrado {
+    display: inline-block;
+    margin: 8px 0 10px 0;
+    font-size: 26px;
+    font-weight: 800;
+    color: #facc15;
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.18);
+}
+
+.resultado-buscador .linha-info {
+    display: block;
+    margin-top: 4px;
+    color: #cbd5e1;
+}
+
+.resultado-buscador .linha-info b {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* BUSCADOR TÉCNICO COM SVG */
+.buscador-tecnico {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 28px;
+    align-items: start;
+    margin-top: 18px;
+}
+
+.desenho-rolamento h3 {
+    color: #e2e8f0;
+    margin-bottom: 14px;
+}
+
+.svg-rolamento {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 14px;
+    padding: 10px;
+}
+
+.campos-medidas {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.linha-medida {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+    gap: 14px;
+}
+
+.linha-medida label {
+    font-size: 28px;
+    color: #e2e8f0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.linha-medida input,
+.linha-medida select {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.campos-medidas button {
+    margin-top: 4px;
+    padding: 14px 18px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+/* RESPONSIVO DO BUSCADOR */
+@media (max-width: 900px) {
+    .buscador-tecnico {
+        grid-template-columns: 1fr;
+    }
+
+    .desenho-rolamento {
+        text-align: left;
+    }
+
+    .svg-rolamento {
+        max-width: 100%;
+    }
+
+    .linha-medida {
+        grid-template-columns: 56px 1fr;
+    }
+
+    .linha-medida label {
+        font-size: 22px;
+    }
 }

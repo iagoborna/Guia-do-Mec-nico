@@ -200,7 +200,6 @@ mancais, transportadores e máquinas industriais.
     </div>
 </section>
 
-
 <section>
     <h2 class="reveal">Diferença entre os tipos de rolamentos</h2>
 
@@ -236,66 +235,194 @@ mancais, transportadores e máquinas industriais.
 </section>
 
 <section id="buscador">
-    <h2 class="reveal">Buscador de Rolamentos</h2>
-
+    <h2 class="reveal">🔎 Identificação de Rolamentos por Medidas</h2>
+    
     <div class="card reveal destaque-card">
-        <div class="card-content">
-            <p class="texto-suporte">
-                Informe as medidas e identifique o modelo correspondente.
-            </p>
+    <div class="card-content">
+        <p class="texto-suporte">
+            Informe as medidas do rolamento para identificar o modelo correspondente.
+        </p>
 
-            <div class="buscador-box">
-                <input type="number" id="d" placeholder="Diâmetro interno (mm)">
-                <input type="number" id="D" placeholder="Diâmetro externo (mm)">
-                <input type="number" id="B" placeholder="Largura (mm)">
+        <div class="buscador-tecnico">
 
-                <select id="tipo">
-                    <option value="rigido_esferas">Rígido de esferas</option>
-                    <option value="autocompensador_esferas">Autocompensador de esferas</option>
-                    <option value="autocompensador_rolos">Autocompensador de rolos</option>
-                    <option value="rolos_cilindricos">Rolos cilíndricos</option>
-                    <option value="contato_angular">Contato angular</option>
-                </select>
+            <div class="desenho-rolamento">
+                <h3>Dimensões [mm]</h3>
+
+                <svg class="svg-rolamento" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-label="Desenho técnico simplificado de rolamento com medidas d, D e B">
+    <defs>
+        <marker id="arrow-end-light" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#dbe4f0"></path>
+        </marker>
+        <marker id="arrow-start-light" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto" markerUnits="strokeWidth">
+            <path d="M8,0 L0,4 L8,8 Z" fill="#dbe4f0"></path>
+        </marker>
+    </defs>
+
+    <!-- COTA B -->
+    <line x1="150" y1="55" x2="150" y2="95" stroke="#dbe4f0" stroke-width="2"/>
+    <line x1="270" y1="55" x2="270" y2="95" stroke="#dbe4f0" stroke-width="2"/>
+    <line x1="160" y1="55" x2="260" y2="55"
+          stroke="#dbe4f0" stroke-width="2"
+          marker-start="url(#arrow-start-light)"
+          marker-end="url(#arrow-end-light)"/>
+    <text x="210" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#f8fafc">B</text>
+
+    <!-- COTA D -->
+    <line x1="78" y1="95" x2="145" y2="95" stroke="#dbe4f0" stroke-width="2"/>
+    <line x1="78" y1="355" x2="145" y2="355" stroke="#dbe4f0" stroke-width="2"/>
+    <line x1="78" y1="105" x2="78" y2="345"
+          stroke="#dbe4f0" stroke-width="2"
+          marker-start="url(#arrow-start-light)"
+          marker-end="url(#arrow-end-light)"/>
+    <text x="56" y="232" text-anchor="middle" font-size="24" font-weight="700" fill="#f8fafc">D</text>
+
+    <!-- COTA d -->
+    <line x1="275" y1="155" x2="340" y2="155" stroke="#dbe4f0" stroke-width="2"/>
+    <line x1="275" y1="295" x2="340" y2="295" stroke="#dbe4f0" stroke-width="2"/>
+    <line x1="340" y1="165" x2="340" y2="285"
+          stroke="#dbe4f0" stroke-width="2"
+          marker-start="url(#arrow-start-light)"
+          marker-end="url(#arrow-end-light)"/>
+    <text x="360" y="232" text-anchor="middle" font-size="24" font-weight="700" fill="#f8fafc">d</text>
+
+    <!-- ROLAMENTO EM CORTE LATERAL -->
+    <rect x="150" y="95" width="120" height="260" rx="18" fill="#a8bbd6" stroke="#0f172a" stroke-width="4"/>
+
+    <rect x="150" y="165" width="120" height="120" fill="#d9dde7"/>
+
+    <rect x="150" y="95" width="120" height="70" rx="18" fill="#a8bbd6" stroke="#0f172a" stroke-width="4"/>
+    <rect x="150" y="285" width="120" height="70" rx="18" fill="#a8bbd6" stroke="#0f172a" stroke-width="4"/>
+
+    <line x1="150" y1="165" x2="270" y2="165" stroke="#0f172a" stroke-width="4"/>
+    <line x1="150" y1="285" x2="270" y2="285" stroke="#0f172a" stroke-width="4"/>
+    <line x1="150" y1="165" x2="150" y2="285" stroke="#0f172a" stroke-width="4"/>
+    <line x1="270" y1="165" x2="270" y2="285" stroke="#0f172a" stroke-width="4"/>
+</svg>
+            </div>
+
+            <div class="campos-medidas">
+                <div class="linha-medida">
+                    <label for="d">d</label>
+                    <input type="number" id="d" placeholder="Adicionar valor (mm)">
+                </div>
+
+                <div class="linha-medida">
+                    <label for="D">D</label>
+                    <input type="number" id="D" placeholder="Adicionar valor (mm)">
+                </div>
+
+                <div class="linha-medida">
+                    <label for="B">B</label>
+                    <input type="number" id="B" placeholder="Adicionar valor (mm)">
+                </div>
+
+                <div class="linha-medida">
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo">
+                        <option value="rigido_esferas">Rígido de esferas</option>
+                    </select>
+                </div>
 
                 <button type="button" onclick="buscarRolamento()">Buscar</button>
             </div>
+        </div>
 
-            <div id="resultadoCard" class="resultado-card">
-                <p id="resultado" class="resultado-buscador">
-                    Preencha as medidas e clique em buscar.
-                </p>
-            </div>
+        <div id="resultadoCard" class="resultado-card">
+            <p id="resultado" class="resultado-buscador">
+                Preencha as medidas e clique em buscar.
+            </p>
         </div>
     </div>
+</div>
+
 </section>
 
-<footer>
-    <p>Iago de Oliveira Leite - Projeto Acadêmico</p>
+<footer class="footer-profissional">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>⚙️ O Guia do Mecânico</h3>
+            <p>
+                Plataforma educacional voltada à mecânica industrial,
+                com foco em componentes, manutenção e engenharia aplicada.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Desenvolvido por</h4>
+            <p>
+                Guilherme Prado, Iago Leite, João Bispo, Marcelo Lima, Régis Eduardo.<br>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 O Guia do Mecânico — Todos os direitos reservados.</p>
+    </div>
 </footer>
 
 <script>
 const rolamentosDB = [
-  { codigo: "6000", tipo: "rigido_esferas", d: 10, D: 26, B: 8 },
-  { codigo: "6001", tipo: "rigido_esferas", d: 12, D: 28, B: 8 },
-  { codigo: "6002", tipo: "rigido_esferas", d: 15, D: 32, B: 9 },
-  { codigo: "6003", tipo: "rigido_esferas", d: 17, D: 35, B: 10 },
-  { codigo: "6004", tipo: "rigido_esferas", d: 20, D: 42, B: 12 },
-  { codigo: "6005", tipo: "rigido_esferas", d: 25, D: 47, B: 12 },
-  { codigo: "6203", tipo: "rigido_esferas", d: 17, D: 40, B: 12 },
-  { codigo: "6204", tipo: "rigido_esferas", d: 20, D: 47, B: 14 },
-  { codigo: "6205", tipo: "rigido_esferas", d: 25, D: 52, B: 15 },
-  { codigo: "6206", tipo: "rigido_esferas", d: 30, D: 62, B: 16 },
-  { codigo: "6305", tipo: "rigido_esferas", d: 25, D: 62, B: 17 },
+  // SÉRIE 6000
+  { codigo: "6000", tipo: "rigido_esferas", serie: "6000", d: 10, D: 26, B: 8, carga: "radial" },
+  { codigo: "6001", tipo: "rigido_esferas", serie: "6000", d: 12, D: 28, B: 8, carga: "radial" },
+  { codigo: "6002", tipo: "rigido_esferas", serie: "6000", d: 15, D: 32, B: 9, carga: "radial" },
+  { codigo: "6003", tipo: "rigido_esferas", serie: "6000", d: 17, D: 35, B: 10, carga: "radial" },
+  { codigo: "6004", tipo: "rigido_esferas", serie: "6000", d: 20, D: 42, B: 12, carga: "radial" },
+  { codigo: "6005", tipo: "rigido_esferas", serie: "6000", d: 25, D: 47, B: 12, carga: "radial" },
+  { codigo: "6006", tipo: "rigido_esferas", serie: "6000", d: 30, D: 55, B: 13, carga: "radial" },
+  { codigo: "6007", tipo: "rigido_esferas", serie: "6000", d: 35, D: 62, B: 14, carga: "radial" },
+  { codigo: "6008", tipo: "rigido_esferas", serie: "6000", d: 40, D: 68, B: 15, carga: "radial" },
+  { codigo: "6009", tipo: "rigido_esferas", serie: "6000", d: 45, D: 75, B: 16, carga: "radial" },
+  { codigo: "6010", tipo: "rigido_esferas", serie: "6000", d: 50, D: 80, B: 16, carga: "radial" },
+  { codigo: "6011", tipo: "rigido_esferas", serie: "6000", d: 55, D: 90, B: 18, carga: "radial" },
+  { codigo: "6012", tipo: "rigido_esferas", serie: "6000", d: 60, D: 95, B: 18, carga: "radial" },
 
-  { codigo: "1204", tipo: "autocompensador_esferas", d: 20, D: 47, B: 14 },
-  { codigo: "1205", tipo: "autocompensador_esferas", d: 25, D: 52, B: 15 },
-  { codigo: "1206", tipo: "autocompensador_esferas", d: 30, D: 62, B: 16 },
-  { codigo: "1207", tipo: "autocompensador_esferas", d: 35, D: 72, B: 17 },
-  { codigo: "1208", tipo: "autocompensador_esferas", d: 40, D: 80, B: 18 }
+  // SÉRIE 6200
+  { codigo: "6200", tipo: "rigido_esferas", serie: "6200", d: 10, D: 30, B: 9, carga: "radial" },
+  { codigo: "6201", tipo: "rigido_esferas", serie: "6200", d: 12, D: 32, B: 10, carga: "radial" },
+  { codigo: "6202", tipo: "rigido_esferas", serie: "6200", d: 15, D: 35, B: 11, carga: "radial" },
+  { codigo: "6203", tipo: "rigido_esferas", serie: "6200", d: 17, D: 40, B: 12, carga: "radial" },
+  { codigo: "6204", tipo: "rigido_esferas", serie: "6200", d: 20, D: 47, B: 14, carga: "radial" },
+  { codigo: "6205", tipo: "rigido_esferas", serie: "6200", d: 25, D: 52, B: 15, carga: "radial" },
+  { codigo: "6206", tipo: "rigido_esferas", serie: "6200", d: 30, D: 62, B: 16, carga: "radial" },
+  { codigo: "6207", tipo: "rigido_esferas", serie: "6200", d: 35, D: 72, B: 17, carga: "radial" },
+  { codigo: "6208", tipo: "rigido_esferas", serie: "6200", d: 40, D: 80, B: 18, carga: "radial" },
+  { codigo: "6209", tipo: "rigido_esferas", serie: "6200", d: 45, D: 85, B: 19, carga: "radial" },
+  { codigo: "6210", tipo: "rigido_esferas", serie: "6200", d: 50, D: 90, B: 20, carga: "radial" },
+  { codigo: "6211", tipo: "rigido_esferas", serie: "6200", d: 55, D: 100, B: 21, carga: "radial" },
+  { codigo: "6212", tipo: "rigido_esferas", serie: "6200", d: 60, D: 110, B: 22, carga: "radial" },
+
+  // SÉRIE 6300
+  { codigo: "6300", tipo: "rigido_esferas", serie: "6300", d: 10, D: 35, B: 11, carga: "radial" },
+  { codigo: "6301", tipo: "rigido_esferas", serie: "6300", d: 12, D: 37, B: 12, carga: "radial" },
+  { codigo: "6302", tipo: "rigido_esferas", serie: "6300", d: 15, D: 42, B: 13, carga: "radial" },
+  { codigo: "6303", tipo: "rigido_esferas", serie: "6300", d: 17, D: 47, B: 14, carga: "radial" },
+  { codigo: "6304", tipo: "rigido_esferas", serie: "6300", d: 20, D: 52, B: 15, carga: "radial" },
+  { codigo: "6305", tipo: "rigido_esferas", serie: "6300", d: 25, D: 62, B: 17, carga: "radial" },
+  { codigo: "6306", tipo: "rigido_esferas", serie: "6300", d: 30, D: 72, B: 19, carga: "radial" },
+  { codigo: "6307", tipo: "rigido_esferas", serie: "6300", d: 35, D: 80, B: 21, carga: "radial" },
+  { codigo: "6308", tipo: "rigido_esferas", serie: "6300", d: 40, D: 90, B: 23, carga: "radial" },
+  { codigo: "6309", tipo: "rigido_esferas", serie: "6300", d: 45, D: 100, B: 25, carga: "radial" },
+  { codigo: "6310", tipo: "rigido_esferas", serie: "6300", d: 50, D: 110, B: 27, carga: "radial" },
+  { codigo: "6311", tipo: "rigido_esferas", serie: "6300", d: 55, D: 120, B: 29, carga: "radial" },
+  { codigo: "6312", tipo: "rigido_esferas", serie: "6300", d: 60, D: 130, B: 31, carga: "radial" }
 ];
 
 function calcularPontuacao(item, d, D, B) {
     return Math.abs(item.d - d) + Math.abs(item.D - D) + Math.abs(item.B - B);
+}
+
+function calcularRpmMax(item) {
+    const fatores = {
+        "6000": 320000,
+        "6200": 280000,
+        "6300": 240000
+    };
+
+    const fator = fatores[item.serie] || 250000;
+    return Math.round(fator / item.d);
 }
 
 function buscarRolamento() {
@@ -325,9 +452,14 @@ function buscarRolamento() {
     );
 
     if (exato) {
-        resultadoEl.innerHTML =
-            `<strong>✔ Modelo encontrado</strong><br>
-             <span style="font-size:22px; color:#facc15;">${exato.codigo}</span>`;
+        const rpmMax = calcularRpmMax(exato);
+
+resultadoEl.innerHTML = `
+    <strong>✔ Modelo encontrado</strong><br>
+    <span class="codigo-encontrado">${exato.codigo}</span>
+    <span class="linha-info"><b>Carga predominante:</b> ${exato.carga}</span>
+    <span class="linha-info"><b>Máx. rpm:</b> ${rpmMax}</span>
+`;
         return;
     }
 
