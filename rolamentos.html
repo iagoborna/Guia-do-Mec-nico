@@ -1,506 +1,422 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rolamentos | O Guia do Mecânico</title>
-
-  <link rel="stylesheet" href="./style.css?v=16">
-  <link rel="icon" href="./icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rolamentos — O Guia do Mecânico</title>
+  <link rel="stylesheet" href="style-rolamentos.css" />
 </head>
-
 <body>
 
-<header>
-    <h1>⚙️ O Guia do Mecânico</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#tipos">Tipos</a>
-        <a href="#buscador">Buscador</a>
-    </nav>
-</header>
+<!-- ── NAVBAR ── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="gear-spin">⚙</span>
+    O Guia do Mecânico
+    <span class="nav-tag">v2.0</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#componentes" class="active">Componentes</a></li>
+    <li><a href="index.html#manutencao">Manutenção</a></li>
+    <li><a href="index.html#aprender">Aprender</a></li>
+    <li><a href="index.html#sobre">Sobre</a></li>
+  </ul>
+  <a href="index.html" class="nav-cta">← Voltar à Home</a>
+</nav>
 
-<section class="hero">
-    <div class="hero-content">
-        <h2>Rolamentos</h2>
-        <p>
-Guia técnico completo sobre rolamentos: tipos, funcionamento, cargas, identificação por código e seleção prática para aplicações industriais.
-</p>
-        <a href="#buscador" class="btn">Abrir Buscador</a>
+<!-- ── HERO ── -->
+<div class="page-hero">
+  <div class="hero-left">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="index.html#componentes">Componentes</a>
+      <span>/</span>
+      <strong>Rolamentos</strong>
     </div>
-</section>
-
-<section class="pagina-intro">
-    <div class="card reveal destaque-card">
-        <div class="card-content"><h3>O que são rolamentos?</h3>
-
-<p>
-Rolamentos são elementos mecânicos de máquina projetados para suportar e guiar eixos rotativos,
-reduzindo o atrito entre partes móveis através do contato rolante em vez de deslizante.
-</p>
-
-<p>
-Sua função principal é permitir movimento rotativo com menor resistência, maior eficiência energética
-e maior vida útil dos componentes, além de suportar cargas radiais, axiais ou combinadas.
-</p>
-
-<p>
-São compostos, de forma geral, por anel interno, anel externo, elementos rolantes (esferas ou rolos)
-e, em muitos casos, gaiola separadora, sendo amplamente utilizados em motores elétricos, redutores,
-mancais, transportadores e máquinas industriais.
-</p>
-            
-        </div>
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Componentes Mecânicos — 01 / 04</span>
     </div>
-</section>
-
-<section id="tipos">
-    <h2 class="reveal">Principais tipos de rolamentos</h2>
-
-    <div class="cards">
-        <div class="card reveal">
-            <div class="card-content">
-                <span class="mini-tag">Mais comum</span>
-                <h3>Rígido de Esferas</h3>
-                <p>Indicado para altas rotações e cargas moderadas. Muito usado em motores e aplicações gerais.</p>
-            </div>
-        </div>
-
-        <div class="card reveal">
-            <div class="card-content">
-                <span class="mini-tag">Carga radial</span>
-                <h3>Rolos Cilíndricos</h3>
-                <p>Suportam cargas radiais elevadas e são aplicados em conjuntos mais robustos.</p>
-            </div>
-        </div>
-
-        <div class="card reveal">
-            <div class="card-content">
-                <span class="mini-tag">Desalinhamento</span>
-                <h3>Autocompensador</h3>
-                <p>Compensa desalinhamentos entre eixo e alojamento, sendo útil em aplicações severas.</p>
-            </div>
-        </div>
-
-        <div class="card reveal">
-            <div class="card-content">
-                <span class="mini-tag">Compacto</span>
-                <h3>Rolamento de Agulha</h3>
-                <p>Ideal quando há pouco espaço disponível, suportando boa carga em tamanho reduzido.</p>
-            </div>
-        </div>
+    <h1 class="hero-title">
+      Rola-
+      <span class="accent">mentos</span>
+      <span class="outline">Industriais</span>
+    </h1>
+    <p class="hero-desc">
+      Elementos de máquinas que reduzem o atrito entre peças em movimento relativo,
+      suportando cargas radiais e axiais com alta precisão e durabilidade.
+    </p>
+    <div class="hero-actions">
+      <a href="#tipos" class="btn-primary">Ver tipos →</a>
+      <a href="#manutencao" class="btn-secondary">Manutenção</a>
     </div>
-</section>
+  </div>
 
-<section>
-    <h2 class="reveal">Tipos de carga</h2>
+  <div class="hero-right">
+  <div class="hero-visual hero-visual-rolamentos">
 
-    <div class="cards">
-        <div class="card reveal carga-card">
-            <div class="card-content">
-                <span class="mini-tag">Perpendicular ao eixo</span>
-                <h3>Carga Radial</h3>
-                <p>
-                    É a força aplicada para baixo, para cima ou para os lados do eixo, ou seja,
-                    perpendicularmente ao seu comprimento.
-                </p>
-
-                <div class="seta-demo radial-demo">
-                    <div class="seta-vertical">↓</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card reveal carga-card">
-            <div class="card-content">
-                <span class="mini-tag">Paralela ao eixo</span>
-                <h3>Carga Axial</h3>
-                <p>
-                    É a força aplicada no sentido do comprimento do eixo,
-                    empurrando ou puxando axialmente.
-                </p>
-
-                <div class="seta-demo axial-demo">
-                    <div class="seta-horizontal">→</div>
-                </div>
-            </div>
-        </div>
+    <div class="float-card card-1">
+      <div class="card-label">Função</div>
+      <div class="card-value">Suporte</div>
+      <div class="card-sub">Redução de atrito</div>
     </div>
-</section>
 
-<section>
-    <h2 class="reveal">Como ler o código de um rolamento</h2>
-
-    <div class="card reveal destaque-card">
-        <div class="card-content">
-
-            <h3>Entendendo a lógica da numeração</h3>
-            <p>
-                O código de um rolamento não é aleatório. Em muitos modelos, ele ajuda a identificar
-                o <strong>tipo do rolamento</strong>, a <strong>série dimensional</strong> e o
-                <strong>diâmetro interno</strong>.
-            </p>
-            <p>
-                Saber interpretar essa numeração facilita a identificação correta da peça e evita erros
-                na substituição durante manutenção.
-            </p>
-
-            <hr class="divisor">
-
-            <h3>Exemplo prático: 6205</h3>
-            <p><strong>6</strong> → indica a família do rolamento (rígido de esferas)</p>
-            <p><strong>2</strong> → indica a série dimensional</p>
-            <p><strong>05</strong> → indica o diâmetro interno (25 mm)</p>
-
-            <p class="texto-suporte">
-                Ou seja, trata-se de um rolamento rígido de esferas, série 2, com furo de 25 mm.
-            </p>
-
-            <hr class="divisor">
-
-            <h3>Regra dos dois últimos dígitos</h3>
-
-            <div class="grid-codigo">
-                <div><strong>00</strong> = 10 mm</div>
-                <div><strong>01</strong> = 12 mm</div>
-                <div><strong>02</strong> = 15 mm</div>
-                <div><strong>03</strong> = 17 mm</div>
-            </div>
-
-            <p>
-                A partir do código <strong>04</strong>, basta multiplicar por <strong>5</strong>:
-            </p>
-            <p><strong>Exemplo:</strong> 05 × 5 = 25 mm</p>
-            <p><strong>Exemplo:</strong> 06 × 5 = 30 mm</p>
-
-            <hr class="divisor">
-
-            <h3>Exemplos comparativos</h3>
-
-            <ul class="lista-codigo">
-                <li><strong>6205</strong> → furo 25 mm</li>
-                <li><strong>6206</strong> → furo 30 mm</li>
-                <li><strong>6305</strong> → mesmo furo (25 mm), porém mais robusto</li>
-                <li><strong>1205</strong> → mesmo furo (25 mm), mas outro tipo de rolamento</li>
-            </ul>
-
-            <hr class="divisor">
-
-            <h3>Observação importante</h3>
-            <p>
-                Alguns rolamentos possuem letras e sufixos adicionais, como blindagem, vedação,
-                folga interna e outras características específicas.
-            </p>
-            <p>
-                Por isso, a numeração principal ajuda muito, mas nem sempre é a única informação
-                necessária para identificar completamente a peça.
-            </p>
-
-        </div>
+    <div class="float-card card-2">
+      <div class="card-label">Objetivo</div>
+      <div class="card-value">Precisão</div>
+      <div class="card-sub">Rotação estável</div>
     </div>
-</section>
 
-<section>
-    <h2 class="reveal">Diferença entre os tipos de rolamentos</h2>
-
-    <div class="cards">
-        <div class="card reveal">
-            <div class="card-content">
-                <h3>Rígido de Esferas</h3>
-                <p>Mais comum, versátil, adequado para altas rotações e aplicações gerais.</p>
-            </div>
-        </div>
-
-        <div class="card reveal">
-            <div class="card-content">
-                <h3>Autocompensador</h3>
-                <p>Compensa desalinhamentos e é indicado quando a montagem ou o eixo podem trabalhar fora de alinhamento perfeito.</p>
-            </div>
-        </div>
-
-        <div class="card reveal">
-            <div class="card-content">
-                <h3>Rolos</h3>
-                <p>Mais indicado para cargas elevadas, especialmente radiais, em aplicações industriais pesadas.</p>
-            </div>
-        </div>
-
-        <div class="card reveal">
-            <div class="card-content">
-                <h3>Agulha</h3>
-                <p>Compacto e eficiente para pouco espaço disponível, com boa capacidade de carga.</p>
-            </div>
-        </div>
+    <div class="float-card card-3">
+      <div class="card-label">Aplicação</div>
+      <div class="card-value">Industrial</div>
+      <div class="card-sub">Motores e redutores</div>
     </div>
-</section>
 
-<section id="buscador">
-    <h2 class="reveal">🔎 Identificação de Rolamentos por Medidas</h2>
-    
-    <div class="card reveal destaque-card">
-    <div class="card-content">
-        <p class="texto-suporte">
-            Informe as medidas do rolamento para identificar o modelo correspondente.
-        </p>
-
-        <div class="buscador-tecnico">
-
-            <div class="desenho-rolamento">
-                <h3>Dimensões [mm]</h3>
-
-                <svg class="svg-rolamento" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-label="Desenho técnico simplificado de rolamento com medidas d, D e B">
-    <defs>
-        <marker id="arrow-end-light" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
-            <path d="M0,0 L8,4 L0,8 Z" fill="#dbe4f0"></path>
-        </marker>
-        <marker id="arrow-start-light" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto" markerUnits="strokeWidth">
-            <path d="M8,0 L0,4 L8,8 Z" fill="#dbe4f0"></path>
-        </marker>
-    </defs>
-
-    <!-- COTA B -->
-    <line x1="150" y1="55" x2="150" y2="95" stroke="#dbe4f0" stroke-width="2"/>
-    <line x1="270" y1="55" x2="270" y2="95" stroke="#dbe4f0" stroke-width="2"/>
-    <line x1="160" y1="55" x2="260" y2="55"
-          stroke="#dbe4f0" stroke-width="2"
-          marker-start="url(#arrow-start-light)"
-          marker-end="url(#arrow-end-light)"/>
-    <text x="210" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#f8fafc">B</text>
-
-    <!-- COTA D -->
-    <line x1="78" y1="95" x2="145" y2="95" stroke="#dbe4f0" stroke-width="2"/>
-    <line x1="78" y1="355" x2="145" y2="355" stroke="#dbe4f0" stroke-width="2"/>
-    <line x1="78" y1="105" x2="78" y2="345"
-          stroke="#dbe4f0" stroke-width="2"
-          marker-start="url(#arrow-start-light)"
-          marker-end="url(#arrow-end-light)"/>
-    <text x="56" y="232" text-anchor="middle" font-size="24" font-weight="700" fill="#f8fafc">D</text>
-
-    <!-- COTA d -->
-    <line x1="275" y1="155" x2="340" y2="155" stroke="#dbe4f0" stroke-width="2"/>
-    <line x1="275" y1="295" x2="340" y2="295" stroke="#dbe4f0" stroke-width="2"/>
-    <line x1="340" y1="165" x2="340" y2="285"
-          stroke="#dbe4f0" stroke-width="2"
-          marker-start="url(#arrow-start-light)"
-          marker-end="url(#arrow-end-light)"/>
-    <text x="360" y="232" text-anchor="middle" font-size="24" font-weight="700" fill="#f8fafc">d</text>
-
-    <!-- ROLAMENTO EM CORTE LATERAL -->
-    <rect x="150" y="95" width="120" height="260" rx="18" fill="#a8bbd6" stroke="#0f172a" stroke-width="4"/>
-
-    <rect x="150" y="165" width="120" height="120" fill="#d9dde7"/>
-
-    <rect x="150" y="95" width="120" height="70" rx="18" fill="#a8bbd6" stroke="#0f172a" stroke-width="4"/>
-    <rect x="150" y="285" width="120" height="70" rx="18" fill="#a8bbd6" stroke="#0f172a" stroke-width="4"/>
-
-    <line x1="150" y1="165" x2="270" y2="165" stroke="#0f172a" stroke-width="4"/>
-    <line x1="150" y1="285" x2="270" y2="285" stroke="#0f172a" stroke-width="4"/>
-    <line x1="150" y1="165" x2="150" y2="285" stroke="#0f172a" stroke-width="4"/>
-    <line x1="270" y1="165" x2="270" y2="285" stroke="#0f172a" stroke-width="4"/>
-</svg>
-            </div>
-
-            <div class="campos-medidas">
-                <div class="linha-medida">
-                    <label for="d">d</label>
-                    <input type="number" id="d" placeholder="Adicionar valor (mm)">
-                </div>
-
-                <div class="linha-medida">
-                    <label for="D">D</label>
-                    <input type="number" id="D" placeholder="Adicionar valor (mm)">
-                </div>
-
-                <div class="linha-medida">
-                    <label for="B">B</label>
-                    <input type="number" id="B" placeholder="Adicionar valor (mm)">
-                </div>
-
-                <div class="linha-medida">
-                    <label for="tipo">Tipo</label>
-                    <select id="tipo">
-                        <option value="rigido_esferas">Rígido de esferas</option>
-                    </select>
-                </div>
-
-                <button type="button" onclick="buscarRolamento()">Buscar</button>
-            </div>
-        </div>
-
-        <div id="resultadoCard" class="resultado-card">
-            <p id="resultado" class="resultado-buscador">
-                Preencha as medidas e clique em buscar.
-            </p>
-        </div>
+    <div class="center-wrap">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="center-circle">
+        <span class="center-gear-icon">⊙</span>
+        <span class="center-mono">rolamentos</span>
+      </div>
     </div>
+
+  </div>
 </div>
 
+<!-- ── MARQUEE ── -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Esferas <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Rolos Cilíndricos <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Rolos Cônicos <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Rolos de Agulha <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Axial <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Autocompensador <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Lubrificação <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Vedação <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Carga Radial <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Carga Axial <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Vida Útil L10 <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Esferas <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Rolos Cilíndricos <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Rolos Cônicos <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Rolos de Agulha <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Axial <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Autocompensador <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Lubrificação <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Vedação <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Carga Radial <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Carga Axial <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Vida Útil L10 <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<!-- ── O QUE SÃO ── -->
+<section id="intro">
+  <div class="section-header">
+    <div>
+      <div class="section-label">01 — Definição</div>
+      <h2 class="section-title">O que são<br>Rolamentos?</h2>
+    </div>
+  </div>
+  <div class="intro-grid">
+    <div class="intro-text">
+      <p>Rolamentos são elementos de máquinas que permitem o movimento relativo entre duas peças com o mínimo de atrito possível. São compostos por dois anéis (interno e externo), elementos rolantes (esferas ou rolos) e uma gaiola que mantém o espaçamento entre os elementos.</p>
+      <p>Sua principal função é suportar cargas <strong style="color:var(--orange)">radiais</strong> (perpendiculares ao eixo), cargas <strong style="color:var(--orange)">axiais</strong> (paralelas ao eixo) ou uma combinação de ambas, permitindo a rotação com baixo atrito e alta precisão.</p>
+      <p>Amplamente utilizados na indústria, os rolamentos são encontrados em motores elétricos, caixas de câmbio, bombas, compressores, ventiladores, correias transportadoras e em praticamente qualquer equipamento com peças em movimento rotativo.</p>
+    </div>
+    <div class="intro-stats">
+      <div class="intro-stat"><div class="intro-stat-num">4</div><div class="intro-stat-label">Partes principais</div></div>
+      <div class="intro-stat"><div class="intro-stat-num">6+</div><div class="intro-stat-label">Tipos de rolamento</div></div>
+      <div class="intro-stat"><div class="intro-stat-num">99%</div><div class="intro-stat-label">Redução de atrito</div></div>
+      <div class="intro-stat"><div class="intro-stat-num">L10</div><div class="intro-stat-label">Norma de vida útil</div></div>
+    </div>
+  </div>
 </section>
 
-<footer class="footer-profissional">
-    <div class="footer-container">
+<!-- ── TIPOS ── -->
+<section id="tipos">
+  <div class="section-header">
+    <div>
+      <div class="section-label">02 — Catálogo</div>
+      <h2 class="section-title">Tipos de<br>Rolamentos</h2>
+    </div>
+  </div>
+  <div class="tipos-grid">
+    <div class="tipo-card">
+      <div class="tipo-num">01 / 06</div>
+      <span class="tipo-emoji">🔵</span>
+      <div class="tipo-name">De Esferas (Rígido)</div>
+      <div class="tipo-desc">O mais comum. Utiliza esferas como elementos rolantes. Suporta cargas radiais e axiais moderadas com altas velocidades. Ideal para motores elétricos e ventiladores.</div>
+      <div class="tipo-tags"><span class="tipo-tag">Carga radial</span><span class="tipo-tag">Carga axial</span><span class="tipo-tag">Alta rotação</span></div>
+    </div>
+    <div class="tipo-card">
+      <div class="tipo-num">02 / 06</div>
+      <span class="tipo-emoji">🔶</span>
+      <div class="tipo-name">De Rolos Cilíndricos</div>
+      <div class="tipo-desc">Utiliza rolos cilíndricos como elementos rolantes. Suporta cargas radiais elevadas, mas não é adequado para cargas axiais. Muito usado em redutores e laminadores.</div>
+      <div class="tipo-tags"><span class="tipo-tag">Alta carga radial</span><span class="tipo-tag">Redutores</span><span class="tipo-tag">Laminadores</span></div>
+    </div>
+    <div class="tipo-card">
+      <div class="tipo-num">03 / 06</div>
+      <span class="tipo-emoji">🔺</span>
+      <div class="tipo-name">De Rolos Cônicos</div>
+      <div class="tipo-desc">Rolos em formato cônico permitem suportar simultaneamente cargas radiais e axiais elevadas. Muito utilizado em rodas de veículos, diferenciais e caixas de câmbio.</div>
+      <div class="tipo-tags"><span class="tipo-tag">Carga combinada</span><span class="tipo-tag">Veículos</span><span class="tipo-tag">Câmbio</span></div>
+    </div>
+    <div class="tipo-card">
+      <div class="tipo-num">04 / 06</div>
+      <span class="tipo-emoji">📌</span>
+      <div class="tipo-name">De Rolos de Agulha</div>
+      <div class="tipo-desc">Rolos muito finos (agulhas) permitem grande capacidade de carga radial em espaço reduzido. Ideal para aplicações compactas como pistões e articulações.</div>
+      <div class="tipo-tags"><span class="tipo-tag">Compacto</span><span class="tipo-tag">Alta carga radial</span><span class="tipo-tag">Pistões</span></div>
+    </div>
+    <div class="tipo-card">
+      <div class="tipo-num">05 / 06</div>
+      <span class="tipo-emoji">⬆️</span>
+      <div class="tipo-name">Axial de Esferas</div>
+      <div class="tipo-desc">Projetado exclusivamente para cargas axiais (empuxo). Não suporta cargas radiais. Comum em mesas giratórias, tornos e sistemas de direção.</div>
+      <div class="tipo-tags"><span class="tipo-tag">Carga axial</span><span class="tipo-tag">Mesa giratória</span><span class="tipo-tag">Torno</span></div>
+    </div>
+    <div class="tipo-card">
+      <div class="tipo-num">06 / 06</div>
+      <span class="tipo-emoji">🔄</span>
+      <div class="tipo-name">Autocompensador</div>
+      <div class="tipo-desc">Permite desalinhamento angular entre o eixo e o mancal sem comprometer o funcionamento. Indicado para eixos longos e estruturas com deflexão.</div>
+      <div class="tipo-tags"><span class="tipo-tag">Desalinhamento</span><span class="tipo-tag">Eixo longo</span><span class="tipo-tag">Flexível</span></div>
+    </div>
+  </div>
+</section>
 
-        <div class="footer-col">
-            <h3>⚙️ O Guia do Mecânico</h3>
-            <p>
-                Plataforma educacional voltada à mecânica industrial,
-                com foco em componentes, manutenção e engenharia aplicada.
-            </p>
-        </div>
+<!-- ── APLICAÇÕES ── -->
+<section id="aplicacoes">
+  <div class="section-header">
+    <div>
+      <div class="section-label">03 — Uso Industrial</div>
+      <h2 class="section-title">Principais<br>Aplicações</h2>
+    </div>
+  </div>
+  <div class="aplic-grid">
+    <div class="aplic-item">
+      <span class="aplic-emoji">⚡</span>
+      <div class="aplic-title">Motores Elétricos</div>
+      <div class="aplic-desc">Rolamentos de esferas suportam o eixo do rotor, garantindo rotação suave e silenciosa com baixa dissipação de energia.</div>
+    </div>
+    <div class="aplic-item">
+      <span class="aplic-emoji">⚙️</span>
+      <div class="aplic-title">Redutores e Caixas</div>
+      <div class="aplic-desc">Rolos cilíndricos e cônicos suportam altas cargas transmitidas pelas engrenagens em caixas de redução industrial.</div>
+    </div>
+    <div class="aplic-item">
+      <span class="aplic-emoji">💧</span>
+      <div class="aplic-title">Bombas e Compressores</div>
+      <div class="aplic-desc">Suportam cargas radiais e axiais causadas pela pressão do fluido. Exigem alta confiabilidade e vedação eficiente.</div>
+    </div>
+    <div class="aplic-item">
+      <span class="aplic-emoji">🏭</span>
+      <div class="aplic-title">Transportadores</div>
+      <div class="aplic-desc">Rolamentos de rolos em tambores e roletes suportam cargas pesadas em esteiras e correias transportadoras.</div>
+    </div>
+  </div>
+</section>
 
-        <div class="footer-col">
-            <h4>Desenvolvido por</h4>
-            <p>
-                Guilherme Prado, Iago Leite, João Bispo, Marcelo Lima, Régis Eduardo.<br>
-            </p>
-        </div>
-
+<!-- ── CODIFICAÇÃO ── -->
+<section id="codificacao">
+  <div class="section-header">
+    <div>
+      <div class="section-label">04 — Norma Técnica</div>
+      <h2 class="section-title">Identificação e<br>Codificação</h2>
+    </div>
+  </div>
+  <div class="code-layout">
+    <div class="bearing-diagram">
+      <div class="diagram-title">Partes do Rolamento</div>
+      <div class="bearing-svg-wrap">
+        <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="90" fill="none" stroke="#2a2a2a" stroke-width="18"/>
+          <circle cx="100" cy="100" r="90" fill="none" stroke="#f97316" stroke-width="1" opacity="0.4"/>
+          <circle cx="100" cy="100" r="46" fill="none" stroke="#2a2a2a" stroke-width="18"/>
+          <circle cx="100" cy="100" r="46" fill="none" stroke="#f97316" stroke-width="1" opacity="0.4"/>
+          <circle cx="100" cy="19"  r="9" fill="#f97316" opacity="0.7"/>
+          <circle cx="100" cy="181" r="9" fill="#f97316" opacity="0.7"/>
+          <circle cx="19"  cy="100" r="9" fill="#f97316" opacity="0.7"/>
+          <circle cx="181" cy="100" r="9" fill="#f97316" opacity="0.7"/>
+          <circle cx="46"  cy="46"  r="9" fill="#f97316" opacity="0.7"/>
+          <circle cx="154" cy="46"  r="9" fill="#f97316" opacity="0.7"/>
+          <circle cx="46"  cy="154" r="9" fill="#f97316" opacity="0.7"/>
+          <circle cx="154" cy="154" r="9" fill="#f97316" opacity="0.7"/>
+          <circle cx="100" cy="100" r="68" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="6 4"/>
+          <text x="100" y="7"   text-anchor="middle" fill="#f97316" font-size="8" font-family="Courier New">A</text>
+          <text x="100" y="200" text-anchor="middle" fill="#f97316" font-size="8" font-family="Courier New">A</text>
+          <text x="135" y="104" fill="#64748b" font-size="7" font-family="Courier New">B</text>
+          <text x="100" y="104" text-anchor="middle" fill="#64748b" font-size="7" font-family="Courier New">C</text>
+          <text x="60"  y="104" fill="#64748b" font-size="7" font-family="Courier New">D</text>
+        </svg>
+      </div>
+      <div class="part-list">
+        <div class="part-item"><span class="part-letter">A</span><div><div class="part-name">Anel Externo</div><div class="part-desc-small">Pista externa — fixo no mancal/carcaça</div></div></div>
+        <div class="part-item"><span class="part-letter">B</span><div><div class="part-name">Elementos Rolantes</div><div class="part-desc-small">Esferas ou rolos — transmitem as cargas entre os anéis</div></div></div>
+        <div class="part-item"><span class="part-letter">C</span><div><div class="part-name">Gaiola</div><div class="part-desc-small">Separador — mantém espaçamento uniforme</div></div></div>
+        <div class="part-item"><span class="part-letter">D</span><div><div class="part-name">Anel Interno</div><div class="part-desc-small">Pista interna — fixo no eixo, gira com ele</div></div></div>
+      </div>
     </div>
 
-    <div class="footer-bottom">
-        <p>© 2026 O Guia do Mecânico — Todos os direitos reservados.</p>
+    <div class="code-box">
+      <div class="code-box-title">Leitura do Código NBR</div>
+      <div class="code-example">
+        <div class="code-block"><div class="code-block-val">6</div><div class="code-block-lbl">Tipo</div></div>
+        <div class="code-block"><div class="code-block-val">2</div><div class="code-block-lbl">Série</div></div>
+        <div class="code-block"><div class="code-block-val">05</div><div class="code-block-lbl">Furo (x5mm)</div></div>
+        <div class="code-block"><div class="code-block-val">ZZ</div><div class="code-block-lbl">Vedação</div></div>
+        <div class="code-block"><div class="code-block-val">C3</div><div class="code-block-lbl">Folga</div></div>
+      </div>
+      <div class="code-row"><span class="code-row-key">Tipo 6</span><span class="code-row-val">Rolamento de esferas rígido, 1 fileira</span></div>
+      <div class="code-row"><span class="code-row-key">Tipo 2/22</span><span class="code-row-val">Autocompensador de esferas / 2 fileiras</span></div>
+      <div class="code-row"><span class="code-row-key">Tipo N/NU</span><span class="code-row-val">Rolos cilíndricos / anel interno sem flange</span></div>
+      <div class="code-row"><span class="code-row-key">Tipo 3/32</span><span class="code-row-val">Rolos cônicos / 2 fileiras</span></div>
+      <div class="code-row"><span class="code-row-key">Vedação ZZ</span><span class="code-row-val">Blindagem metálica dos dois lados</span></div>
+      <div class="code-row"><span class="code-row-key">Vedação 2RS</span><span class="code-row-val">Vedação em borracha dos dois lados</span></div>
+      <div class="code-row"><span class="code-row-key">Folga C3</span><span class="code-row-val">Folga interna maior que padrão (alta temp.)</span></div>
+      <div class="code-row"><span class="code-row-key">Furo 05</span><span class="code-row-val">Diâmetro interno = 05 × 5 = 25 mm</span></div>
     </div>
+  </div>
+</section>
+
+<!-- ── MANUTENÇÃO ── -->
+<section id="manutencao">
+  <div class="section-header">
+    <div>
+      <div class="section-label">05 — Conservação</div>
+      <h2 class="section-title">Manutenção de<br>Rolamentos</h2>
+    </div>
+  </div>
+  <div class="mant-grid">
+    <div class="mant-card verde">
+      <div class="mant-badge">Preventiva</div>
+      <span class="mant-emoji">🔍</span>
+      <div class="mant-title">Inspeção e Controle</div>
+      <div class="mant-desc">Monitoramento regular para evitar falhas antes que aconteçam. Garante vida útil máxima do componente.</div>
+      <ul class="mant-list">
+        <li>Verificar nível e qualidade do lubrificante</li>
+        <li>Medir temperatura de operação</li>
+        <li>Analisar ruído e vibração</li>
+        <li>Checar aperto das tampas e selos</li>
+        <li>Inspecionar alinhamento do eixo</li>
+      </ul>
+    </div>
+    <div class="mant-card amarelo">
+      <div class="mant-badge">Montagem</div>
+      <span class="mant-emoji">🔧</span>
+      <div class="mant-title">Instalação Correta</div>
+      <div class="mant-desc">Montagem incorreta é a principal causa de falha prematura. Seguir o processo correto é fundamental.</div>
+      <ul class="mant-list">
+        <li>Nunca bater diretamente no rolamento</li>
+        <li>Aquecer o rolamento (80–100°C) para montagem a quente</li>
+        <li>Usar prensa ou ferramenta adequada</li>
+        <li>Aplicar força apenas no anel que pressiona</li>
+        <li>Verificar folga interna após montagem</li>
+      </ul>
+    </div>
+    <div class="mant-card vermelho">
+      <div class="mant-badge">Corretiva</div>
+      <span class="mant-emoji">⚠️</span>
+      <div class="mant-title">Substituição</div>
+      <div class="mant-desc">Ao detectar falha confirmada, o rolamento deve ser substituído imediatamente para evitar danos secundários.</div>
+      <ul class="mant-list">
+        <li>Identificar e registrar o código do rolamento</li>
+        <li>Usar extrator adequado para remoção</li>
+        <li>Limpar e inspecionar eixo e alojamento</li>
+        <li>Verificar causas da falha antes de reinstalar</li>
+        <li>Nunca reutilizar rolamento danificado</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── FALHAS COMUNS ── -->
+<section id="falhas">
+  <div class="section-header">
+    <div>
+      <div class="section-label">06 — Diagnóstico</div>
+      <h2 class="section-title">Falhas<br>Comuns</h2>
+    </div>
+  </div>
+  <div class="falhas-grid">
+    <div class="falha-item">
+      <div class="falha-num">01</div>
+      <div><div class="falha-title">Fadiga Superficial</div><div class="falha-desc">Lascamento (spalling) na pista causado por sobrecarga ou número excessivo de ciclos. Gera ruído e vibração característicos.</div><div class="falha-causa">Causa: Sobrecarga · Vida útil esgotada</div></div>
+    </div>
+    <div class="falha-item">
+      <div class="falha-num">02</div>
+      <div><div class="falha-title">Desgaste Abrasivo</div><div class="falha-desc">Desgaste das superfícies por partículas contaminantes no lubrificante ou lubrificação insuficiente. Aumenta folga e ruído.</div><div class="falha-causa">Causa: Contaminação · Falta de lubrificação</div></div>
+    </div>
+    <div class="falha-item">
+      <div class="falha-num">03</div>
+      <div><div class="falha-title">Corrosão</div><div class="falha-desc">Manchas avermelhadas nas pistas e elementos rolantes causadas por penetração de umidade ou produto químico agressivo.</div><div class="falha-causa">Causa: Vedação falha · Umidade</div></div>
+    </div>
+    <div class="falha-item">
+      <div class="falha-num">04</div>
+      <div><div class="falha-title">Marcas de Instalação</div><div class="falha-desc">Amassados nas pistas causados por montagem incorreta (golpes de martelo, sobrecarga durante instalação).</div><div class="falha-causa">Causa: Montagem incorreta</div></div>
+    </div>
+    <div class="falha-item">
+      <div class="falha-num">05</div>
+      <div><div class="falha-title">Passagem de Corrente</div><div class="falha-desc">Cratera eletronicamente erodida nas pistas (fluting) causada por corrente elétrica em motores com inversor de frequência.</div><div class="falha-causa">Causa: Corrente parasita · Inversor</div></div>
+    </div>
+    <div class="falha-item">
+      <div class="falha-num">06</div>
+      <div><div class="falha-title">Superaquecimento</div><div class="falha-desc">Descoloração (azul/marrom) no aço causada por temperatura excessiva, levando à perda de dureza dos componentes.</div><div class="falha-causa">Causa: Lubrificante excessivo · Sobrecarga</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LUBRIFICAÇÃO ── -->
+<section id="lubrificacao">
+  <div class="section-header">
+    <div>
+      <div class="section-label">07 — Lubrificação</div>
+      <h2 class="section-title">Tipos de<br>Lubrificante</h2>
+    </div>
+  </div>
+  <div class="lubri-layout">
+    <div class="lubri-text">
+      <p>A lubrificação é o fator mais crítico para a vida útil de um rolamento. Ela reduz o atrito, protege contra corrosão, veda contra contaminantes e auxilia na dissipação de calor.</p>
+      <p>A escolha entre <strong style="color:var(--orange)">graxa</strong> e <strong style="color:var(--orange)">óleo</strong> depende da velocidade, temperatura, carga e condições ambientais. Em geral, graxa é usada em 90% das aplicações por ser mais fácil de aplicar e reter.</p>
+      <p>O excesso de lubrificante é tão prejudicial quanto a falta — causa superaquecimento e pode danificar as vedações.</p>
+    </div>
+    <table class="lubri-table">
+      <thead>
+        <tr><th>Lubrificante</th><th>Vantagens</th><th>Aplicação</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Graxa NLGI 2</td><td>Fácil aplicação, veda</td><td>Uso geral industrial</td></tr>
+        <tr><td>Graxa NLGI 3</td><td>Alta consistência</td><td>Vibração / posição vertical</td></tr>
+        <tr><td>Óleo ISO VG 46</td><td>Refrigeração, circulação</td><td>Alta velocidade</td></tr>
+        <tr><td>Óleo ISO VG 220</td><td>Alta viscosidade</td><td>Baixa velocidade / alta carga</td></tr>
+        <tr><td>Graxa EP</td><td>Aditivos extrema pressão</td><td>Impacto / carga pesada</td></tr>
+        <tr><td>Graxa de Lítio</td><td>Ampla faixa de temp.</td><td>Uso geral / padrão</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── NAVEGAÇÃO ── -->
+<div class="back-strip">
+  <div class="back-text">Componente 01 de 04 — Rolamentos</div>
+  <div class="nav-btn-group">
+    <a href="index.html#componentes" class="btn-secondary">← Todos os componentes</a>
+    <a href="engrenagens.html" class="btn-primary">Próximo: Engrenagens →</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">⚙ O Guia do Mecânico</div>
+  <div class="footer-team">Guilherme Prado · Iago Leite · João Bispo · Marcelo Lima · Régis Eduardo</div>
+  <div class="footer-copy">© 2026 — Todos os direitos reservados</div>
 </footer>
-
-<script>
-const rolamentosDB = [
-  // SÉRIE 6000
-  { codigo: "6000", tipo: "rigido_esferas", serie: "6000", d: 10, D: 26, B: 8, carga: "radial" },
-  { codigo: "6001", tipo: "rigido_esferas", serie: "6000", d: 12, D: 28, B: 8, carga: "radial" },
-  { codigo: "6002", tipo: "rigido_esferas", serie: "6000", d: 15, D: 32, B: 9, carga: "radial" },
-  { codigo: "6003", tipo: "rigido_esferas", serie: "6000", d: 17, D: 35, B: 10, carga: "radial" },
-  { codigo: "6004", tipo: "rigido_esferas", serie: "6000", d: 20, D: 42, B: 12, carga: "radial" },
-  { codigo: "6005", tipo: "rigido_esferas", serie: "6000", d: 25, D: 47, B: 12, carga: "radial" },
-  { codigo: "6006", tipo: "rigido_esferas", serie: "6000", d: 30, D: 55, B: 13, carga: "radial" },
-  { codigo: "6007", tipo: "rigido_esferas", serie: "6000", d: 35, D: 62, B: 14, carga: "radial" },
-  { codigo: "6008", tipo: "rigido_esferas", serie: "6000", d: 40, D: 68, B: 15, carga: "radial" },
-  { codigo: "6009", tipo: "rigido_esferas", serie: "6000", d: 45, D: 75, B: 16, carga: "radial" },
-  { codigo: "6010", tipo: "rigido_esferas", serie: "6000", d: 50, D: 80, B: 16, carga: "radial" },
-  { codigo: "6011", tipo: "rigido_esferas", serie: "6000", d: 55, D: 90, B: 18, carga: "radial" },
-  { codigo: "6012", tipo: "rigido_esferas", serie: "6000", d: 60, D: 95, B: 18, carga: "radial" },
-
-  // SÉRIE 6200
-  { codigo: "6200", tipo: "rigido_esferas", serie: "6200", d: 10, D: 30, B: 9, carga: "radial" },
-  { codigo: "6201", tipo: "rigido_esferas", serie: "6200", d: 12, D: 32, B: 10, carga: "radial" },
-  { codigo: "6202", tipo: "rigido_esferas", serie: "6200", d: 15, D: 35, B: 11, carga: "radial" },
-  { codigo: "6203", tipo: "rigido_esferas", serie: "6200", d: 17, D: 40, B: 12, carga: "radial" },
-  { codigo: "6204", tipo: "rigido_esferas", serie: "6200", d: 20, D: 47, B: 14, carga: "radial" },
-  { codigo: "6205", tipo: "rigido_esferas", serie: "6200", d: 25, D: 52, B: 15, carga: "radial" },
-  { codigo: "6206", tipo: "rigido_esferas", serie: "6200", d: 30, D: 62, B: 16, carga: "radial" },
-  { codigo: "6207", tipo: "rigido_esferas", serie: "6200", d: 35, D: 72, B: 17, carga: "radial" },
-  { codigo: "6208", tipo: "rigido_esferas", serie: "6200", d: 40, D: 80, B: 18, carga: "radial" },
-  { codigo: "6209", tipo: "rigido_esferas", serie: "6200", d: 45, D: 85, B: 19, carga: "radial" },
-  { codigo: "6210", tipo: "rigido_esferas", serie: "6200", d: 50, D: 90, B: 20, carga: "radial" },
-  { codigo: "6211", tipo: "rigido_esferas", serie: "6200", d: 55, D: 100, B: 21, carga: "radial" },
-  { codigo: "6212", tipo: "rigido_esferas", serie: "6200", d: 60, D: 110, B: 22, carga: "radial" },
-
-  // SÉRIE 6300
-  { codigo: "6300", tipo: "rigido_esferas", serie: "6300", d: 10, D: 35, B: 11, carga: "radial" },
-  { codigo: "6301", tipo: "rigido_esferas", serie: "6300", d: 12, D: 37, B: 12, carga: "radial" },
-  { codigo: "6302", tipo: "rigido_esferas", serie: "6300", d: 15, D: 42, B: 13, carga: "radial" },
-  { codigo: "6303", tipo: "rigido_esferas", serie: "6300", d: 17, D: 47, B: 14, carga: "radial" },
-  { codigo: "6304", tipo: "rigido_esferas", serie: "6300", d: 20, D: 52, B: 15, carga: "radial" },
-  { codigo: "6305", tipo: "rigido_esferas", serie: "6300", d: 25, D: 62, B: 17, carga: "radial" },
-  { codigo: "6306", tipo: "rigido_esferas", serie: "6300", d: 30, D: 72, B: 19, carga: "radial" },
-  { codigo: "6307", tipo: "rigido_esferas", serie: "6300", d: 35, D: 80, B: 21, carga: "radial" },
-  { codigo: "6308", tipo: "rigido_esferas", serie: "6300", d: 40, D: 90, B: 23, carga: "radial" },
-  { codigo: "6309", tipo: "rigido_esferas", serie: "6300", d: 45, D: 100, B: 25, carga: "radial" },
-  { codigo: "6310", tipo: "rigido_esferas", serie: "6300", d: 50, D: 110, B: 27, carga: "radial" },
-  { codigo: "6311", tipo: "rigido_esferas", serie: "6300", d: 55, D: 120, B: 29, carga: "radial" },
-  { codigo: "6312", tipo: "rigido_esferas", serie: "6300", d: 60, D: 130, B: 31, carga: "radial" }
-];
-
-function calcularPontuacao(item, d, D, B) {
-    return Math.abs(item.d - d) + Math.abs(item.D - D) + Math.abs(item.B - B);
-}
-
-function calcularRpmMax(item) {
-    const fatores = {
-        "6000": 320000,
-        "6200": 280000,
-        "6300": 240000
-    };
-
-    const fator = fatores[item.serie] || 250000;
-    return Math.round(fator / item.d);
-}
-
-function buscarRolamento() {
-    const resultadoEl = document.getElementById("resultado");
-
-    const d = parseInt(document.getElementById("d").value, 10);
-    const D = parseInt(document.getElementById("D").value, 10);
-    const B = parseInt(document.getElementById("B").value, 10);
-    const tipo = document.getElementById("tipo").value;
-
-    if (isNaN(d) || isNaN(D) || isNaN(B)) {
-        resultadoEl.innerText = "Informe todas as medidas.";
-        return;
-    }
-
-    const bancoFiltrado = rolamentosDB.filter(r => r.tipo === tipo);
-
-    if (bancoFiltrado.length === 0) {
-        resultadoEl.innerText = "Nenhum rolamento cadastrado para esse tipo.";
-        return;
-    }
-
-    const exato = bancoFiltrado.find(r =>
-        r.d === d &&
-        r.D === D &&
-        r.B === B
-    );
-
-    if (exato) {
-        const rpmMax = calcularRpmMax(exato);
-
-resultadoEl.innerHTML = `
-    <strong>✔ Modelo encontrado</strong><br>
-    <span class="codigo-encontrado">${exato.codigo}</span>
-    <span class="linha-info"><b>Carga predominante:</b> ${exato.carga}</span>
-    <span class="linha-info"><b>Máx. rpm:</b> ${rpmMax}</span>
-`;
-        return;
-    }
-
-    const candidatos = bancoFiltrado
-        .map(r => ({
-            ...r,
-            score: calcularPontuacao(r, d, D, B)
-        }))
-        .sort((a, b) => a.score - b.score)
-        .slice(0, 3);
-
-    if (candidatos.length > 0) {
-        resultadoEl.innerHTML = `
-            <strong>⚠ Nenhuma correspondência exata encontrada.</strong><br><br>
-            <strong>Sugestões mais próximas:</strong><br>
-            ${candidatos.map(c =>
-                `<span style="color:#facc15; font-size:18px;">${c.codigo}</span> — ${c.d} x ${c.D} x ${c.B} mm`
-            ).join("<br>")}
-        `;
-    } else {
-        resultadoEl.innerText = "Nenhum rolamento encontrado para esse tipo.";
-    }
-}
-
-const reveals = document.querySelectorAll('.reveal');
-
-function mostrarAoRolar() {
-    const triggerBottom = window.innerHeight * 0.88;
-
-    reveals.forEach((element) => {
-        const top = element.getBoundingClientRect().top;
-
-        if (top < triggerBottom) {
-            element.classList.add('show');
-        }
-    });
-}
-
-window.addEventListener('scroll', mostrarAoRolar);
-window.addEventListener('load', mostrarAoRolar);
-</script>
 
 </body>
 </html>
