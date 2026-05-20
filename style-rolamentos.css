@@ -39,11 +39,19 @@ body {
   overflow-x: hidden;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* LARGURA GLOBAL */
 .page-hero,
 .marquee-wrap,
 section {
-  width: min(100%, 1380px);
+  width: 100%;
+  max-width: 1380px;
   margin-inline: auto;
 }
 
@@ -990,68 +998,114 @@ section {
 }
 
 /* NOTE GRANDE / DESKTOP INTERMEDIÁRIO */
-@media (max-width: 1280px) {
+@media (max-width: 1366px) {
   nav {
-    grid-template-columns: 1fr;
-    justify-items: stretch;
-    gap: 12px;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
     padding: 12px 18px;
   }
 
   .nav-logo {
-    justify-content: flex-start;
+    font-size: 0.8rem;
+    gap: 10px;
   }
 
   .nav-links {
-    justify-content: stretch;
     gap: 10px;
   }
 
   .nav-links a {
-    flex: 1 1 calc(50% - 10px);
-    min-width: 0;
+    min-width: 112px;
+    padding: 10px 10px;
+    font-size: 0.54rem;
   }
 
   .nav-cta {
-    justify-self: start;
+    min-width: 150px;
+    padding: 10px 14px;
+    font-size: 0.54rem;
   }
 
   .page-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.88fr);
-    min-height: 74vh;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 88px;
   }
 
   .hero-left {
-    padding: 68px 30px 40px;
+    padding: 58px 28px 36px;
   }
 
   .hero-right {
-    min-height: 520px;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    min-height: 420px;
   }
 
   .hero-visual,
   .hero-visual-rolamentos {
-    min-height: 520px;
+    min-height: 420px;
     padding: 20px;
   }
 
+  .hero-visual-rolamentos .float-card {
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    padding: 10px 12px;
+  }
+
   .hero-visual-rolamentos .card-1 {
-    top: 12%;
-    left: 4%;
+    top: 10%;
+    left: 6%;
   }
 
   .hero-visual-rolamentos .card-2 {
-    bottom: 12%;
-    left: 10%;
+    bottom: 10%;
+    left: 14%;
   }
 
   .hero-visual-rolamentos .card-3 {
-    top: 40%;
-    right: 4%;
+    top: 36%;
+    right: 6%;
+  }
+
+  .center-wrap {
+    width: 180px;
+    height: 180px;
+  }
+
+  .center-circle {
+    inset: 34px;
   }
 
   section {
-    padding: 64px 24px;
+    padding: 56px 22px;
+  }
+
+  .section-header,
+  .intro-grid,
+  .tipos-grid,
+  .aplic-grid,
+  .code-layout,
+  .mant-grid,
+  .falhas-grid {
+    max-width: 1180px;
+  }
+
+  .intro-grid,
+  .code-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tipos-grid,
+  .aplic-grid,
+  .mant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .falhas-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1063,25 +1117,20 @@ section {
   }
 
   .hero-right {
-    border-left: none;
-    border-top: 1px solid var(--border);
-    min-height: 440px;
+    min-height: 400px;
   }
 
   .hero-visual,
   .hero-visual-rolamentos {
-    min-height: 440px;
+    min-height: 400px;
   }
 
   .intro-grid,
   .code-layout,
   .mant-grid,
-  .aplic-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .aplic-grid,
   .tipos-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .falhas-grid {
