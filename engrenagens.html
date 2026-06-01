@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engrenagens — O Guia do Mecânico</title>
+  <link rel="stylesheet" href="style-rolamentos.css" />
+  <link rel="stylesheet" href="style-engrenagem.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════
+     NAVBAR
+════════════════════════════════ -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="gear-spin">⚙</span>
+    O Guia do Mecânico
+    <span class="nav-tag">v2.0</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#componentes" class="active">Componentes</a></li>
+    <li><a href="index.html#manutencao">Manutenção</a></li>
+    <li><a href="index.html#aprender">Aprender</a></li>
+    <li><a href="index.html#sobre">Sobre</a></li>
+  </ul>
+  <a href="index.html" class="nav-cta">← Voltar à Home</a>
+</nav>
+
+
+<!-- ════════════════════════════════
+     HERO
+════════════════════════════════ -->
+<div class="page-hero">
+
+  <!-- Lado esquerdo: texto -->
+  <div class="hero-left">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="index.html#componentes">Componentes</a>
+      <span>/</span>
+      <strong>Engrenagens</strong>
+    </div>
+
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Componentes Mecânicos — 02 / 04</span>
+    </div>
+
+    <h1 class="hero-title">
+      Engre-
+      <span class="accent">nagens</span>
+      <span class="outline">Industriais</span>
+    </h1>
+
+    <p class="hero-desc">
+      Elementos de transmissão que transformam velocidade em torque — e torque em velocidade.
+      Entenda relação de transmissão, tipos, cálculos e aplicações reais na indústria.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#calculadora" class="btn-primary">Ver calculadora →</a>
+      <a href="#tipos" class="btn-secondary">Explorar conteúdo</a>
+    </div>
+  </div>
+
+  <!-- Lado direito: visual -->
+  <div class="hero-right">
+    <div class="hero-visual">
+
+      <!-- Engrenagens SVG de fundo -->
+      <svg class="gear-bg-1" viewBox="0 0 200 200" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M85 5L95 5L100 28Q112 31 122 38L143 24L153 34L139 55Q146 65 148 77L171 82L171 92L148 97Q146 109 139 119L153 140L143 150L122 136Q112 143 100 146L95 169L85 169L80 146Q68 143 58 136L37 150L27 140L41 119Q34 109 32 97L9 92L9 82L32 77Q34 65 41 55L27 34L37 24L58 38Q68 31 80 28Z M90 72A18 18 0 1 0 90 108A18 18 0 0 0 90 72Z"/>
+      </svg>
+      <svg class="gear-bg-2" viewBox="0 0 200 200" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M85 5L95 5L100 28Q112 31 122 38L143 24L153 34L139 55Q146 65 148 77L171 82L171 92L148 97Q146 109 139 119L153 140L143 150L122 136Q112 143 100 146L95 169L85 169L80 146Q68 143 58 136L37 150L27 140L41 119Q34 109 32 97L9 92L9 82L32 77Q34 65 41 55L27 34L37 24L58 38Q68 31 80 28Z M90 72A18 18 0 1 0 90 108A18 18 0 0 0 90 72Z"/>
+      </svg>
+
+      <!-- Cards flutuantes de especificação -->
+      <div class="float-card">
+        <div class="card-label">Parâmetro principal</div>
+        <div class="card-value">i = Z2 / Z1</div>
+        <div class="card-sub">Relação de transmissão</div>
+      </div>
+
+      <div class="float-card">
+        <div class="card-label">Tipos disponíveis</div>
+        <div class="card-value">5 tipos</div>
+        <div class="card-sub">Reta, helicoidal, cônica...</div>
+      </div>
+
+      <div class="float-card">
+        <div class="card-label">Eficiência típica</div>
+        <div class="card-value">97 — 99%</div>
+        <div class="card-sub">Engrenagens retas e helicoidais</div>
+      </div>
+
+      <!-- Centro animado: par de engrenagens -->
+      <div class="center-wrap">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="center-circle">
+          <span class="center-gear-icon">⚙</span>
+          <span class="center-mono">Transmissão</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════
+     MARQUEE
+════════════════════════════════ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Engrenagem Reta <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Helicoidal <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Cônica <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Sem-fim e Coroa <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Cremalheira <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Relação de Transmissão <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Módulo <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Número de Dentes <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Torque <span class="marquee-dot"></span></span>
+    <span class="marquee-item">RPM de Saída <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Redução <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Engrenagem Reta <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Helicoidal <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Cônica <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Sem-fim e Coroa <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Cremalheira <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Relação de Transmissão <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Módulo <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Número de Dentes <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Torque <span class="marquee-dot"></span></span>
+    <span class="marquee-item">RPM de Saída <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Redução <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════
+     01 — O QUE SÃO ENGRENAGENS
+════════════════════════════════ -->
+<section id="intro">
+  <div class="section-header">
+    <div>
+      <div class="section-label">01 — Definição</div>
+      <h2 class="section-title">O que são<br>Engrenagens?</h2>
+    </div>
+  </div>
+
+  <div class="intro-grid">
+    <div class="intro-text">
+      <p>
+        Engrenagens são elementos de máquinas compostos por rodas dentadas que se engrenam entre si,
+        transmitindo movimento rotativo e potência de um eixo para outro. Os dentes de uma engrenagem
+        encaixam nos dentes da outra, garantindo transmissão <strong>positiva</strong> — sem deslizamento.
+      </p>
+      <p>
+        Sua função vai além de simplesmente transmitir rotação: engrenagens permitem alterar
+        <strong>velocidade</strong>, <strong>torque</strong> e <strong>direção</strong> do movimento.
+        Ao usar engrenagens com diferentes números de dentes, é possível reduzir ou aumentar a velocidade
+        de saída em relação à entrada, com o efeito inverso acontecendo no torque.
+      </p>
+      <p>
+        Na indústria, são encontradas em redutores de velocidade, caixas de câmbio, tornos mecânicos,
+        prensas, pontes rolantes, máquinas agrícolas, elevadores e praticamente qualquer sistema
+        que exija controle preciso de rotação e força.
+      </p>
+    </div>
+
+    <div class="intro-stats">
+      <div class="intro-stat">
+        <div class="intro-stat-num">5</div>
+        <div class="intro-stat-label">Tipos principais</div>
+      </div>
+      <div class="intro-stat">
+        <div class="intro-stat-num">99%</div>
+        <div class="intro-stat-label">Eficiência (retas)</div>
+      </div>
+      <div class="intro-stat">
+        <div class="intro-stat-num">i</div>
+        <div class="intro-stat-label">Relação de transmissão</div>
+      </div>
+      <div class="intro-stat">
+        <div class="intro-stat-num">Z</div>
+        <div class="intro-stat-label">Símbolo nº de dentes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     02 — CONCEITOS FUNDAMENTAIS
+════════════════════════════════ -->
+<section id="conceitos">
+  <div class="section-header">
+    <div>
+      <div class="section-label">02 — Fundamentos</div>
+      <h2 class="section-title">Conceitos<br>Fundamentais</h2>
+    </div>
+  </div>
+
+  <div class="conceitos-grid">
+
+    <article class="conceito-card">
+      <div class="conceito-card__index">01</div>
+      <div class="conceito-card__body">
+        <h3 class="conceito-card__title">Engrenagem Motora</h3>
+        <p class="conceito-card__desc">
+          É a engrenagem conectada à fonte de potência (motor). Ela fornece o movimento de entrada ao sistema.
+          Também chamada de <em>pinhão</em> quando é a menor do par.
+        </p>
+        <div class="conceito-card__tag">Z1 · n1 · T1</div>
+      </div>
+    </article>
+
+    <article class="conceito-card">
+      <div class="conceito-card__index">02</div>
+      <div class="conceito-card__body">
+        <h3 class="conceito-card__title">Engrenagem Movida</h3>
+        <p class="conceito-card__desc">
+          É a engrenagem que recebe o movimento transmitido pela motora. Está ligada ao eixo de saída.
+          Quando é maior que a motora, produz redução de velocidade.
+        </p>
+        <div class="conceito-card__tag">Z2 · n2 · T2</div>
+      </div>
+    </article>
+
+    <article class="conceito-card">
+      <div class="conceito-card__index">03</div>
+      <div class="conceito-card__body">
+        <h3 class="conceito-card__title">Número de Dentes (Z)</h3>
+        <p class="conceito-card__desc">
+          Quantidade total de dentes em uma engrenagem. É o parâmetro principal que define a relação
+          de transmissão. O módulo e o número de dentes determinam o diâmetro da engrenagem.
+        </p>
+        <div class="conceito-card__tag">Z = D / m</div>
+      </div>
+    </article>
+
+    <article class="conceito-card">
+      <div class="conceito-card__index">04</div>
+      <div class="conceito-card__body">
+        <h3 class="conceito-card__title">RPM de Entrada (n1)</h3>
+        <p class="conceito-card__desc">
+          Velocidade angular da engrenagem motora, em rotações por minuto. Geralmente é a velocidade
+          fornecida pelo motor elétrico ou qualquer outra fonte de potência do sistema.
+        </p>
+        <div class="conceito-card__tag">rpm · rad/s · Hz</div>
+      </div>
+    </article>
+
+    <article class="conceito-card">
+      <div class="conceito-card__index">05</div>
+      <div class="conceito-card__body">
+        <h3 class="conceito-card__title">RPM de Saída (n2)</h3>
+        <p class="conceito-card__desc">
+          Velocidade angular da engrenagem movida. Calculada pela relação de transmissão:
+          n2 = n1 × (Z1 / Z2). Será menor que n1 em caso de redução, maior em caso de aumento.
+        </p>
+        <div class="conceito-card__tag">n2 = n1 × Z1 / Z2</div>
+      </div>
+    </article>
+
+    <article class="conceito-card">
+      <div class="conceito-card__index">06</div>
+      <div class="conceito-card__body">
+        <h3 class="conceito-card__title">Relação de Transmissão (i)</h3>
+        <p class="conceito-card__desc">
+          Razão entre o número de dentes da engrenagem movida e da motora. Define quanto a velocidade
+          é reduzida ou aumentada. Valor acima de 1 indica redução; abaixo de 1, aumento de velocidade.
+        </p>
+        <div class="conceito-card__tag">i = Z2 / Z1</div>
+      </div>
+    </article>
+
+    <article class="conceito-card">
+      <div class="conceito-card__index">07</div>
+      <div class="conceito-card__body">
+        <h3 class="conceito-card__title">Torque (T)</h3>
+        <p class="conceito-card__desc">
+          Força rotacional aplicada ao eixo. Quando a velocidade é reduzida (i > 1), o torque de
+          saída é multiplicado na mesma proporção — desconsiderando perdas mecânicas.
+          T2 = T1 × i × η.
+        </p>
+        <div class="conceito-card__tag">T2 = T1 × i × η</div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     03 — TIPOS DE ENGRENAGENS
+════════════════════════════════ -->
+<section id="tipos">
+  <div class="section-header">
+    <div>
+      <div class="section-label">03 — Catálogo</div>
+      <h2 class="section-title">Tipos de<br>Engrenagens</h2>
+    </div>
+  </div>
+
+  <div class="tipos-grid">
+
+    <article class="tipo-card">
+      <div class="tipo-num">01 / 05</div>
+      <span class="tipo-emoji" aria-hidden="true">—</span>
+      <h3 class="tipo-name">Reta</h3>
+      <p class="tipo-desc">
+        Dentes paralelos ao eixo de rotação. Transmissão simples, eficiente e de baixo custo.
+        Gera força axial nula, porém produz mais ruído em altas velocidades.
+      </p>
+      <div class="tipo-card__detail">
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Vantagem</span>
+          <span class="tipo-card__val">Alta eficiência, fabricação simples</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Aplicação</span>
+          <span class="tipo-card__val">Redutores, caixas de câmbio, tornos</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Eficiência</span>
+          <span class="tipo-card__val">97 — 99%</span>
+        </div>
+      </div>
+      <div class="tipo-tags">
+        <span class="tipo-tag">Eixos paralelos</span>
+        <span class="tipo-tag">Baixo custo</span>
+        <span class="tipo-tag">Alta eficiência</span>
+      </div>
+    </article>
+
+    <article class="tipo-card">
+      <div class="tipo-num">02 / 05</div>
+      <span class="tipo-emoji" aria-hidden="true">—</span>
+      <h3 class="tipo-name">Helicoidal</h3>
+      <p class="tipo-desc">
+        Dentes inclinados em relação ao eixo. O contato ocorre progressivamente, gerando
+        funcionamento mais suave e silencioso. Produz força axial que deve ser absorvida pelos mancais.
+      </p>
+      <div class="tipo-card__detail">
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Vantagem</span>
+          <span class="tipo-card__val">Operação silenciosa, maior capacidade de carga</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Aplicação</span>
+          <span class="tipo-card__val">Redutores de alta potência, automotivo</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Eficiência</span>
+          <span class="tipo-card__val">96 — 99%</span>
+        </div>
+      </div>
+      <div class="tipo-tags">
+        <span class="tipo-tag">Eixos paralelos</span>
+        <span class="tipo-tag">Silenciosa</span>
+        <span class="tipo-tag">Alta carga</span>
+      </div>
+    </article>
+
+    <article class="tipo-card">
+      <div class="tipo-num">03 / 05</div>
+      <span class="tipo-emoji" aria-hidden="true">—</span>
+      <h3 class="tipo-name">Cônica</h3>
+      <p class="tipo-desc">
+        Dentes dispostos em superfície cônica. Permite transmissão entre eixos que se cruzam,
+        geralmente a 90°. Usada para mudar a direção do movimento rotativo.
+      </p>
+      <div class="tipo-card__detail">
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Vantagem</span>
+          <span class="tipo-card__val">Muda direção do movimento a 90°</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Aplicação</span>
+          <span class="tipo-card__val">Diferencial automotivo, fresadoras</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Eficiência</span>
+          <span class="tipo-card__val">95 — 98%</span>
+        </div>
+      </div>
+      <div class="tipo-tags">
+        <span class="tipo-tag">Eixos perpendiculares</span>
+        <span class="tipo-tag">Diferencial</span>
+        <span class="tipo-tag">Mudança de direção</span>
+      </div>
+    </article>
+
+    <article class="tipo-card">
+      <div class="tipo-num">04 / 05</div>
+      <span class="tipo-emoji" aria-hidden="true">—</span>
+      <h3 class="tipo-name">Sem-fim e Coroa</h3>
+      <p class="tipo-desc">
+        Par composto por um parafuso sem-fim e uma coroa helicoidal. Permite grandes reduções
+        em espaço reduzido. O sistema é irreversível — a coroa não pode acionar o sem-fim.
+      </p>
+      <div class="tipo-card__detail">
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Vantagem</span>
+          <span class="tipo-card__val">Grande redução em um único estágio</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Aplicação</span>
+          <span class="tipo-card__val">Guindastes, elevadores, travas de segurança</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Eficiência</span>
+          <span class="tipo-card__val">40 — 90%</span>
+        </div>
+      </div>
+      <div class="tipo-tags">
+        <span class="tipo-tag">Eixos cruzados</span>
+        <span class="tipo-tag">Irreversível</span>
+        <span class="tipo-tag">Grande redução</span>
+      </div>
+    </article>
+
+    <article class="tipo-card">
+      <div class="tipo-num">05 / 05</div>
+      <span class="tipo-emoji" aria-hidden="true">—</span>
+      <h3 class="tipo-name">Cremalheira</h3>
+      <p class="tipo-desc">
+        Engrenagem linear com dentes em linha reta. Converte movimento rotativo em movimento
+        linear (translação). Usada quando é necessário deslocamento longitudinal preciso.
+      </p>
+      <div class="tipo-card__detail">
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Vantagem</span>
+          <span class="tipo-card__val">Converte rotação em translação linear</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Aplicação</span>
+          <span class="tipo-card__val">Fresadoras, direção de veículos, portões</span>
+        </div>
+        <div class="tipo-card__row">
+          <span class="tipo-card__key">Eficiência</span>
+          <span class="tipo-card__val">95 — 98%</span>
+        </div>
+      </div>
+      <div class="tipo-tags">
+        <span class="tipo-tag">Movimento linear</span>
+        <span class="tipo-tag">Direção</span>
+        <span class="tipo-tag">Precisão</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     04 — RELAÇÃO DE TRANSMISSÃO
+════════════════════════════════ -->
+<section id="relacao">
+  <div class="section-header">
+    <div>
+      <div class="section-label">04 — Teoria</div>
+      <h2 class="section-title">Relação de<br>Transmissão</h2>
+    </div>
+  </div>
+
+  <div class="relacao-layout">
+
+    <!-- Explicação textual + fórmula principal -->
+    <div class="relacao-content">
+      <p class="relacao-intro">
+        A relação de transmissão (<strong>i</strong>) é o parâmetro fundamental que define como
+        velocidade e torque são transformados entre as engrenagens de um par.
+        Ela é calculada pela razão entre os números de dentes das duas engrenagens.
+      </p>
+
+      <!-- Fórmula principal -->
+      <div class="formula-block formula-block--primary">
+        <div class="formula-block__label">Relação de transmissão</div>
+        <div class="formula-block__expr">i = Z<sub>2</sub> / Z<sub>1</sub></div>
+        <div class="formula-block__vars">
+          <span>Z<sub>1</sub> = dentes da motora</span>
+          <span>Z<sub>2</sub> = dentes da movida</span>
+        </div>
+      </div>
+
+      <!-- Fórmula rpm de saída -->
+      <div class="formula-block">
+        <div class="formula-block__label">RPM de saída</div>
+        <div class="formula-block__expr">n<sub>2</sub> = n<sub>1</sub> × Z<sub>1</sub> / Z<sub>2</sub></div>
+        <div class="formula-block__vars">
+          <span>n<sub>1</sub> = rpm de entrada</span>
+          <span>n<sub>2</sub> = rpm de saída</span>
+        </div>
+      </div>
+
+      <!-- Fórmula torque de saída -->
+      <div class="formula-block">
+        <div class="formula-block__label">Torque de saída (com eficiência)</div>
+        <div class="formula-block__expr">T<sub>2</sub> = T<sub>1</sub> × i × η</div>
+        <div class="formula-block__vars">
+          <span>T<sub>1</sub> = torque de entrada</span>
+          <span>η = eficiência do par (ex: 0,97)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards de interpretação -->
+    <div class="relacao-cases">
+
+      <div class="relacao-case relacao-case--reducao">
+        <div class="relacao-case__badge">i &gt; 1</div>
+        <h4 class="relacao-case__title">Redução de Velocidade</h4>
+        <p class="relacao-case__desc">
+          A movida tem mais dentes que a motora. A saída gira mais lento,
+          porém com torque multiplicado. Exemplo: Z1 = 20, Z2 = 60 → i = 3.
+          A saída gira 3× mais devagar e com 3× mais torque.
+        </p>
+        <div class="relacao-case__example">
+          <span>Z1 = 20 / Z2 = 60</span>
+          <span>i = 3,0</span>
+        </div>
+      </div>
+
+      <div class="relacao-case relacao-case--neutro">
+        <div class="relacao-case__badge">i = 1</div>
+        <h4 class="relacao-case__title">Transmissão Direta</h4>
+        <p class="relacao-case__desc">
+          Ambas as engrenagens têm o mesmo número de dentes. A velocidade e o torque
+          de saída são iguais à entrada (descontando perdas). Usada para inverter
+          o sentido de rotação sem alterar velocidade.
+        </p>
+        <div class="relacao-case__example">
+          <span>Z1 = 30 / Z2 = 30</span>
+          <span>i = 1,0</span>
+        </div>
+      </div>
+
+      <div class="relacao-case relacao-case--aumento">
+        <div class="relacao-case__badge">i &lt; 1</div>
+        <h4 class="relacao-case__title">Aumento de Velocidade</h4>
+        <p class="relacao-case__desc">
+          A movida tem menos dentes que a motora. A saída gira mais rápido,
+          porém com torque reduzido. Menos comum na indústria pesada. Exemplo:
+          Z1 = 60, Z2 = 20 → i = 0,33. A saída gira 3× mais rápido.
+        </p>
+        <div class="relacao-case__example">
+          <span>Z1 = 60 / Z2 = 20</span>
+          <span>i = 0,33</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     05 — CALCULADORA DE REDUÇÃO
+════════════════════════════════ -->
+<section id="calculadora">
+  <div class="section-header">
+    <div>
+      <div class="section-label">05 — Ferramenta</div>
+      <h2 class="section-title">Calculadora de<br>Redução</h2>
+    </div>
+  </div>
+
+  <div class="calc-layout">
+
+    <!-- Esquema visual / fórmulas de referência -->
+    <aside class="calc-visual">
+      <div class="calc-visual__title">Esquema do Par</div>
+
+      <!-- Diagrama SVG do par de engrenagens -->
+      <div class="calc-visual__diagram">
+        <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" aria-label="Diagrama par de engrenagens">
+          <!-- Engrenagem motora (menor) -->
+          <circle cx="80"  cy="90" r="40" fill="none" stroke="#2a2a2a" stroke-width="12"/>
+          <circle cx="80"  cy="90" r="40" fill="none" stroke="#f97316" stroke-width="1" opacity="0.5"/>
+          <circle cx="80"  cy="90" r="12" fill="#f97316" opacity="0.15" stroke="#f97316" stroke-width="1"/>
+          <!-- dentes simplificados motora -->
+          <circle cx="80"  cy="47" r="4" fill="#f97316" opacity="0.5"/>
+          <circle cx="80"  cy="133" r="4" fill="#f97316" opacity="0.5"/>
+          <circle cx="37"  cy="90" r="4" fill="#f97316" opacity="0.5"/>
+          <circle cx="123" cy="90" r="4" fill="#f97316" opacity="0.5"/>
+          <circle cx="51"  cy="58" r="4" fill="#f97316" opacity="0.5"/>
+          <circle cx="109" cy="122" r="4" fill="#f97316" opacity="0.5"/>
+          <circle cx="51"  cy="122" r="4" fill="#f97316" opacity="0.5"/>
+          <circle cx="109" cy="58" r="4" fill="#f97316" opacity="0.5"/>
+          <!-- eixo motora -->
+          <line x1="80" y1="90" x2="80" y2="40" stroke="#64748b" stroke-width="1" stroke-dasharray="3 2"/>
+          <!-- label motora -->
+          <text x="80" y="28" text-anchor="middle" fill="#f97316" font-size="9" font-family="Courier New">Z1 (motora)</text>
+          <text x="80" y="165" text-anchor="middle" fill="#64748b" font-size="8" font-family="Courier New">n1</text>
+
+          <!-- Engrenagem movida (maior) -->
+          <circle cx="200" cy="90" r="60" fill="none" stroke="#2a2a2a" stroke-width="14"/>
+          <circle cx="200" cy="90" r="60" fill="none" stroke="#94a3b8" stroke-width="1" opacity="0.3"/>
+          <circle cx="200" cy="90" r="18" fill="#94a3b8" opacity="0.08" stroke="#94a3b8" stroke-width="1"/>
+          <!-- dentes simplificados movida -->
+          <circle cx="200" cy="28" r="5" fill="#94a3b8" opacity="0.4"/>
+          <circle cx="200" cy="152" r="5" fill="#94a3b8" opacity="0.4"/>
+          <circle cx="138" cy="90" r="5" fill="#94a3b8" opacity="0.4"/>
+          <circle cx="262" cy="90" r="5" fill="#94a3b8" opacity="0.4"/>
+          <circle cx="156" cy="46" r="5" fill="#94a3b8" opacity="0.4"/>
+          <circle cx="244" cy="134" r="5" fill="#94a3b8" opacity="0.4"/>
+          <circle cx="156" cy="134" r="5" fill="#94a3b8" opacity="0.4"/>
+          <circle cx="244" cy="46" r="5" fill="#94a3b8" opacity="0.4"/>
+          <!-- eixo movida -->
+          <line x1="200" y1="90" x2="200" y2="20" stroke="#64748b" stroke-width="1" stroke-dasharray="3 2"/>
+          <!-- label movida -->
+          <text x="200" y="10" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Courier New">Z2 (movida)</text>
+          <text x="200" y="165" text-anchor="middle" fill="#64748b" font-size="8" font-family="Courier New">n2</text>
+
+          <!-- Ponto de contato -->
+          <circle cx="140" cy="90" r="3" fill="#f97316" opacity="0.8"/>
+        </svg>
+      </div>
+
+      <!-- Fórmulas de referência compactas -->
+      <div class="calc-visual__formulas">
+        <div class="calc-formula-ref">
+          <span class="calc-formula-ref__label">Relação</span>
+          <code class="calc-formula-ref__expr">i = Z2 / Z1</code>
+        </div>
+        <div class="calc-formula-ref">
+          <span class="calc-formula-ref__label">Saída</span>
+          <code class="calc-formula-ref__expr">n2 = n1 × Z1 / Z2</code>
+        </div>
+        <div class="calc-formula-ref">
+          <span class="calc-formula-ref__label">Torque</span>
+          <code class="calc-formula-ref__expr">T2 = T1 × i × η</code>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Formulário da calculadora -->
+    <div class="calc-form-wrap">
+      <div class="calc-form-header">
+        <div class="calc-form-header__label">Insira os dados</div>
+        <div class="calc-form-header__desc">
+          Preencha os campos abaixo e pressione Calcular para obter a relação de transmissão e a RPM de saída.
+        </div>
+      </div>
+
+      <div class="calc-form" id="calculadoraForm">
+
+        <div class="calc-field">
+          <label class="calc-field__label" for="dentesMotora">
+            Dentes da Motora
+            <span class="calc-field__hint">(Z1)</span>
+          </label>
+          <input
+            class="calc-field__input"
+            type="number"
+            id="dentesMotora"
+            name="dentesMotora"
+            min="1"
+            placeholder="Ex: 20"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-field__label" for="dentesMovida">
+            Dentes da Movida
+            <span class="calc-field__hint">(Z2)</span>
+          </label>
+          <input
+            class="calc-field__input"
+            type="number"
+            id="dentesMovida"
+            name="dentesMovida"
+            min="1"
+            placeholder="Ex: 60"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="calc-field">
+          <label class="calc-field__label" for="rpmEntrada">
+            RPM de Entrada
+            <span class="calc-field__hint">(n1)</span>
+          </label>
+          <input
+            class="calc-field__input"
+            type="number"
+            id="rpmEntrada"
+            name="rpmEntrada"
+            min="1"
+            placeholder="Ex: 1750"
+            autocomplete="off"
+          />
+        </div>
+
+        <button class="calc-btn" type="button" id="btnCalcular">
+          Calcular
+          <span class="calc-btn__arrow">→</span>
+        </button>
+
+      </div>
+
+      <!-- Área de resultado — preenchida pelo JavaScript -->
+      <div class="calc-result" id="calcResult" aria-live="polite" hidden>
+
+        <div class="calc-result__header">
+          <span class="calc-result__status">Resultado</span>
+        </div>
+
+        <div class="calc-result__grid">
+
+          <div class="calc-result__item">
+            <div class="calc-result__value" id="resultRelacao">—</div>
+            <div class="calc-result__label">Relação de transmissão (i)</div>
+          </div>
+
+          <div class="calc-result__item">
+            <div class="calc-result__value" id="resultRpmSaida">—</div>
+            <div class="calc-result__label">RPM de saída (n2)</div>
+          </div>
+
+          <div class="calc-result__item calc-result__item--wide">
+            <div class="calc-result__value calc-result__value--text" id="resultInterpretacao">—</div>
+            <div class="calc-result__label">Interpretação</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     06 — EXEMPLOS PRÁTICOS
+════════════════════════════════ -->
+<section id="exemplos">
+  <div class="section-header">
+    <div>
+      <div class="section-label">06 — Prática</div>
+      <h2 class="section-title">Exemplos<br>Práticos</h2>
+    </div>
+  </div>
+
+  <div class="exemplos-grid">
+
+    <!-- Exemplo 1: redução -->
+    <article class="exemplo-card exemplo-card--reducao">
+      <div class="exemplo-card__badge">Redução</div>
+      <h3 class="exemplo-card__title">Redutor Industrial</h3>
+      <div class="exemplo-card__params">
+        <div class="exemplo-param">
+          <span class="exemplo-param__key">Z1 (motora)</span>
+          <span class="exemplo-param__val">20 dentes</span>
+        </div>
+        <div class="exemplo-param">
+          <span class="exemplo-param__key">Z2 (movida)</span>
+          <span class="exemplo-param__val">80 dentes</span>
+        </div>
+        <div class="exemplo-param">
+          <span class="exemplo-param__key">n1 (entrada)</span>
+          <span class="exemplo-param__val">1.750 rpm</span>
+        </div>
+        <div class="exemplo-param exemplo-param--highlight">
+          <span class="exemplo-param__key">i (relação)</span>
+          <span class="exemplo-param__val">4,0</span>
+        </div>
+        <div class="exemplo-param exemplo-param--highlight">
+          <span class="exemplo-param__key">n2 (saída)</span>
+          <span class="exemplo-param__val">437,5 rpm</span>
+        </div>
+      </div>
+      <p class="exemplo-card__interp">
+        A saída gira 4 vezes mais devagar que a entrada. O torque de saída é
+        aproximadamente 4 vezes maior que o torque de entrada (multiplicado pelo fator de eficiência).
+        Aplicação típica em redutores de acionamento de esteiras.
+      </p>
+    </article>
+
+    <!-- Exemplo 2: 1:1 -->
+    <article class="exemplo-card exemplo-card--neutro">
+      <div class="exemplo-card__badge">1 : 1</div>
+      <h3 class="exemplo-card__title">Inversão de Sentido</h3>
+      <div class="exemplo-card__params">
+        <div class="exemplo-param">
+          <span class="exemplo-param__key">Z1 (motora)</span>
+          <span class="exemplo-param__val">40 dentes</span>
+        </div>
+        <div class="exemplo-param">
+          <span class="exemplo-param__key">Z2 (movida)</span>
+          <span class="exemplo-param__val">40 dentes</span>
+        </div>
+        <div class="exemplo-param">
+          <span class="exemplo-param__key">n1 (entrada)</span>
+          <span class="exemplo-param__val">960 rpm</span>
+        </div>
+        <div class="exemplo-param exemplo-param--highlight">
+          <span class="exemplo-param__key">i (relação)</span>
+          <span class="exemplo-param__val">1,0</span>
+        </div>
+        <div class="exemplo-param exemplo-param--highlight">
+          <span class="exemplo-param__key">n2 (saída)</span>
+          <span class="exemplo-param__val">960 rpm</span>
+        </div>
+      </div>
+      <p class="exemplo-card__interp">
+        Velocidade e torque de saída iguais à entrada (exceto perdas). O objetivo principal
+        é inverter o sentido de rotação ou separar dois eixos coaxiais para que girem
+        em direções opostas.
+      </p>
+    </article>
+
+    <!-- Exemplo 3: aumento de velocidade -->
+    <article class="exemplo-card exemplo-card--aumento">
+      <div class="exemplo-card__badge">Aumento</div>
+      <h3 class="exemplo-card__title">Multiplicador de Velocidade</h3>
+      <div class="exemplo-card__params">
+        <div class="exemplo-param">
+          <span class="exemplo-param__key">Z1 (motora)</span>
+          <span class="exemplo-param__val">60 dentes</span>
+        </div>
+        <div class="exemplo-param">
+          <span class="exemplo-param__key">Z2 (movida)</span>
+          <span class="exemplo-param__val">15 dentes</span>
+        </div>
+        <div class="exemplo-param">
+          <span class="exemplo-param__key">n1 (entrada)</span>
+          <span class="exemplo-param__val">500 rpm</span>
+        </div>
+        <div class="exemplo-param exemplo-param--highlight">
+          <span class="exemplo-param__key">i (relação)</span>
+          <span class="exemplo-param__val">0,25</span>
+        </div>
+        <div class="exemplo-param exemplo-param--highlight">
+          <span class="exemplo-param__key">n2 (saída)</span>
+          <span class="exemplo-param__val">2.000 rpm</span>
+        </div>
+      </div>
+      <p class="exemplo-card__interp">
+        A saída gira 4 vezes mais rápido que a entrada. O torque de saída é,
+        portanto, 4 vezes menor. Usado em geradores, superchargers e
+        equipamentos que precisam de alta rotação com motor lento.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     07 — APLICAÇÕES INDUSTRIAIS
+════════════════════════════════ -->
+<section id="aplicacoes">
+  <div class="section-header">
+    <div>
+      <div class="section-label">07 — Uso Industrial</div>
+      <h2 class="section-title">Aplicações<br>Industriais</h2>
+    </div>
+  </div>
+
+  <div class="aplic-grid">
+
+    <div class="aplic-item">
+      <span class="aplic-emoji" aria-hidden="true">&#9881;</span>
+      <div class="aplic-title">Redutores</div>
+      <div class="aplic-desc">
+        Caixas de redução usam múltiplos estágios de engrenagens para adaptar a velocidade
+        do motor à rotação de trabalho do equipamento, multiplicando o torque disponível.
+      </div>
+    </div>
+
+    <div class="aplic-item">
+      <span class="aplic-emoji" aria-hidden="true">&#9654;</span>
+      <div class="aplic-title">Esteiras e Transportadores</div>
+      <div class="aplic-desc">
+        Redutores com engrenagens helicoidais acionam tambores de esteiras industriais,
+        garantindo velocidade controlada e alto torque mesmo em partidas a plena carga.
+      </div>
+    </div>
+
+    <div class="aplic-item">
+      <span class="aplic-emoji" aria-hidden="true">&#9679;</span>
+      <div class="aplic-title">Tornos e Fresadoras</div>
+      <div class="aplic-desc">
+        Caixas de câmbio com engrenagens retas permitem selecionar diferentes faixas
+        de avanço e rotação do fuso, adaptando o equipamento ao material e ferramenta.
+      </div>
+    </div>
+
+    <div class="aplic-item">
+      <span class="aplic-emoji" aria-hidden="true">&#9650;</span>
+      <div class="aplic-title">Caixas de Transmissão</div>
+      <div class="aplic-desc">
+        Em veículos industriais e agrícolas, engrenagens helicoidais e cônicas compõem
+        caixas de marcha que distribuem torque do motor às rodas em múltiplas relações.
+      </div>
+    </div>
+
+    <div class="aplic-item">
+      <span class="aplic-emoji" aria-hidden="true">&#9670;</span>
+      <div class="aplic-title">Diferenciais</div>
+      <div class="aplic-desc">
+        Conjuntos de engrenagens cônicas permitem que duas rodas do mesmo eixo girem
+        em velocidades diferentes nas curvas, sem transmissão de forças indesejadas.
+      </div>
+    </div>
+
+    <div class="aplic-item">
+      <span class="aplic-emoji" aria-hidden="true">&#9632;</span>
+      <div class="aplic-title">Máquinas Agrícolas</div>
+      <div class="aplic-desc">
+        Colheitadeiras e tratores utilizam combinações de engrenagens retas, helicoidais
+        e sem-fim para adaptar a potência do motor a diversas tomadas de força e velocidades.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     08 — ERROS COMUNS
+════════════════════════════════ -->
+<section id="erros">
+  <div class="section-header">
+    <div>
+      <div class="section-label">08 — Diagnóstico</div>
+      <h2 class="section-title">Erros Comuns e<br>Observações Técnicas</h2>
+    </div>
+  </div>
+
+  <div class="falhas-grid">
+
+    <div class="falha-item">
+      <div class="falha-num">01</div>
+      <div>
+        <div class="falha-title">Confundir Motora e Movida</div>
+        <div class="falha-desc">
+          Inverter Z1 e Z2 na fórmula resulta em relação incorreta.
+          A motora é sempre a que recebe potência da fonte; a movida é a que entrega potência à carga.
+          O erro inverte a interpretação de redução e aumento.
+        </div>
+        <div class="falha-causa">Consequência: cálculo de i e n2 incorretos</div>
+      </div>
+    </div>
+
+    <div class="falha-item">
+      <div class="falha-num">02</div>
+      <div>
+        <div class="falha-title">Ignorar o Efeito no Torque</div>
+        <div class="falha-desc">
+          Muitos projetistas calculam apenas a velocidade de saída e esquecem que o torque
+          é inversamente proporcional à relação de transmissão. Subdimensionar o torque
+          de saída leva a rupturas de eixos e chavetas.
+        </div>
+        <div class="falha-causa">Consequência: falha mecânica por subtorque</div>
+      </div>
+    </div>
+
+    <div class="falha-item">
+      <div class="falha-num">03</div>
+      <div>
+        <div class="falha-title">Desconsiderar Perdas Mecânicas</div>
+        <div class="falha-desc">
+          Toda transmissão tem eficiência menor que 100%. Ignorar o fator η (eta) superestima
+          o torque e a potência de saída. Pares sem-fim/coroa podem ter eficiência de apenas 40%,
+          tornando esse erro ainda mais crítico.
+        </div>
+        <div class="falha-causa">Consequência: superdimensionamento ou falha do acionamento</div>
+      </div>
+    </div>
+
+    <div class="falha-item">
+      <div class="falha-num">04</div>
+      <div>
+        <div class="falha-title">Negligenciar Alinhamento</div>
+        <div class="falha-desc">
+          Desalinhamento entre eixos gera desgaste irregular dos dentes, vibração e ruído
+          excessivos. Engrenagens cônicas e helicoidais são especialmente sensíveis ao
+          alinhamento angular incorreto durante a montagem.
+        </div>
+        <div class="falha-causa">Consequência: desgaste prematuro e ruído</div>
+      </div>
+    </div>
+
+    <div class="falha-item">
+      <div class="falha-num">05</div>
+      <div>
+        <div class="falha-title">Lubrificação Inadequada</div>
+        <div class="falha-desc">
+          Usar lubrificante com viscosidade errada para a velocidade e carga do par provoca
+          temperatura excessiva, desgaste abrasivo e microfissuras nos dentes.
+          Cada tipo de engrenagem exige especificação de viscosidade adequada.
+        </div>
+        <div class="falha-causa">Consequência: desgaste superficial, trincas e travamento</div>
+      </div>
+    </div>
+
+    <div class="falha-item">
+      <div class="falha-num">06</div>
+      <div>
+        <div class="falha-title">Misturar Módulos Diferentes</div>
+        <div class="falha-desc">
+          Engrenagens só engrenam corretamente se tiverem o mesmo módulo (m). Tentar
+          combinar engrenagens de módulos diferentes resulta em contato pontual incorreto,
+          desgaste acelerado e risco de fratura dos dentes.
+        </div>
+        <div class="falha-causa">Consequência: fratura de dentes e ruído intenso</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     09 — LUBRIFICAÇÃO
+════════════════════════════════ -->
+<section id="lubrificacao">
+  <div class="section-header">
+    <div>
+      <div class="section-label">09 — Conservação</div>
+      <h2 class="section-title">Lubrificação de<br>Engrenagens</h2>
+    </div>
+  </div>
+
+  <div class="lubri-layout">
+
+    <div class="lubri-text">
+      <p>
+        A lubrificação é o principal fator de proteção das superfícies dentadas. O filme de
+        lubrificante formado entre os dentes reduz o contato metal-metal, dissipa calor,
+        protege contra corrosão e remove partículas de desgaste da zona de contato.
+      </p>
+      <p>
+        A escolha entre <strong style="color:var(--orange)">óleo</strong> e
+        <strong style="color:var(--orange)">graxa</strong> depende da velocidade periférica
+        dos dentes, da carga transmitida e da temperatura de operação.
+        Óleos minerais ou sintéticos são usados em caixas fechadas com banho ou circulação forçada.
+        Graxa é adequada para sistemas abertos e baixas velocidades.
+      </p>
+      <p>
+        Engrenagens sem-fim/coroa merecem atenção especial: a alta taxa de deslizamento
+        entre os dentes exige óleos com aditivos EP (extrema pressão) de alta viscosidade.
+        O uso de óleo inadequado resulta em desgaste rápido e pontuação (pitting) nos dentes.
+      </p>
+    </div>
+
+    <table class="lubri-table">
+      <thead>
+        <tr>
+          <th>Tipo de Engrenagem</th>
+          <th>Lubrificante Recomendado</th>
+          <th>Viscosidade Típica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reta (fechada)</td>
+          <td>Óleo mineral ISO VG ou sintético</td>
+          <td>VG 150 — 320</td>
+        </tr>
+        <tr>
+          <td>Helicoidal (fechada)</td>
+          <td>Óleo mineral ou sintético com EP</td>
+          <td>VG 220 — 460</td>
+        </tr>
+        <tr>
+          <td>Cônica (fechada)</td>
+          <td>Óleo hipóide ou mineral com EP</td>
+          <td>VG 220 — 320</td>
+        </tr>
+        <tr>
+          <td>Sem-fim / Coroa</td>
+          <td>Óleo sintético PAO com EP</td>
+          <td>VG 460 — 680</td>
+        </tr>
+        <tr>
+          <td>Cremalheira (aberta)</td>
+          <td>Graxa EP NLGI 1 ou 2</td>
+          <td>— (graxa)</td>
+        </tr>
+        <tr>
+          <td>Reta (aberta)</td>
+          <td>Graxa ou óleo aberto com EP</td>
+          <td>VG 1000+ ou graxa</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     NAVEGAÇÃO ENTRE COMPONENTES
+════════════════════════════════ -->
+<div class="back-strip">
+  <div class="back-text">Componente 02 de 04 — Engrenagens</div>
+  <div class="nav-btn-group">
+    <a href="rolamentos.html" class="btn-secondary">← Anterior: Rolamentos</a>
+    <a href="correntes.html"  class="btn-primary">Próximo: Correntes →</a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════
+     RODAPÉ
+════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">⚙ O Guia do Mecânico</div>
+  <div class="footer-team">
+    Guilherme Prado · Iago Leite · João Bispo · Marcelo Lima · Régis Eduardo
+  </div>
+  <div class="footer-copy">© 2026 — Todos os direitos reservados</div>
+</footer>
+
+
+<!-- ════════════════════════════════
+     JAVASCRIPT DA CALCULADORA
+     (preencha aqui ou em arquivo externo)
+════════════════════════════════ -->
+<script>
+  document.getElementById('btnCalcular').addEventListener('click', function () {
+    const z1  = parseFloat(document.getElementById('dentesMotora').value);
+    const z2  = parseFloat(document.getElementById('dentesMovida').value);
+    const n1  = parseFloat(document.getElementById('rpmEntrada').value);
+    const resultBox = document.getElementById('calcResult');
+
+    if (!z1 || !z2 || !n1 || z1 <= 0 || z2 <= 0 || n1 <= 0) {
+      alert('Preencha todos os campos com valores positivos.');
+      return;
+    }
+
+    const i  = z2 / z1;
+    const n2 = n1 * (z1 / z2);
+
+    let interpretacao = '';
+    if (i > 1)      interpretacao = `Redução de ${i.toFixed(2)}×. A saída gira ${i.toFixed(2)}× mais devagar e o torque é multiplicado por ${i.toFixed(2)} (× eficiência).`;
+    else if (i < 1) interpretacao = `Aumento de ${(1/i).toFixed(2)}×. A saída gira ${(1/i).toFixed(2)}× mais rápido e o torque é dividido por ${(1/i).toFixed(2)}.`;
+    else            interpretacao = 'Transmissão direta 1:1. Velocidade e torque de saída iguais à entrada (desconsiderando perdas). O sentido de rotação é invertido.';
+
+    document.getElementById('resultRelacao').textContent = i.toFixed(3);
+    document.getElementById('resultRpmSaida').textContent = n2.toFixed(1) + ' rpm';
+    document.getElementById('resultInterpretacao').textContent = interpretacao;
+
+    resultBox.hidden = false;
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>
+
+</body>
+</html>
