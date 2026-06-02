@@ -569,36 +569,60 @@
   line-height: 1.7;
 }
 
-/* IDENTIFICADOR */
-#identificador {
+/* FERRAMENTAS INTERATIVAS */
+#ferramentas {
   background: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
-.calc-box {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  padding: 28px;
-}
-
-.calc-grid {
+.tools-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 24px;
 }
 
-.calc-field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.tool-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  overflow: hidden;
 }
 
-.calc-field-full {
-  grid-column: 1 / -1;
+.tool-head {
+  padding: 24px 24px 18px;
+  border-bottom: 1px solid var(--border);
 }
 
-.calc-field label {
+.tool-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.tool-title {
+  font-family: var(--font-title);
+  font-size: 1.18rem;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.tool-desc {
+  color: var(--steel);
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+.tool-body {
+  padding: 24px;
+}
+
+.tool-body label {
+  display: block;
+  margin-bottom: 8px;
   font-family: var(--font-mono);
   font-size: 0.55rem;
   letter-spacing: 0.14em;
@@ -606,39 +630,74 @@
   color: var(--orange);
 }
 
-.calc-field input,
-.calc-field select {
+.tool-body select,
+.tool-body input {
+  width: 100%;
   padding: 14px;
   background: #f1f5f9;
   color: #0f172a;
   border: none;
   outline: none;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
 }
 
-.calc-btn {
-  margin-top: 18px;
+.converter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.converter-field button {
   width: 100%;
-  padding: 14px;
+  padding: 13px 14px;
   border: none;
   background: var(--orange);
   color: #0a0a0a;
   font-family: var(--font-mono);
-  text-transform: uppercase;
+  font-size: 0.58rem;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.calc-result {
+.converter-field button:hover {
+  background: var(--orange2);
+}
+
+.tool-result {
   margin-top: 18px;
   border: 1px solid var(--border);
   background: var(--surface);
   padding: 18px;
   color: var(--steel);
   line-height: 1.8;
+  min-height: 110px;
 }
 
-.calc-result strong {
+.compare-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.compare-title {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  text-transform: uppercase;
   color: var(--orange);
+  margin-bottom: 4px;
+}
+
+.compare-line {
+  color: var(--steel);
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+.compare-line strong {
+  color: var(--white);
 }
 
 /* APLICAÇÕES */
@@ -759,7 +818,9 @@
   .ident-grid,
   .torque-grid,
   .aplic-grid,
-  .praticas-grid {
+  .praticas-grid,
+  .tools-grid,
+  .converter-grid {
     grid-template-columns: 1fr;
   }
 

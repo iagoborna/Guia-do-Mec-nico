@@ -60,7 +60,7 @@
 
       <div class="hero-actions">
         <a href="#tipos" class="btn-primary">Ver tipos →</a>
-        <a href="#identificador" class="btn-secondary">Identificar parafuso</a>
+        <a href="#ferramentas" class="btn-secondary">Abrir ferramentas</a>
       </div>
     </div>
 
@@ -440,54 +440,73 @@
     </div>
   </section>
 
-  <!-- IDENTIFICADOR -->
-  <section id="identificador">
+  <!-- FERRAMENTAS -->
+  <section id="ferramentas">
     <div class="section-header">
       <div>
-        <div class="section-label">07 — Ferramenta</div>
-        <h2 class="section-title">Identificador de<br>Parafuso</h2>
+        <div class="section-label">07 — Ferramentas</div>
+        <h2 class="section-title">Ferramentas<br>Interativas</h2>
       </div>
     </div>
 
-    <div class="calc-box">
-      <div class="calc-grid">
-        <div class="calc-field">
-          <label for="sistema">Sistema</label>
-          <select id="sistema">
-            <option value="metrico">Métrico</option>
-            <option value="polegada">Polegada</option>
+    <div class="tools-grid">
+      <article class="tool-card">
+        <div class="tool-head">
+          <div class="tool-kicker">Comparador técnico</div>
+          <h3 class="tool-title">Classes de resistência</h3>
+          <p class="tool-desc">
+            Selecione uma classe para visualizar o nível de resistência,
+            uso típico, aplicação industrial e observações importantes.
+          </p>
+        </div>
+
+        <div class="tool-body">
+          <label for="classeParafuso">Classe do parafuso</label>
+          <select id="classeParafuso" onchange="compararClasseParafuso()">
+            <option value="">Selecione uma classe</option>
+            <option value="4.6">4.6</option>
+            <option value="5.8">5.8</option>
+            <option value="8.8">8.8</option>
+            <option value="10.9">10.9</option>
+            <option value="12.9">12.9</option>
           </select>
+
+          <div id="resultadoClasse" class="tool-result">
+            Escolha uma classe para visualizar a comparação técnica.
+          </div>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-head">
+          <div class="tool-kicker">Conversão dimensional</div>
+          <h3 class="tool-title">mm ↔ polegadas</h3>
+          <p class="tool-desc">
+            Converta rapidamente medidas em milímetros para polegadas
+            e vice-versa para leitura técnica e comparação dimensional.
+          </p>
         </div>
 
-        <div class="calc-field">
-          <label for="diametro">Diâmetro</label>
-          <input type="text" id="diametro" placeholder="Ex: 8 ou 1/2">
+        <div class="tool-body">
+          <div class="converter-grid">
+            <div class="converter-field">
+              <label for="mmInput">Milímetros (mm)</label>
+              <input type="number" id="mmInput" step="any" placeholder="Ex: 12.7">
+              <button type="button" onclick="converterMmParaPolegada()">Converter para polegadas</button>
+            </div>
+
+            <div class="converter-field">
+              <label for="polInput">Polegadas (in)</label>
+              <input type="number" id="polInput" step="any" placeholder="Ex: 0.5">
+              <button type="button" onclick="converterPolegadaParaMm()">Converter para mm</button>
+            </div>
+          </div>
+
+          <div id="resultadoConversao" class="tool-result">
+            Digite um valor para converter.
+          </div>
         </div>
-
-        <div class="calc-field">
-          <label for="passo">Passo</label>
-          <input type="text" id="passo" placeholder="Ex: 1,25 ou UNC">
-        </div>
-
-        <div class="calc-field">
-          <label for="comprimento">Comprimento</label>
-          <input type="text" id="comprimento" placeholder="Ex: 40">
-        </div>
-
-        <div class="calc-field calc-field-full">
-          <label for="cabeca">Tipo de cabeça</label>
-          <select id="cabeca">
-  <option value="sextavado">Sextavado</option>
-  <option value="allen">Allen</option>
-</select>
-        </div>
-      </div>
-
-      <button class="calc-btn" onclick="identificarParafuso()">Identificar</button>
-
-      <div class="calc-result" id="resultado-parafuso">
-        Preencha os dados para gerar a descrição técnica do parafuso.
-      </div>
+      </article>
     </div>
   </section>
 
@@ -544,55 +563,120 @@
 
   <!-- RODAPÉ -->
   <footer class="footer-premium">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <div class="footer-logo">⚙ O Guia do Mecânico</div>
-      <p class="footer-desc">
-        Plataforma educacional desenvolvida para reunir conceitos, componentes e aplicações
-        da mecânica industrial em linguagem clara, visual técnico e consulta rápida.
-      </p>
-    </div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">⚙ O Guia do Mecânico</div>
+        <p class="footer-desc">
+          Plataforma educacional desenvolvida para reunir conceitos, componentes e aplicações
+          da mecânica industrial em linguagem clara, visual técnico e consulta rápida.
+        </p>
+      </div>
 
-    <div class="footer-meta">
-      <div class="footer-meta-title">Integrantes do grupo</div>
-      <div class="footer-team">
-        Guilherme Prado · Iago Leite · João Bispo · Marcelo Lima · Régis Eduardo
+      <div class="footer-meta">
+        <div class="footer-meta-title">Integrantes do grupo</div>
+        <div class="footer-team">
+          Guilherme Prado · Iago Leite · João Bispo · Marcelo Lima · Régis Eduardo
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer-bottom">
-    <span>© 2026 — Todos os direitos reservados</span>
-    <span>Projeto acadêmico · O Guia do Mecânico v2.0</span>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <span>© 2026 — Todos os direitos reservados</span>
+      <span>Projeto acadêmico · O Guia do Mecânico v2.0</span>
+    </div>
+  </footer>
 
   <script>
-    function identificarParafuso() {
-      const sistema = document.getElementById("sistema").value;
-      const diametro = document.getElementById("diametro").value.trim();
-      const passo = document.getElementById("passo").value.trim();
-      const comprimento = document.getElementById("comprimento").value.trim();
-      const cabeca = document.getElementById("cabeca").value;
-      const resultado = document.getElementById("resultado-parafuso");
+    function compararClasseParafuso() {
+      const classe = document.getElementById("classeParafuso").value;
+      const resultado = document.getElementById("resultadoClasse");
 
-      if (!diametro || !passo || !comprimento) {
-        resultado.innerHTML = "Preencha diâmetro, passo e comprimento para identificar o parafuso.";
+      const dados = {
+        "4.6": {
+          resistencia: "Baixa",
+          uso: "Fixações leves e aplicações sem grande esforço mecânico.",
+          aplicacao: "Montagens simples, suportes leves e conjuntos não críticos.",
+          observacao: "Não recomendada para cargas elevadas ou vibração intensa."
+        },
+        "5.8": {
+          resistencia: "Baixa a média",
+          uso: "Aplicações gerais com esforço moderado.",
+          aplicacao: "Equipamentos leves, tampas, suportes e fixações secundárias.",
+          observacao: "Uso comum onde não há solicitação severa."
+        },
+        "8.8": {
+          resistencia: "Alta",
+          uso: "Classe industrial padrão para grande parte das máquinas.",
+          aplicacao: "Estruturas, motores, redutores, suportes e montagens mecânicas gerais.",
+          observacao: "Boa combinação entre resistência, custo e disponibilidade."
+        },
+        "10.9": {
+          resistencia: "Muito alta",
+          uso: "Aplicações com cargas elevadas e alta exigência mecânica.",
+          aplicacao: "Fixações críticas, conjuntos pesados, flanges e máquinas industriais severas.",
+          observacao: "Exige montagem correta e torque bem controlado."
+        },
+        "12.9": {
+          resistencia: "Extremamente alta",
+          uso: "Aplicações severas e altamente críticas.",
+          aplicacao: "Componentes de precisão, conjuntos especiais e sistemas de alta solicitação.",
+          observacao: "Deve ser usado com critério técnico e torque corretamente especificado."
+        }
+      };
+
+      if (!classe || !dados[classe]) {
+        resultado.innerHTML = "Escolha uma classe para visualizar a comparação técnica.";
         return;
       }
 
-      let descricao = "";
-
-      if (sistema === "metrico") {
-        descricao = `Parafuso ${nomeCabeca} M${diametro} × ${passo} × ${comprimento}`;
-      } else {
-        descricao = `Parafuso ${nomeCabeca} ${diametro}" ${passo} × ${comprimento}`;
-      }
+      const item = dados[classe];
 
       resultado.innerHTML = `
-        <strong>${descricao}</strong><br>
-        Sistema: ${sistema === "metrico" ? "Rosca métrica" : "Rosca em polegada"}<br>
-        Aplicação típica: montagem mecânica desmontável com aperto controlado.
+        <div class="compare-block">
+          <div class="compare-title">Classe ${classe}</div>
+          <div class="compare-line"><strong>Resistência:</strong> ${item.resistencia}</div>
+          <div class="compare-line"><strong>Uso típico:</strong> ${item.uso}</div>
+          <div class="compare-line"><strong>Aplicação:</strong> ${item.aplicacao}</div>
+          <div class="compare-line"><strong>Observação:</strong> ${item.observacao}</div>
+        </div>
+      `;
+    }
+
+    function converterMmParaPolegada() {
+      const mm = parseFloat(document.getElementById("mmInput").value);
+      const resultado = document.getElementById("resultadoConversao");
+
+      if (isNaN(mm)) {
+        resultado.innerHTML = "Digite um valor em milímetros para converter.";
+        return;
+      }
+
+      const pol = mm / 25.4;
+
+      resultado.innerHTML = `
+        <div class="compare-block">
+          <div class="compare-title">Conversão mm → polegadas</div>
+          <div class="compare-line"><strong>${mm} mm</strong> = ${pol.toFixed(4)} in</div>
+        </div>
+      `;
+    }
+
+    function converterPolegadaParaMm() {
+      const pol = parseFloat(document.getElementById("polInput").value);
+      const resultado = document.getElementById("resultadoConversao");
+
+      if (isNaN(pol)) {
+        resultado.innerHTML = "Digite um valor em polegadas para converter.";
+        return;
+      }
+
+      const mm = pol * 25.4;
+
+      resultado.innerHTML = `
+        <div class="compare-block">
+          <div class="compare-title">Conversão polegadas → mm</div>
+          <div class="compare-line"><strong>${pol} in</strong> = ${mm.toFixed(3)} mm</div>
+        </div>
       `;
     }
   </script>
