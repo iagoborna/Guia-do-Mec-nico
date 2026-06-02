@@ -1,0 +1,663 @@
+/* ══════════════════════════════════════════
+   style-parafuso.css — O Guia do Mecânico
+   Estilos exclusivos da página de Parafusos
+   ══════════════════════════════════════════ */
+
+
+/* ══ SEÇÕES COM BG ALTERNADO ══ */
+
+#intro        { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#tipos        { background: var(--bg); }
+#partes       { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#identificacao { background: var(--bg); }
+#classes      { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#torque       { background: var(--bg); border-top: 1px solid var(--border); }
+#identificador { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#aplicacoes   { background: var(--bg); }
+#falhas       { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#praticas     { background: var(--bg); border-top: 1px solid var(--border); }
+
+
+/* ══ TIPOS — ícone de linha horizontal ══ */
+
+.tipos-grid--3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.tipo-icon-line {
+  font-family: var(--font-mono);
+  font-size: 0.4rem;
+  color: var(--orange);
+  opacity: 0.35;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 14px;
+  letter-spacing: -1px;
+}
+
+/* reaproveitando tipo-card__detail e tipo-card__row de style-engrenagem.css */
+.tipo-card__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.tipo-card__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.75rem;
+}
+
+.tipo-card__key {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--orange);
+  text-transform: uppercase;
+  min-width: 60px;
+}
+
+.tipo-card__val { color: var(--steel); }
+
+
+/* ══ PARTES DO PARAFUSO ══ */
+
+.partes-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.partes-diagram {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 32px;
+}
+
+.partes-diagram__title {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.partes-diagram__svg-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.partes-diagram__svg-wrap svg {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  overflow: visible;
+}
+
+/* Lista de partes */
+.partes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.parte-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--surface);
+  padding: 18px 20px;
+  transition: background 0.2s;
+}
+
+.parte-item:hover { background: var(--surface2); }
+
+.parte-item__letra {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  color: var(--muted);
+  line-height: 1;
+  min-width: 28px;
+  transition: color 0.2s;
+}
+
+.parte-item__letra--orange { color: var(--orange); }
+.parte-item:hover .parte-item__letra { color: var(--orange); }
+
+.parte-item__nome {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.parte-item__desc {
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+
+/* ══ IDENTIFICAÇÃO (COMO LER O CÓDIGO) ══ */
+
+.ident-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.ident-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ident-col__title {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--steel);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ident-col__badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  border: 1px solid rgba(249,115,22,0.3);
+  background: rgba(249,115,22,0.05);
+  padding: 3px 10px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+
+.ident-col__badge--alt {
+  color: var(--steel);
+  border-color: rgba(148,163,184,0.3);
+  background: rgba(148,163,184,0.05);
+}
+
+/* Bloco de exemplo com código */
+.ident-exemplo {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--orange);
+  padding: 20px 22px;
+}
+
+.ident-exemplo__codigo {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  color: var(--orange);
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+.ident-exemplo__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.ident-campo {
+  background: var(--surface);
+  padding: 10px 12px;
+}
+
+.ident-campo__ref {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.ident-campo__desc {
+  font-size: 0.72rem;
+  color: var(--steel);
+  line-height: 1.4;
+}
+
+/* Tabela de passos */
+.ident-tabela {
+  border: 1px solid var(--border);
+}
+
+.ident-tabela__titulo {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  padding: 12px 16px;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+}
+
+.ident-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ident-tabela th {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 10px 14px;
+  text-align: left;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+}
+
+.ident-tabela td {
+  font-size: 0.78rem;
+  color: var(--steel);
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ident-tabela tr:last-child td { border-bottom: none; }
+.ident-tabela tr:hover td { background: var(--surface2); }
+
+/* Aviso métrico ≠ polegada */
+.ident-aviso {
+  background: rgba(249,115,22,0.05);
+  border: 1px solid rgba(249,115,22,0.25);
+  border-left: 2px solid var(--orange);
+  padding: 18px 20px;
+}
+
+.ident-aviso__titulo {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.ident-aviso p {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--steel);
+}
+
+
+/* ══ CLASSES DE RESISTÊNCIA ══ */
+
+.classes-intro {
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.classes-intro p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--steel);
+}
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.classe-card {
+  background: var(--surface);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: background 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.classe-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.classe-card:hover { background: var(--surface2); }
+.classe-card:hover::before { transform: scaleX(1); }
+
+.classe-card--baixa::before     { background: #64748b; }
+.classe-card--media::before     { background: #eab308; }
+.classe-card--alta::before      { background: #f97316; }
+.classe-card--muito-alta::before { background: #ef4444; }
+.classe-card--extrema::before   { background: #9333ea; }
+
+.classe-card__code {
+  font-family: var(--font-title);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.classe-card--baixa     .classe-card__code { color: #64748b; }
+.classe-card--media     .classe-card__code { color: #eab308; }
+.classe-card--alta      .classe-card__code { color: var(--orange); }
+.classe-card--muito-alta .classe-card__code { color: #ef4444; }
+.classe-card--extrema   .classe-card__code { color: #9333ea; }
+
+/* Barra de resistência */
+.classe-card__bar {
+  height: 3px;
+  background: var(--border);
+  position: relative;
+}
+
+.classe-card__bar::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.classe-card--baixa     .classe-card__bar::after { background: #64748b; }
+.classe-card--media     .classe-card__bar::after { background: #eab308; }
+.classe-card--alta      .classe-card__bar::after { background: var(--orange); }
+.classe-card--muito-alta .classe-card__bar::after { background: #ef4444; }
+.classe-card--extrema   .classe-card__bar::after { background: #9333ea; }
+
+.classe-card__specs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.classe-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.classe-spec__k {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.classe-spec__v {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--white);
+}
+
+.classe-card__aplic {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+
+/* ══ TORQUE — introdução ══ */
+
+.torque-intro {
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.torque-intro p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--steel);
+}
+
+
+/* ══ IDENTIFICADOR — painel lateral de referência ══ */
+
+.idf-ref-block {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--orange);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.idf-ref-block__label {
+  font-family: var(--font-mono);
+  font-size: 0.53rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+
+.idf-ref-block__code {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--white);
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+.idf-ref-block__ex {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* Marcações da cabeça */
+.idf-marcacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  margin-top: 10px;
+}
+
+.idf-marcacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  padding: 8px 12px;
+}
+
+.idf-marcacao__cod {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  color: var(--orange);
+  min-width: 44px;
+}
+
+.idf-marcacao__desc {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--muted);
+}
+
+/* Reutilizando calc-layout, calc-visual, calc-form, calc-result de style-engrenagem.css */
+.idf-field--full { grid-column: 1 / -1; }
+
+.calc-field__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2364748b' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.calc-field__select option {
+  background: var(--surface2);
+  color: var(--white);
+}
+
+.calc-result__value--code {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--orange);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+
+/* ══ APLICAÇÕES — 7 itens em grid ══ */
+
+.aplic-grid--7 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+/* 4 na primeira linha, 3 na segunda centralizadas */
+.aplic-grid--7 .aplic-item:nth-child(5) { grid-column: 1; }
+
+
+/* ══ BOAS PRÁTICAS ══ */
+
+.praticas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.pratica-item {
+  background: var(--surface);
+  padding: 32px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: background 0.25s;
+}
+
+.pratica-item:hover { background: var(--surface2); }
+
+.pratica-item__num {
+  font-family: var(--font-title);
+  font-size: 2.4rem;
+  color: rgba(249,115,22,0.12);
+  line-height: 1;
+  min-width: 48px;
+  transition: color 0.3s;
+}
+
+.pratica-item:hover .pratica-item__num { color: rgba(249,115,22,0.28); }
+
+.pratica-item__title {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.pratica-item__desc {
+  font-size: 0.79rem;
+  line-height: 1.68;
+  color: var(--muted);
+}
+
+/* último item ocupa coluna inteira se número ímpar */
+.praticas-grid .pratica-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+
+/* ══ RESPONSIVO — TABLET (≤ 1024px) ══ */
+@media (max-width: 1024px) {
+
+  .partes-layout    { grid-template-columns: 1fr; }
+  .ident-layout     { grid-template-columns: 1fr; }
+  .classes-grid     { grid-template-columns: repeat(3, 1fr); }
+  .tipos-grid--3col { grid-template-columns: repeat(2, 1fr); }
+  .aplic-grid--7    { grid-template-columns: repeat(2, 1fr); }
+  .praticas-grid    { grid-template-columns: 1fr; }
+
+  .praticas-grid .pratica-item:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
+
+
+/* ══ RESPONSIVO — MOBILE (≤ 640px) ══ */
+@media (max-width: 640px) {
+
+  section { padding: 56px 20px; }
+
+  .page-hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 40px 20px; }
+
+  nav { padding: 0 16px; }
+  .nav-links { display: none; }
+
+  .tipos-grid--3col,
+  .classes-grid,
+  .aplic-grid--7,
+  .praticas-grid { grid-template-columns: 1fr; }
+
+  .aplic-grid--7 .aplic-item:nth-child(5) { grid-column: auto; }
+
+  .ident-exemplo__grid { grid-template-columns: 1fr; }
+
+  .back-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .nav-btn-group { flex-direction: column; width: 100%; }
+  .nav-btn-group .btn-primary,
+  .nav-btn-group .btn-secondary { justify-content: center; }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 20px;
+    gap: 10px;
+  }
+
+  .calc-form    { grid-template-columns: 1fr; }
+  .idf-field--full { grid-column: auto; }
+
+  .calc-result__grid { grid-template-columns: 1fr; }
+  .calc-result__item--wide { grid-column: auto; }
+
+  .intro-grid   { grid-template-columns: 1fr; }
+  .intro-stats  { grid-template-columns: 1fr 1fr; }
+}
