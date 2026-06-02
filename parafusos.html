@@ -4,396 +4,582 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Parafusos — O Guia do Mecânico</title>
+
+  <!-- CSS base do site -->
   <link rel="stylesheet" href="style-rolamentos.css" />
+
+  <!-- CSS exclusivo da página -->
   <link rel="stylesheet" href="style-parafuso.css" />
 </head>
 <body>
 
-<!-- ══════════════════════════════════
-     NAVBAR
-══════════════════════════════════ -->
-<nav>
-  <a href="index.html" class="nav-logo">
-    <span class="gear-spin">⚙</span>
-    O Guia do Mecânico
-    <span class="nav-tag">v2.0</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html#componentes" class="active">Componentes</a></li>
-    <li><a href="index.html#manutencao">Manutenção</a></li>
-    <li><a href="index.html#aprender">Aprender</a></li>
-    <li><a href="index.html#sobre">Sobre</a></li>
-  </ul>
-  <a href="index.html" class="nav-cta">← Voltar à Home</a>
-</nav>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="gear-spin">⚙</span>
+      O Guia do Mecânico
+      <span class="nav-tag">v2.0</span>
+    </a>
 
+    <ul class="nav-links">
+      <li><a href="index.html#componentes" class="active">Componentes</a></li>
+      <li><a href="index.html#manutencao">Manutenção</a></li>
+      <li><a href="index.html#aprender">Aprender</a></li>
+      <li><a href="index.html#sobre">Sobre</a></li>
+    </ul>
 
-<!-- ══════════════════════════════════
-     HERO
-══════════════════════════════════ -->
-<div class="page-hero">
+    <a href="index.html" class="nav-cta">← Voltar à Home</a>
+  </nav>
 
-  <div class="hero-left">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>/</span>
-      <a href="index.html#componentes">Componentes</a>
-      <span>/</span>
-      <strong>Parafusos</strong>
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="hero-left">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#componentes">Componentes</a>
+        <span>/</span>
+        <strong>Parafusos</strong>
+      </div>
+
+      <div class="hero-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Componentes Mecânicos — 04 / 04</span>
+      </div>
+
+      <h1 class="hero-title">
+        Para-
+        <span class="accent">fusos</span>
+        <span class="outline">Industriais</span>
+      </h1>
+
+      <p class="hero-desc">
+        Fixadores roscados que garantem a união desmontável de peças e estruturas.
+        Entenda tipos, classes de resistência, identificação por código e aperto correto.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#tipos" class="btn-primary">Ver tipos →</a>
+        <a href="#identificador" class="btn-secondary">Identificar parafuso</a>
+      </div>
     </div>
 
-    <div class="hero-eyebrow">
-      <div class="eyebrow-line"></div>
-      <span class="eyebrow-text">Componentes Mecânicos — 04 / 04</span>
-    </div>
+    <div class="hero-right">
+      <div class="hero-visual-parafusos">
+        <div class="para-card para-card-1">
+          <div class="para-card-label">Função</div>
+          <div class="para-card-value">União mecânica</div>
+          <div class="para-card-sub">Fixação desmontável por rosca</div>
+        </div>
 
-    <h1 class="hero-title">
-      Para-
-      <span class="accent">fusos</span>
-      <span class="outline">Industriais</span>
-    </h1>
+        <div class="para-card para-card-2">
+          <div class="para-card-label">Classe</div>
+          <div class="para-card-value">8.8 · 10.9 · 12.9</div>
+          <div class="para-card-sub">Resistência mecânica padronizada</div>
+        </div>
 
-    <p class="hero-desc">
-      Fixadores roscados que garantem a união desmontável de peças e estruturas.
-      Entenda tipos, classes de resistência, identificação por código e aperto correto.
-    </p>
+        <div class="para-card para-card-3">
+          <div class="para-card-label">Aplicação</div>
+          <div class="para-card-value">Máquinas e estruturas</div>
+          <div class="para-card-sub">Montagem com precisão e segurança</div>
+        </div>
 
-    <div class="hero-actions">
-      <a href="#tipos" class="btn-primary">Ver tipos →</a>
-      <a href="#identificador" class="btn-secondary">Identificar parafuso</a>
+        <div class="hero-center-wrap">
+          <div class="hero-ring hero-ring-1"></div>
+          <div class="hero-ring hero-ring-2"></div>
+
+          <div class="hero-center-circle">
+            <div class="hero-bolt-icon"></div>
+            <span class="hero-center-text">fixação</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="hero-right">
-    <div class="hero-visual">
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">Rosca Métrica <span class="marquee-dot"></span></span>
+      <span class="marquee-item">UNC <span class="marquee-dot"></span></span>
+      <span class="marquee-item">UNF <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Passo <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Diâmetro nominal <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Comprimento <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Classe 8.8 <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Classe 10.9 <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Classe 12.9 <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Torque <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Porca <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Arruela <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Sextavado <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Allen <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Rosca Métrica <span class="marquee-dot"></span></span>
+      <span class="marquee-item">UNC <span class="marquee-dot"></span></span>
+      <span class="marquee-item">UNF <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Passo <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Diâmetro nominal <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Comprimento <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Classe 8.8 <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Classe 10.9 <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Classe 12.9 <span class="marquee-dot"></span></span>
+    </div>
+  </div>
 
-      <svg class="gear-bg-1" viewBox="0 0 200 200" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M85 5L95 5L100 28Q112 31 122 38L143 24L153 34L139 55Q146 65 148 77L171 82L171 92L148 97Q146 109 139 119L153 140L143 150L122 136Q112 143 100 146L95 169L85 169L80 146Q68 143 58 136L37 150L27 140L41 119Q34 109 32 97L9 92L9 82L32 77Q34 65 41 55L27 34L37 24L58 38Q68 31 80 28Z M90 72A18 18 0 1 0 90 108A18 18 0 0 0 90 72Z"/>
-      </svg>
-      <svg class="gear-bg-2" viewBox="0 0 200 200" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M85 5L95 5L100 28Q112 31 122 38L143 24L153 34L139 55Q146 65 148 77L171 82L171 92L148 97Q146 109 139 119L153 140L143 150L122 136Q112 143 100 146L95 169L85 169L80 146Q68 143 58 136L37 150L27 140L41 119Q34 109 32 97L9 92L9 82L32 77Q34 65 41 55L27 34L37 24L58 38Q68 31 80 28Z M90 72A18 18 0 1 0 90 108A18 18 0 0 0 90 72Z"/>
-      </svg>
+  <!-- INTRO -->
+  <section id="intro">
+    <div class="section-header">
+      <div>
+        <div class="section-label">01 — Definição</div>
+        <h2 class="section-title">O que são<br>Parafusos?</h2>
+      </div>
+    </div>
 
-      <div class="float-card">
-        <div class="card-label">Função</div>
-        <div class="card-value">União mecânica</div>
-        <div class="card-sub">Fixação desmontável por rosca</div>
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p>
+          Parafusos são fixadores roscados utilizados para unir duas ou mais peças de forma
+          desmontável. Seu princípio de funcionamento está na rosca helicoidal, que transforma
+          o movimento de giro em força axial de aperto.
+        </p>
+
+        <p>
+          Na indústria, são aplicados em estruturas metálicas, flanges, mancais, redutores,
+          motores, suportes, tampas e carcaças. A escolha correta depende do tipo de cabeça,
+          classe de resistência, diâmetro, passo e comprimento.
+        </p>
+
+        <p>
+          Um parafuso industrial não é apenas “um fixador”: ele influencia diretamente a
+          segurança da montagem, a resistência ao esforço e a confiabilidade do equipamento.
+        </p>
       </div>
 
-      <div class="float-card">
-        <div class="card-label">Classe de resistência</div>
-        <div class="card-value">8.8 · 10.9 · 12.9</div>
-        <div class="card-sub">NBR ISO 898-1</div>
+      <div class="intro-stats">
+        <div class="intro-stat">
+          <div class="intro-stat-num">6+</div>
+          <div class="intro-stat-label">Tipos principais</div>
+        </div>
+        <div class="intro-stat">
+          <div class="intro-stat-num">ISO</div>
+          <div class="intro-stat-label">Normas técnicas</div>
+        </div>
+        <div class="intro-stat">
+          <div class="intro-stat-num">M</div>
+          <div class="intro-stat-label">Rosca métrica</div>
+        </div>
+        <div class="intro-stat">
+          <div class="intro-stat-num">12.9</div>
+          <div class="intro-stat-label">Classe elevada</div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="float-card">
-        <div class="card-label">Aplicação</div>
-        <div class="card-value">Máquinas e estruturas</div>
-        <div class="card-sub">Alta resistência e precisão</div>
+  <!-- TIPOS -->
+  <section id="tipos">
+    <div class="section-header">
+      <div>
+        <div class="section-label">02 — Catálogo</div>
+        <h2 class="section-title">Tipos de<br>Parafusos</h2>
       </div>
+    </div>
 
-      <div class="center-wrap">
-        <div class="ring ring-1"></div>
-        <div class="ring ring-2"></div>
-        <div class="center-circle">
-          <span class="center-gear-icon" style="animation:none; font-size:1.8rem;">🔩</span>
-          <span class="center-mono">Fixação</span>
+    <div class="tipos-grid">
+      <article class="tipo-card">
+        <div class="tipo-num">01 / 06</div>
+        <h3 class="tipo-name">Sextavado</h3>
+        <p class="tipo-desc">
+          O mais comum na indústria. Possui cabeça sextavada e permite aplicação de alto torque
+          com chave fixa, combinada ou soquete.
+        </p>
+        <div class="tipo-tags">
+          <span class="tipo-tag">Estruturas</span>
+          <span class="tipo-tag">Flanges</span>
+          <span class="tipo-tag">Máquinas</span>
+        </div>
+      </article>
+
+      <article class="tipo-card">
+        <div class="tipo-num">02 / 06</div>
+        <h3 class="tipo-name">Allen</h3>
+        <p class="tipo-desc">
+          Tem sextavado interno e cabeça cilíndrica. Muito usado em montagens com pouco espaço
+          lateral e onde se busca acabamento mais limpo.
+        </p>
+        <div class="tipo-tags">
+          <span class="tipo-tag">Precisão</span>
+          <span class="tipo-tag">CNC</span>
+          <span class="tipo-tag">Espaço restrito</span>
+        </div>
+      </article>
+
+      <article class="tipo-card">
+        <div class="tipo-num">03 / 06</div>
+        <h3 class="tipo-name">Parafuso de Máquina</h3>
+        <p class="tipo-desc">
+          Muito usado em tampas, painéis, chapas e montagens leves. Pode ter cabeça chata,
+          panela ou oval.
+        </p>
+        <div class="tipo-tags">
+          <span class="tipo-tag">Painéis</span>
+          <span class="tipo-tag">Tampas</span>
+          <span class="tipo-tag">Carcaças</span>
+        </div>
+      </article>
+
+      <article class="tipo-card">
+        <div class="tipo-num">04 / 06</div>
+        <h3 class="tipo-name">Prisioneiro</h3>
+        <p class="tipo-desc">
+          Não possui cabeça. Fica rosqueado em uma peça e recebe porca na outra extremidade.
+          Ideal para desmontagens frequentes.
+        </p>
+        <div class="tipo-tags">
+          <span class="tipo-tag">Flanges</span>
+          <span class="tipo-tag">Motores</span>
+          <span class="tipo-tag">Cabeçotes</span>
+        </div>
+      </article>
+
+      <article class="tipo-card">
+        <div class="tipo-num">05 / 06</div>
+        <h3 class="tipo-name">Autoatarraxante</h3>
+        <p class="tipo-desc">
+          Cria ou conforma a rosca no próprio material. É comum em chapas finas, perfis leves
+          e fixações de montagem rápida.
+        </p>
+        <div class="tipo-tags">
+          <span class="tipo-tag">Chapas</span>
+          <span class="tipo-tag">Rápido</span>
+          <span class="tipo-tag">Sem porca</span>
+        </div>
+      </article>
+
+      <article class="tipo-card">
+        <div class="tipo-num">06 / 06</div>
+        <h3 class="tipo-name">Alta Resistência</h3>
+        <p class="tipo-desc">
+          Usado em aplicações críticas, com classes como 10.9 e 12.9. Exige montagem correta
+          e torque controlado.
+        </p>
+        <div class="tipo-tags">
+          <span class="tipo-tag">10.9</span>
+          <span class="tipo-tag">12.9</span>
+          <span class="tipo-tag">Carga elevada</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PARTES -->
+  <section id="partes">
+    <div class="section-header">
+      <div>
+        <div class="section-label">03 — Anatomia</div>
+        <h2 class="section-title">Partes do<br>Parafuso</h2>
+      </div>
+    </div>
+
+    <div class="anatomia-grid">
+      <div class="anatomia-diagrama">
+        <div class="anatomia-diagrama-title">Vista lateral — parafuso sextavado industrial</div>
+
+        <div class="anatomia-svg-wrap">
+          <svg viewBox="0 0 820 240" xmlns="http://www.w3.org/2000/svg" class="bolt-svg">
+            <line x1="40" y1="190" x2="780" y2="190" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+            <polygon points="90,70 160,70 185,95 185,145 160,170 90,170 65,145 65,95"
+                     fill="none" stroke="#f97316" stroke-width="3"/>
+
+            <rect x="185" y="102" width="170" height="36"
+                  fill="none" stroke="#f8fafc" stroke-width="3"/>
+
+            <rect x="355" y="102" width="260" height="36"
+                  fill="none" stroke="#f8fafc" stroke-width="3"/>
+
+            <line x1="372" y1="104" x2="387" y2="136" stroke="#f97316" stroke-width="3"/>
+            <line x1="397" y1="104" x2="412" y2="136" stroke="#f97316" stroke-width="3"/>
+            <line x1="422" y1="104" x2="437" y2="136" stroke="#f97316" stroke-width="3"/>
+            <line x1="447" y1="104" x2="462" y2="136" stroke="#f97316" stroke-width="3"/>
+            <line x1="472" y1="104" x2="487" y2="136" stroke="#f97316" stroke-width="3"/>
+            <line x1="497" y1="104" x2="512" y2="136" stroke="#f97316" stroke-width="3"/>
+            <line x1="522" y1="104" x2="537" y2="136" stroke="#f97316" stroke-width="3"/>
+            <line x1="547" y1="104" x2="562" y2="136" stroke="#f97316" stroke-width="3"/>
+            <line x1="572" y1="104" x2="587" y2="136" stroke="#f97316" stroke-width="3"/>
+            <line x1="597" y1="104" x2="612" y2="136" stroke="#f97316" stroke-width="3"/>
+
+            <polygon points="615,102 660,102 672,120 660,138 615,138"
+                     fill="none" stroke="#f8fafc" stroke-width="3"/>
+
+            <line x1="125" y1="52" x2="125" y2="70" stroke="#f97316" stroke-width="2" stroke-dasharray="4 4"/>
+            <line x1="270" y1="52" x2="270" y2="102" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+            <line x1="485" y1="52" x2="485" y2="102" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+            <line x1="645" y1="52" x2="645" y2="102" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+
+            <text x="125" y="42" fill="#f97316" font-size="14" text-anchor="middle" font-family="Courier New">A</text>
+            <text x="270" y="42" fill="#94a3b8" font-size="14" text-anchor="middle" font-family="Courier New">B</text>
+            <text x="485" y="42" fill="#94a3b8" font-size="14" text-anchor="middle" font-family="Courier New">C</text>
+            <text x="645" y="42" fill="#94a3b8" font-size="14" text-anchor="middle" font-family="Courier New">D</text>
+          </svg>
         </div>
       </div>
 
-    </div>
-  </div>
-</div>
+      <div class="anatomia-info">
+        <div class="anatomia-card">
+          <span class="anatomia-letter">A</span>
+          <div>
+            <div class="anatomia-name">Cabeça</div>
+            <div class="anatomia-desc">Parte usada para aplicação da ferramenta de aperto. Pode ser sextavada, Allen, flangeada e outras.</div>
+          </div>
+        </div>
 
+        <div class="anatomia-card">
+          <span class="anatomia-letter">B</span>
+          <div>
+            <div class="anatomia-name">Corpo / haste lisa</div>
+            <div class="anatomia-desc">Trecho sem rosca. Em muitos casos ajuda no posicionamento da peça e no esforço de cisalhamento.</div>
+          </div>
+        </div>
 
-<!-- ══════════════════════════════════
-     MARQUEE
-══════════════════════════════════ -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <span class="marquee-item">Rosca Métrica <span class="marquee-dot"></span></span>
-    <span class="marquee-item">UNC <span class="marquee-dot"></span></span>
-    <span class="marquee-item">UNF <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Passo <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Diâmetro Nominal <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Comprimento <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Classe 8.8 <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Classe 10.9 <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Classe 12.9 <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Torque de aperto <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Porca <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Arruela <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Sextavado <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Allen <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Rosca Métrica <span class="marquee-dot"></span></span>
-    <span class="marquee-item">UNC <span class="marquee-dot"></span></span>
-    <span class="marquee-item">UNF <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Passo <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Diâmetro Nominal <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Comprimento <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Classe 8.8 <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Classe 10.9 <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Classe 12.9 <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Torque de aperto <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Porca <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Arruela <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Sextavado <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Allen <span class="marquee-dot"></span></span>
-  </div>
-</div>
+        <div class="anatomia-card">
+          <span class="anatomia-letter">C</span>
+          <div>
+            <div class="anatomia-name">Rosca</div>
+            <div class="anatomia-desc">Responsável pela união mecânica. Pode ser métrica ou em polegada, com diferentes passos.</div>
+          </div>
+        </div>
 
+        <div class="anatomia-card">
+          <span class="anatomia-letter">D</span>
+          <div>
+            <div class="anatomia-name">Extremidade</div>
+            <div class="anatomia-desc">Em parafusos industriais comuns, normalmente é reta com pequeno chanfro — não uma ponta aguda de autoatarraxante.</div>
+          </div>
+        </div>
 
-<!-- ══════════════════════════════════
-     01 — O QUE SÃO PARAFUSOS
-══════════════════════════════════ -->
-<section id="intro">
-  <div class="section-header">
-    <div>
-      <div class="section-label">01 — Definição</div>
-      <h2 class="section-title">O que são<br>Parafusos?</h2>
-    </div>
-  </div>
-
-  <div class="intro-grid">
-    <div class="intro-text">
-      <p>
-        Parafusos são fixadores roscados utilizados para unir duas ou mais peças de forma
-        <strong>desmontável</strong>. Compostos por cabeça, haste e rosca, transformam o
-        movimento rotativo em força de aperto axial — a força que mantém os componentes unidos.
-      </p>
-      <p>
-        Ao contrário de pinos, rebites e soldas, parafusos permitem a separação e remontagem
-        das peças sem destruí-las. Essa característica os torna indispensáveis na indústria,
-        onde manutenção, inspeção e substituição de componentes são rotineiras.
-      </p>
-      <p>
-        A norma <strong style="color:var(--orange)">NBR ISO 898-1</strong> classifica os parafusos
-        por classes de resistência. A seleção correta do fixador envolve diâmetro, passo, comprimento,
-        material, classe e o torque de aperto adequado para cada aplicação.
-      </p>
-    </div>
-
-    <div class="intro-stats">
-      <div class="intro-stat">
-        <div class="intro-stat-num">6+</div>
-        <div class="intro-stat-label">Tipos principais</div>
-      </div>
-      <div class="intro-stat">
-        <div class="intro-stat-num">12.9</div>
-        <div class="intro-stat-label">Classe mais resistente</div>
-      </div>
-      <div class="intro-stat">
-        <div class="intro-stat-num">ISO</div>
-        <div class="intro-stat-label">Norma internacional</div>
-      </div>
-      <div class="intro-stat">
-        <div class="intro-stat-num">M</div>
-        <div class="intro-stat-label">Símbolo rosca métrica</div>
+        <div class="anatomia-note">
+          <div class="anatomia-note-title">Observações técnicas</div>
+          <ul>
+            <li><strong>Comprimento:</strong> geralmente medido da base da cabeça até a extremidade.</li>
+            <li><strong>Diâmetro:</strong> indicado como M6, M8, M10, M12 etc.</li>
+            <li><strong>Passo:</strong> distância entre filetes da rosca.</li>
+            <li><strong>Rosca parcial ou total:</strong> depende da aplicação do fixador.</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- ══════════════════════════════════
-     02 — TIPOS DE PARAFUSOS
-══════════════════════════════════ -->
-<section id="tipos">
-  <div class="section-header">
-    <div>
-      <div class="section-label">02 — Catálogo</div>
-      <h2 class="section-title">Tipos de<br>Parafusos</h2>
+  <!-- IDENTIFICAÇÃO -->
+  <section id="identificacao">
+    <div class="section-header">
+      <div>
+        <div class="section-label">04 — Identificação</div>
+        <h2 class="section-title">Como ler o<br>código do parafuso</h2>
+      </div>
     </div>
-  </div>
 
-  <div class="tipos-grid tipos-grid--3col">
+    <div class="ident-grid">
+      <div class="ident-card">
+        <div class="ident-code">M8 × 1,25 × 40</div>
+        <div class="ident-item"><strong>M8</strong> → diâmetro nominal de 8 mm</div>
+        <div class="ident-item"><strong>1,25</strong> → passo da rosca</div>
+        <div class="ident-item"><strong>40</strong> → comprimento do parafuso</div>
+      </div>
 
-    <article class="tipo-card">
-      <div class="tipo-num">01 / 06</div>
-      <div class="tipo-icon-line" aria-hidden="true">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
-      <h3 class="tipo-name">Sextavado</h3>
-      <p class="tipo-desc">
-        Cabeça hexagonal, apertado com chave de boca ou estrela.
-        O tipo mais comum na indústria. Permite grande torque de aperto
-        e facilidade de inspeção visual de afrouxamento.
-      </p>
-      <div class="tipo-card__detail">
-        <div class="tipo-card__row"><span class="tipo-card__key">Vantagem</span><span class="tipo-card__val">Alto torque, ampla disponibilidade</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Aplicação</span><span class="tipo-card__val">Estruturas, flanges, mancais</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Norma</span><span class="tipo-card__val">NBR 5580 / ISO 4014</span></div>
+      <div class="ident-card">
+        <div class="ident-code">1/2" UNC</div>
+        <div class="ident-item"><strong>1/2"</strong> → diâmetro em polegada</div>
+        <div class="ident-item"><strong>UNC</strong> → rosca grossa americana</div>
+        <div class="ident-item"><strong>UNF</strong> → rosca fina americana</div>
       </div>
-      <div class="tipo-tags">
-        <span class="tipo-tag">DIN 931/933</span>
-        <span class="tipo-tag">Chave boca</span>
-        <span class="tipo-tag">Alta resistência</span>
-      </div>
-    </article>
-
-    <article class="tipo-card">
-      <div class="tipo-num">02 / 06</div>
-      <div class="tipo-icon-line" aria-hidden="true">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
-      <h3 class="tipo-name">Allen (Cilíndrico)</h3>
-      <p class="tipo-desc">
-        Cabeça cilíndrica com sextavado interno (allen). Permite instalação
-        em espaços restritos e aplicação de torque elevado sem deslizamento.
-        Muito utilizado em máquinas de precisão e maquinário CNC.
-      </p>
-      <div class="tipo-card__detail">
-        <div class="tipo-card__row"><span class="tipo-card__key">Vantagem</span><span class="tipo-card__val">Compacto, alto torque, preciso</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Aplicação</span><span class="tipo-card__val">CNC, moldes, equipamentos de precisão</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Norma</span><span class="tipo-card__val">ISO 4762 / DIN 912</span></div>
-      </div>
-      <div class="tipo-tags">
-        <span class="tipo-tag">Chave allen</span>
-        <span class="tipo-tag">Espaço restrito</span>
-        <span class="tipo-tag">Precisão</span>
-      </div>
-    </article>
-
-    <article class="tipo-card">
-      <div class="tipo-num">03 / 06</div>
-      <div class="tipo-icon-line" aria-hidden="true">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
-      <h3 class="tipo-name">Parafuso de Máquina</h3>
-      <p class="tipo-desc">
-        Cabeça chata, panela ou oval com fenda ou Phillips. Utilizado
-        para fixação de tampas, painéis e componentes leves. A cabeça pode
-        ficar embutida na superfície para acabamento plano.
-      </p>
-      <div class="tipo-card__detail">
-        <div class="tipo-card__row"><span class="tipo-card__key">Vantagem</span><span class="tipo-card__val">Cabeça embutida, acabamento limpo</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Aplicação</span><span class="tipo-card__val">Painéis, tampas, carcaças leves</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Norma</span><span class="tipo-card__val">ISO 1580 / DIN 84</span></div>
-      </div>
-      <div class="tipo-tags">
-        <span class="tipo-tag">Fenda / Phillips</span>
-        <span class="tipo-tag">Cabeça embutida</span>
-        <span class="tipo-tag">Leveza</span>
-      </div>
-    </article>
-
-    <article class="tipo-card">
-      <div class="tipo-num">04 / 06</div>
-      <div class="tipo-icon-line" aria-hidden="true">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
-      <h3 class="tipo-name">Prisioneiro (Stud Bolt)</h3>
-      <p class="tipo-desc">
-        Sem cabeça — rosca nas duas extremidades. Uma extremidade é fixada
-        permanentemente no alojamento; a outra recebe a porca. Ideal para
-        montagens repetitivas como tampas de motores e flanges de tubulação.
-      </p>
-      <div class="tipo-card__detail">
-        <div class="tipo-card__row"><span class="tipo-card__key">Vantagem</span><span class="tipo-card__val">Guia a montagem, substituição sem extrair base</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Aplicação</span><span class="tipo-card__val">Cabeçotes, flanges de pressão</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Norma</span><span class="tipo-card__val">ISO 4899 / DIN 938</span></div>
-      </div>
-      <div class="tipo-tags">
-        <span class="tipo-tag">Sem cabeça</span>
-        <span class="tipo-tag">Dupla rosca</span>
-        <span class="tipo-tag">Flanges</span>
-      </div>
-    </article>
-
-    <article class="tipo-card">
-      <div class="tipo-num">05 / 06</div>
-      <div class="tipo-icon-line" aria-hidden="true">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
-      <h3 class="tipo-name">Autoatarraxante</h3>
-      <p class="tipo-desc">
-        Abre sua própria rosca no material durante a instalação, eliminando
-        a necessidade de furo roscado prévio. Muito usado em chapas finas,
-        perfis de alumínio e plásticos estruturais.
-      </p>
-      <div class="tipo-card__detail">
-        <div class="tipo-card__row"><span class="tipo-card__key">Vantagem</span><span class="tipo-card__val">Sem pré-rosqueamento, rápida instalação</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Aplicação</span><span class="tipo-card__val">Chapas, perfis alumínio, carcaças</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Norma</span><span class="tipo-card__val">ISO 1478 / DIN 7981</span></div>
-      </div>
-      <div class="tipo-tags">
-        <span class="tipo-tag">Chapa fina</span>
-        <span class="tipo-tag">Sem porca</span>
-        <span class="tipo-tag">Rápido</span>
-      </div>
-    </article>
-
-    <article class="tipo-card">
-      <div class="tipo-num">06 / 06</div>
-      <div class="tipo-icon-line" aria-hidden="true">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
-      <h3 class="tipo-name">Alta Resistência (Classe 10.9 / 12.9)</h3>
-      <p class="tipo-desc">
-        Fabricado em aço liga tratado termicamente. Suporta cargas extremas
-        de tração, cisalhamento e fadiga. Exige torque de aperto preciso
-        com torquímetro calibrado e arruelas de alta resistência.
-      </p>
-      <div class="tipo-card__detail">
-        <div class="tipo-card__row"><span class="tipo-card__key">Vantagem</span><span class="tipo-card__val">Resistência extrema a cargas dinâmicas</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Aplicação</span><span class="tipo-card__val">Pontes, guindastes, prensas, motores</span></div>
-        <div class="tipo-card__row"><span class="tipo-card__key">Norma</span><span class="tipo-card__val">NBR ISO 898-1</span></div>
-      </div>
-      <div class="tipo-tags">
-        <span class="tipo-tag">Classe 10.9</span>
-        <span class="tipo-tag">Classe 12.9</span>
-        <span class="tipo-tag">Torquímetro obrigatório</span>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════
-     03 — PARTES DO PARAFUSO
-══════════════════════════════════ -->
-<section id="partes">
-  <div class="section-header">
-    <div>
-      <div class="section-label">03 — Anatomia</div>
-      <h2 class="section-title">Partes do<br>Parafuso</h2>
     </div>
-  </div>
+  </section>
 
-  <div class="partes-layout">
+  <!-- CLASSES -->
+  <section id="classes">
+    <div class="section-header">
+      <div>
+        <div class="section-label">05 — Resistência</div>
+        <h2 class="section-title">Classes de<br>resistência</h2>
+      </div>
+    </div>
 
-    <!-- Diagrama SVG do parafuso (vista lateral) -->
-    <div class="partes-diagram">
-      <div class="partes-diagram__title">Vista lateral — parafuso sextavado</div>
-      <div class="partes-diagram__svg-wrap">
-        <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" aria-label="Diagrama do parafuso">
-          <!-- Cabeça sextavada -->
-          <rect x="20" y="60" width="80" height="80" rx="3" fill="#181818" stroke="#f97316" stroke-width="1.5"/>
-          <line x1="20" y1="75"  x2="100" y2="75"  stroke="#2a2a2a" stroke-width="1"/>
-          <line x1="20" y1="125" x2="100" y2="125" stroke="#2a2a2a" stroke-width="1"/>
-          <!-- Haste lisa -->
-          <rect x="100" y="82" width="120" height="36" fill="#181818" stroke="#94a3b8" stroke-width="1"/>
-          <!-- Parte roscada -->
-          <rect x="220" y="82" width="240" height="36" fill="#111111" stroke="#94a3b8" stroke-width="1"/>
-          <!-- Rosca simulada (linhas diagonais) -->
-          <line x1="230" y1="82"  x2="223" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="244" y1="82"  x2="237" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="258" y1="82"  x2="251" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="272" y1="82"  x2="265" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="286" y1="82"  x2="279" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="300" y1="82"  x2="293" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="314" y1="82"  x2="307" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="328" y1="82"  x2="321" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="342" y1="82"  x2="335" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="356" y1="82"  x2="349" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="370" y1="82"  x2="363" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="384" y1="82"  x2="377" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="398" y1="82"  x2="391" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="412" y1="82"  x2="405" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="426" y1="82"  x2="419" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="440" y1="82"  x2="433" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <line x1="454" y1="82"  x2="447" y2="118" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
-          <!-- Ponta -->
-          <polygon points="460,82 460,118 490,100" fill="#181818" stroke="#94a3b8" stroke-width="1"/>
+    <div class="classes-grid">
+      <div class="classe-card"><div class="classe-num">4.6</div><p>Baixa resistência, uso leve.</p></div>
+      <div class="classe-card"><div class="classe-num">5.8</div><p>Aplicações gerais moderadas.</p></div>
+      <div class="classe-card"><div class="classe-num">8.8</div><p>Padrão industrial muito comum.</p></div>
+      <div class="classe-card"><div class="classe-num">10.9</div><p>Alta resistência mecânica.</p></div>
+      <div class="classe-card"><div class="classe-num">12.9</div><p>Aplicações severas e críticas.</p></div>
+    </div>
+  </section>
 
-          <!-- ── Cotas / linhas de indicação ── -->
-          <!-- Cabeça -->
-          <line x1="60"  y1="55"  x2="60"  y2="45"  stroke="#f97316" stroke-width="0.8" stroke-dasharray="3 2"/>
-          <text x="60"   y="40"   text-anchor="middle" fill="#f97316" font-size="9" font-family="Courier New">A</text>
-          <!-- Corpo liso -->
-          <line x1="160" y1="78"  x2="160" y2="45"  stroke="#64748b" stroke-width="0.8" stroke-dasharray="3 2"/>
-          <text x="160"  y="40"   text-anchor="middle" fill="#64748b" font-size="9" font-family="Courier New">B</text>
-          <!-- Parte roscada -->
-          <line x1="340" y1="78"  x2="340" y2="45"  stroke="#64748b" stroke-width="0.8" stroke-dasharray="3 2"/>
-          <text x="340"  y="40"   text-anchor="middle" fill="#64748b" font-size="9" font-family="Courier New">C</text>
-          <!-- Ponta -->
-          <line x1="478" y1="95"  x2="510" y2="70"  stroke="#64748b" str
+  <!-- TORQUE -->
+  <section id="torque">
+    <div class="section-header">
+      <div>
+        <div class="section-label">06 — Montagem</div>
+        <h2 class="section-title">Torque e<br>aperto</h2>
+      </div>
+    </div>
+
+    <div class="torque-grid">
+      <div class="torque-card">
+        <h3>Aperto insuficiente</h3>
+        <p>Pode causar folga, vibração, deslocamento e soltura da união.</p>
+      </div>
+      <div class="torque-card">
+        <h3>Aperto excessivo</h3>
+        <p>Pode causar alongamento, ruptura, deformação e espanamento da rosca.</p>
+      </div>
+      <div class="torque-card">
+        <h3>Uso do torquímetro</h3>
+        <p>Fundamental em montagens críticas para garantir repetibilidade e segurança.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IDENTIFICADOR -->
+  <section id="identificador">
+    <div class="section-header">
+      <div>
+        <div class="section-label">07 — Ferramenta</div>
+        <h2 class="section-title">Identificador de<br>Parafuso</h2>
+      </div>
+    </div>
+
+    <div class="calc-box">
+      <div class="calc-grid">
+        <div class="calc-field">
+          <label for="sistema">Sistema</label>
+          <select id="sistema">
+            <option value="metrico">Métrico</option>
+            <option value="polegada">Polegada</option>
+          </select>
+        </div>
+
+        <div class="calc-field">
+          <label for="diametro">Diâmetro</label>
+          <input type="text" id="diametro" placeholder="Ex: 8 ou 1/2">
+        </div>
+
+        <div class="calc-field">
+          <label for="passo">Passo</label>
+          <input type="text" id="passo" placeholder="Ex: 1,25 ou UNC">
+        </div>
+
+        <div class="calc-field">
+          <label for="comprimento">Comprimento</label>
+          <input type="text" id="comprimento" placeholder="Ex: 40">
+        </div>
+
+        <div class="calc-field calc-field-full">
+          <label for="cabeca">Tipo de cabeça</label>
+          <select id="cabeca">
+            <option value="sextavado">Sextavado</option>
+            <option value="allen">Allen</option>
+            <option value="maquina">Parafuso de máquina</option>
+            <option value="prisioneiro">Prisioneiro</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="identificarParafuso()">Identificar</button>
+
+      <div class="calc-result" id="resultado-parafuso">
+        Preencha os dados para gerar a descrição técnica do parafuso.
+      </div>
+    </div>
+  </section>
+
+  <!-- APLICAÇÕES -->
+  <section id="aplicacoes">
+    <div class="section-header">
+      <div>
+        <div class="section-label">08 — Uso Industrial</div>
+        <h2 class="section-title">Aplicações<br>industriais</h2>
+      </div>
+    </div>
+
+    <div class="aplic-grid">
+      <div class="aplic-card"><h3>Motores e Redutores</h3><p>Fixação de tampas, bases, flanges e suportes.</p></div>
+      <div class="aplic-card"><h3>Mancais e Suportes</h3><p>Montagens que exigem aperto confiável e manutenção periódica.</p></div>
+      <div class="aplic-card"><h3>Estruturas Metálicas</h3><p>Uniões desmontáveis em bases, perfis e estruturas.</p></div>
+      <div class="aplic-card"><h3>Máquinas Industriais</h3><p>Fixação geral de componentes, proteções e conjuntos mecânicos.</p></div>
+    </div>
+  </section>
+
+  <!-- FALHAS -->
+  <section id="falhas">
+    <div class="section-header">
+      <div>
+        <div class="section-label">09 — Diagnóstico</div>
+        <h2 class="section-title">Falhas<br>comuns</h2>
+      </div>
+    </div>
+
+    <div class="falhas-grid">
+      <div class="falha-card"><h3>Afrouxamento</h3><p>Ocorre por vibração, torque insuficiente ou ausência de trava.</p></div>
+      <div class="falha-card"><h3>Corrosão</h3><p>Compromete a integridade do fixador e dificulta desmontagem.</p></div>
+      <div class="falha-card"><h3>Esplanamento</h3><p>Rosca danificada por aperto incorreto ou ferramenta inadequada.</p></div>
+      <div class="falha-card"><h3>Ruptura</h3><p>Geralmente causada por sobrecarga, fadiga ou classe inadequada.</p></div>
+    </div>
+  </section>
+
+  <!-- BOAS PRÁTICAS -->
+  <section id="praticas">
+    <div class="section-header">
+      <div>
+        <div class="section-label">10 — Boas práticas</div>
+        <h2 class="section-title">Montagem e<br>manutenção</h2>
+      </div>
+    </div>
+
+    <div class="praticas-grid">
+      <div class="pratica-card"><h3>Conferir rosca</h3><p>Não misture rosca métrica com polegada.</p></div>
+      <div class="pratica-card"><h3>Limpar roscas</h3><p>Remova sujeira, óleo velho e rebarbas antes da montagem.</p></div>
+      <div class="pratica-card"><h3>Usar torque correto</h3><p>Evita aperto insuficiente ou excessivo.</p></div>
+      <div class="pratica-card"><h3>Respeitar a classe</h3><p>Não substitua um 10.9 por um parafuso comum.</p></div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="footer-logo">⚙ O Guia do Mecânico</div>
+    <div class="footer-team">Guilherme Prado · Iago Leite · João Bispo · Marcelo Lima · Régis Eduardo</div>
+    <div class="footer-copy">© 2026 — Todos os direitos reservados</div>
+  </footer>
+
+  <script>
+    function identificarParafuso() {
+      const sistema = document.getElementById("sistema").value;
+      const diametro = document.getElementById("diametro").value.trim();
+      const passo = document.getElementById("passo").value.trim();
+      const comprimento = document.getElementById("comprimento").value.trim();
+      const cabeca = document.getElementById("cabeca").value;
+      const resultado = document.getElementById("resultado-parafuso");
+
+      if (!diametro || !passo || !comprimento) {
+        resultado.innerHTML = "Preencha diâmetro, passo e comprimento para identificar o parafuso.";
+        return;
+      }
+
+      let descricao = "";
+
+      if (sistema === "metrico") {
+        descricao = `Parafuso ${cabeca} M${diametro} × ${passo} × ${comprimento}`;
+      } else {
+        descricao = `Parafuso ${cabeca} ${diametro}" ${passo} × ${comprimento}`;
+      }
+
+      resultado.innerHTML = `
+        <strong>${descricao}</strong><br>
+        Sistema: ${sistema === "metrico" ? "Rosca métrica" : "Rosca em polegada"}<br>
+        Aplicação típica: montagem mecânica desmontável com aperto controlado.
+      `;
+    }
+  </script>
+
+</body>
+</html>
