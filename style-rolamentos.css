@@ -1633,3 +1633,108 @@ nav {
     padding: 14px 16px 20px;
   }
 }
+
+/* =========================================================
+   FOOTER PADRÃO ÚNICO
+========================================================= */
+
+.footer-premium {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+}
+
+.footer-top {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 34px 56px 24px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-logo {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.footer-desc {
+  max-width: 520px;
+  color: var(--steel);
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.footer-meta-title {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.footer-team {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  line-height: 1.9;
+}
+
+.footer-bottom {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 56px 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 18px 18px;
+  }
+
+  .footer-bottom {
+    padding: 14px 18px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+  }
+
+  .footer-team {
+    font-size: 0.58rem;
+    line-height: 1.8;
+  }
+}
