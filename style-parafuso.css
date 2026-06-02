@@ -570,57 +570,64 @@
 }
 
 /* FERRAMENTAS INTERATIVAS */
+/* =========================================================
+   FERRAMENTAS INTERATIVAS
+========================================================= */
+
 #ferramentas {
   background: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
-.tools-grid {
+.ferramentas-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
-.tool-card {
+.ferramenta-card {
   background: var(--surface2);
   border: 1px solid var(--border);
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-.tool-head {
-  padding: 24px 24px 18px;
+.ferramenta-topo {
+  padding: 24px;
   border-bottom: 1px solid var(--border);
 }
 
-.tool-kicker {
+.ferramenta-kicker {
+  display: inline-block;
+  margin-bottom: 10px;
   font-family: var(--font-mono);
   font-size: 0.55rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--orange);
-  margin-bottom: 10px;
 }
 
-.tool-title {
+.ferramenta-titulo {
   font-family: var(--font-title);
-  font-size: 1.18rem;
+  font-size: 1.15rem;
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 10px;
 }
 
-.tool-desc {
+.ferramenta-texto {
   color: var(--steel);
   font-size: 0.82rem;
   line-height: 1.75;
 }
 
-.tool-body {
+.ferramenta-corpo {
   padding: 24px;
 }
 
-.tool-body label {
+.ferramenta-corpo label {
   display: block;
   margin-bottom: 8px;
   font-family: var(--font-mono);
@@ -630,27 +637,33 @@
   color: var(--orange);
 }
 
-.tool-body select,
-.tool-body input {
+.ferramenta-corpo select,
+.ferramenta-corpo input {
   width: 100%;
-  padding: 14px;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
   background: #f1f5f9;
   color: #0f172a;
-  border: none;
   outline: none;
   font-size: 0.95rem;
   margin-bottom: 16px;
 }
 
-.converter-grid {
+.ferramenta-corpo select:focus,
+.ferramenta-corpo input:focus {
+  border-color: var(--orange);
+}
+
+.conversor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-.converter-field button {
+.conversor-bloco button {
   width: 100%;
-  padding: 13px 14px;
+  height: 46px;
   border: none;
   background: var(--orange);
   color: #0a0a0a;
@@ -659,21 +672,23 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.converter-field button:hover {
+.conversor-bloco button:hover {
   background: var(--orange2);
+  transform: translateY(-1px);
 }
 
-.tool-result {
+.ferramenta-resultado {
   margin-top: 18px;
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: rgba(255,255,255,0.02);
   padding: 18px;
-  color: var(--steel);
-  line-height: 1.8;
   min-height: 110px;
+  color: var(--steel);
+  font-size: 0.84rem;
+  line-height: 1.8;
 }
 
 .compare-block {
@@ -698,6 +713,30 @@
 
 .compare-line strong {
   color: var(--white);
+}
+
+/* RESPONSIVO */
+@media (max-width: 1100px) {
+  .ferramentas-grid,
+  .conversor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  .ferramenta-topo,
+  .ferramenta-corpo {
+    padding: 18px;
+  }
+
+  .ferramenta-titulo {
+    font-size: 1rem;
+  }
+
+  .ferramenta-texto,
+  .compare-line {
+    font-size: 0.8rem;
+  }
 }
 
 /* APLICAÇÕES */

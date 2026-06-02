@@ -442,73 +442,73 @@
 
   <!-- FERRAMENTAS -->
   <section id="ferramentas">
-    <div class="section-header">
-      <div>
-        <div class="section-label">07 — Ferramentas</div>
-        <h2 class="section-title">Ferramentas<br>Interativas</h2>
+  <div class="section-header">
+    <div>
+      <div class="section-label">07 — Ferramentas</div>
+      <h2 class="section-title">Ferramentas<br>Interativas</h2>
+    </div>
+  </div>
+
+  <div class="ferramentas-grid">
+    <article class="ferramenta-card">
+      <div class="ferramenta-topo">
+        <span class="ferramenta-kicker">Comparador técnico</span>
+        <h3 class="ferramenta-titulo">Classes de resistência</h3>
+        <p class="ferramenta-texto">
+          Selecione uma classe para visualizar nível de resistência,
+          uso típico, aplicação industrial e observações importantes.
+        </p>
       </div>
-    </div>
 
-    <div class="tools-grid">
-      <article class="tool-card">
-        <div class="tool-head">
-          <div class="tool-kicker">Comparador técnico</div>
-          <h3 class="tool-title">Classes de resistência</h3>
-          <p class="tool-desc">
-            Selecione uma classe para visualizar o nível de resistência,
-            uso típico, aplicação industrial e observações importantes.
-          </p>
+      <div class="ferramenta-corpo">
+        <label for="classeParafuso">Classe do parafuso</label>
+        <select id="classeParafuso" onchange="compararClasseParafuso()">
+          <option value="">Selecione uma classe</option>
+          <option value="4.6">4.6</option>
+          <option value="5.8">5.8</option>
+          <option value="8.8">8.8</option>
+          <option value="10.9">10.9</option>
+          <option value="12.9">12.9</option>
+        </select>
+
+        <div id="resultadoClasse" class="ferramenta-resultado">
+          Escolha uma classe para visualizar a comparação técnica.
         </div>
+      </div>
+    </article>
 
-        <div class="tool-body">
-          <label for="classeParafuso">Classe do parafuso</label>
-          <select id="classeParafuso" onchange="compararClasseParafuso()">
-            <option value="">Selecione uma classe</option>
-            <option value="4.6">4.6</option>
-            <option value="5.8">5.8</option>
-            <option value="8.8">8.8</option>
-            <option value="10.9">10.9</option>
-            <option value="12.9">12.9</option>
-          </select>
+    <article class="ferramenta-card">
+      <div class="ferramenta-topo">
+        <span class="ferramenta-kicker">Conversão dimensional</span>
+        <h3 class="ferramenta-titulo">mm ↔ polegadas</h3>
+        <p class="ferramenta-texto">
+          Converta rapidamente medidas em milímetros para polegadas
+          e vice-versa para leitura técnica e comparação dimensional.
+        </p>
+      </div>
 
-          <div id="resultadoClasse" class="tool-result">
-            Escolha uma classe para visualizar a comparação técnica.
-          </div>
-        </div>
-      </article>
-
-      <article class="tool-card">
-        <div class="tool-head">
-          <div class="tool-kicker">Conversão dimensional</div>
-          <h3 class="tool-title">mm ↔ polegadas</h3>
-          <p class="tool-desc">
-            Converta rapidamente medidas em milímetros para polegadas
-            e vice-versa para leitura técnica e comparação dimensional.
-          </p>
-        </div>
-
-        <div class="tool-body">
-          <div class="converter-grid">
-            <div class="converter-field">
-              <label for="mmInput">Milímetros (mm)</label>
-              <input type="number" id="mmInput" step="any" placeholder="Ex: 12.7">
-              <button type="button" onclick="converterMmParaPolegada()">Converter para polegadas</button>
-            </div>
-
-            <div class="converter-field">
-              <label for="polInput">Polegadas (in)</label>
-              <input type="number" id="polInput" step="any" placeholder="Ex: 0.5">
-              <button type="button" onclick="converterPolegadaParaMm()">Converter para mm</button>
-            </div>
+      <div class="ferramenta-corpo">
+        <div class="conversor-grid">
+          <div class="conversor-bloco">
+            <label for="mmInput">Milímetros (mm)</label>
+            <input type="number" id="mmInput" step="any" placeholder="Ex: 12.7">
+            <button type="button" onclick="converterMmParaPolegada()">Converter para polegadas</button>
           </div>
 
-          <div id="resultadoConversao" class="tool-result">
-            Digite um valor para converter.
+          <div class="conversor-bloco">
+            <label for="polInput">Polegadas (in)</label>
+            <input type="number" id="polInput" step="any" placeholder="Ex: 0.5">
+            <button type="button" onclick="converterPolegadaParaMm()">Converter para mm</button>
           </div>
         </div>
-      </article>
-    </div>
-  </section>
+
+        <div id="resultadoConversao" class="ferramenta-resultado">
+          Digite um valor para converter.
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
   <!-- APLICAÇÕES -->
   <section id="aplicacoes">
