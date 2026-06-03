@@ -278,74 +278,144 @@
         <div class="diagram-title">Conjunto técnico — corrente e pinhão</div>
 
         <div class="chain-svg-wrap">
-          <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" class="chain-svg">
-            <circle cx="170" cy="180" r="78" fill="none" stroke="#f8fafc" stroke-width="4"/>
-            <circle cx="170" cy="180" r="30" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <svg viewBox="0 0 980 420" xmlns="http://www.w3.org/2000/svg" class="chain-svg" aria-label="Desenho técnico de corrente e pinhões">
+    <defs>
+      <linearGradient id="metalStroke" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="45%" stop-color="#cbd5e1"/>
+        <stop offset="100%" stop-color="#94a3b8"/>
+      </linearGradient>
 
-            <circle cx="615" cy="180" r="108" fill="none" stroke="#f8fafc" stroke-width="4"/>
-            <circle cx="615" cy="180" r="40" fill="none" stroke="#94a3b8" stroke-width="3"/>
+      <linearGradient id="darkMetal" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#3b4047"/>
+        <stop offset="50%" stop-color="#242a31"/>
+        <stop offset="100%" stop-color="#12161b"/>
+      </linearGradient>
 
-            <g stroke="#f97316" stroke-width="3" fill="none">
-              <ellipse cx="262" cy="104" rx="26" ry="18"/>
-              <ellipse cx="318" cy="92" rx="26" ry="18"/>
-              <ellipse cx="376" cy="84" rx="26" ry="18"/>
-              <ellipse cx="436" cy="80" rx="26" ry="18"/>
-              <ellipse cx="496" cy="82" rx="26" ry="18"/>
-              <ellipse cx="554" cy="90" rx="26" ry="18"/>
+      <filter id="orangeGlow" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="2.2" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
 
-              <ellipse cx="675" cy="96" rx="22" ry="16"/>
-              <ellipse cx="719" cy="122" rx="22" ry="16"/>
-              <ellipse cx="747" cy="164" rx="22" ry="16"/>
-              <ellipse cx="746" cy="214" rx="22" ry="16"/>
-              <ellipse cx="718" cy="256" rx="22" ry="16"/>
-              <ellipse cx="672" cy="282" rx="22" ry="16"/>
+      <g id="chainLink">
+        <rect x="-22" y="-13" width="44" height="26" rx="13" class="chain-link-outer"/>
+        <rect x="-10" y="-4.5" width="20" height="9" rx="4.5" class="chain-link-inner"/>
+        <circle cx="-13" cy="0" r="2.8" class="chain-pin"/>
+        <circle cx="13" cy="0" r="2.8" class="chain-pin"/>
+      </g>
+    </defs>
 
-              <ellipse cx="557" cy="270" rx="26" ry="18"/>
-              <ellipse cx="497" cy="278" rx="26" ry="18"/>
-              <ellipse cx="437" cy="280" rx="26" ry="18"/>
-              <ellipse cx="377" cy="276" rx="26" ry="18"/>
-              <ellipse cx="318" cy="268" rx="26" ry="18"/>
-              <ellipse cx="262" cy="256" rx="26" ry="18"/>
+    <!-- moldura -->
+    <rect x="0.5" y="0.5" width="979" height="419" fill="none" stroke="rgba(255,255,255,0.06)"/>
 
-              <ellipse cx="105" cy="236" rx="22" ry="16"/>
-              <ellipse cx="86" cy="180" rx="22" ry="16"/>
-              <ellipse cx="104" cy="124" rx="22" ry="16"/>
-            </g>
+    <!-- pinhão esquerdo -->
+    <g transform="translate(205 210)">
+      <g>
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(0)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(30)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(60)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(90)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(120)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(150)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(180)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(210)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(240)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(270)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(300)" />
+        <rect class="sprocket-tooth" x="-7" y="-98" width="14" height="20" rx="2" transform="rotate(330)" />
+      </g>
 
-            <g fill="#f8fafc">
-              <circle cx="262" cy="104" r="6"/>
-              <circle cx="318" cy="92" r="6"/>
-              <circle cx="376" cy="84" r="6"/>
-              <circle cx="436" cy="80" r="6"/>
-              <circle cx="496" cy="82" r="6"/>
-              <circle cx="554" cy="90" r="6"/>
-              <circle cx="675" cy="96" r="6"/>
-              <circle cx="719" cy="122" r="6"/>
-              <circle cx="747" cy="164" r="6"/>
-              <circle cx="746" cy="214" r="6"/>
-              <circle cx="718" cy="256" r="6"/>
-              <circle cx="672" cy="282" r="6"/>
-            </g>
+      <circle r="74" class="sprocket-body"/>
+      <circle r="32" class="sprocket-inner"/>
+      <circle r="90" class="pitch-guide"/>
+      <circle r="6" class="hub-center"/>
+    </g>
 
-            <g stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 5">
-              <line x1="262" y1="54" x2="262" y2="86"/>
-              <line x1="318" y1="44" x2="318" y2="74"/>
-              <line x1="615" y1="48" x2="615" y2="120"/>
-              <line x1="746" y1="254" x2="784" y2="254"/>
-              <line x1="376" y1="310" x2="376" y2="292"/>
-              <line x1="170" y1="72" x2="170" y2="102"/>
-            </g>
+    <!-- pinhão direito -->
+    <g transform="translate(735 210)">
+      <g>
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(0)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(20)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(40)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(60)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(80)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(100)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(120)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(140)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(160)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(180)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(200)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(220)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(240)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(260)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(280)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(300)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(320)" />
+        <rect class="sprocket-tooth" x="-8.5" y="-126" width="17" height="24" rx="2.5" transform="rotate(340)" />
+      </g>
 
-            <g fill="#f97316" font-size="14" font-family="Courier New">
-              <text x="257" y="44">A</text>
-              <text x="313" y="34">B</text>
-              <text x="609" y="40">F</text>
-              <text x="792" y="259">E</text>
-              <text x="370" y="330">C</text>
-              <text x="164" y="64">D</text>
-            </g>
-          </svg>
-        </div>
+      <circle r="102" class="sprocket-body"/>
+      <circle r="40" class="sprocket-inner"/>
+      <circle r="118" class="pitch-guide"/>
+      <circle r="7" class="hub-center"/>
+    </g>
+
+    <!-- corrente superior -->
+    <g filter="url(#orangeGlow)">
+      <g transform="translate(330 118) rotate(-3)"><use href="#chainLink"/></g>
+      <g transform="translate(384 111) rotate(-2)"><use href="#chainLink"/></g>
+      <g transform="translate(438 107) rotate(-1)"><use href="#chainLink"/></g>
+      <g transform="translate(492 106) rotate(0)"><use href="#chainLink"/></g>
+      <g transform="translate(546 108) rotate(1)"><use href="#chainLink"/></g>
+      <g transform="translate(600 113) rotate(3)"><use href="#chainLink"/></g>
+    </g>
+
+    <!-- corrente no pinhão direito -->
+    <g filter="url(#orangeGlow)">
+      <g transform="translate(829 122) rotate(36)"><use href="#chainLink"/></g>
+      <g transform="translate(861 160) rotate(62)"><use href="#chainLink"/></g>
+      <g transform="translate(873 210) rotate(90)"><use href="#chainLink"/></g>
+      <g transform="translate(861 260) rotate(118)"><use href="#chainLink"/></g>
+      <g transform="translate(829 298) rotate(144)"><use href="#chainLink"/></g>
+    </g>
+
+    <!-- corrente inferior -->
+    <g filter="url(#orangeGlow)">
+      <g transform="translate(598 305) rotate(180)"><use href="#chainLink"/></g>
+      <g transform="translate(544 309) rotate(181)"><use href="#chainLink"/></g>
+      <g transform="translate(490 311) rotate(180)"><use href="#chainLink"/></g>
+      <g transform="translate(436 310) rotate(179)"><use href="#chainLink"/></g>
+      <g transform="translate(382 306) rotate(177)"><use href="#chainLink"/></g>
+      <g transform="translate(328 299) rotate(175)"><use href="#chainLink"/></g>
+    </g>
+
+    <!-- corrente no pinhão esquerdo -->
+    <g filter="url(#orangeGlow)">
+      <g transform="translate(140 284) rotate(220)"><use href="#chainLink"/></g>
+      <g transform="translate(118 235) rotate(248)"><use href="#chainLink"/></g>
+      <g transform="translate(118 185) rotate(278)"><use href="#chainLink"/></g>
+      <g transform="translate(140 136) rotate(308)"><use href="#chainLink"/></g>
+    </g>
+
+    <!-- chamadas -->
+    <line class="callout-line" x1="330" y1="64" x2="330" y2="100"/>
+    <line class="callout-line" x1="384" y1="56" x2="384" y2="96"/>
+    <line class="callout-line" x1="436" y1="334" x2="436" y2="309"/>
+    <line class="callout-line" x1="140" y1="86" x2="140" y2="124"/>
+    <line class="callout-line" x1="895" y1="260" x2="850" y2="260"/>
+    <line class="callout-line" x1="735" y1="58" x2="735" y2="104"/>
+
+    <text class="callout-text" x="323" y="54">A</text>
+    <text class="callout-text" x="377" y="46">B</text>
+    <text class="callout-text" x="430" y="352">C</text>
+    <text class="callout-text" x="134" y="78">D</text>
+    <text class="callout-text" x="902" y="264">E</text>
+    <text class="callout-text" x="728" y="49">F</text>
+  </svg>
+</div>
       </div>
 
       <div class="partes-info">
